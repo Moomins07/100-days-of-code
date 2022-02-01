@@ -13,9 +13,9 @@ Having completed a variety of exercises from various different courses over the 
 
 ### Day 2: January 31, 2022 
 
-**Today's Progress**: I completed 12-16 sub-sections of Section 2: Fundamentals - Part 1. This took approximately 3 hours.
+**Today's Progress**: I completed 12-16 sub-sections of Section 2: Fundamentals - Part 1. The sub-sections covered data types, variables, basic operators, operator precedence and I also completed a coding challenge that entailed the use of all of the previously mentioned fundamentals. This took approximately 3 hours.
 
-**Thoughts**: Once again this particular course went into much greater detail on subjects/fundamentals I thought I already had an adequate understanding of and filled in smaller knowledge gaps I was unaware of. Today covered data types, variables, basic operators, operator precedence and I also completed a coding challenge that entailed the use of all of the previously mentioned fundamentals.
+**Thoughts**: Once again this particular course went into much greater detail on subjects/fundamentals I thought I already had an adequate understanding of and filled in smaller knowledge gaps I was unaware of. For example, |typeof null| returning |object| as opposed to |null| in the same way that |typeof undefined| returns |undefined|.
 
 
 **Link(s) to work**: N/A

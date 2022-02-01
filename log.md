@@ -1,30 +1,24 @@
 # 100 Days Of Code - Log
 
-### Day 0: February 30, 2016 (Example 1)
-##### (delete me or comment me out)
+Having completed a variety of exercises from various different courses over the last few months, I have decided to begin a JavaScript Udemy course from scratch and it is my goal to complete the course in it's entirety by the end of my 100days-of-code challenge. I believe that, by doing so, I will not only streamline my learning experience, but I will also set myself a clear goal/path that is realistic within the time frame that I have set. I am coding along with my lecturer, taking notes and completing ALL of the coding challenges presented to me in the course.
 
-**Today's Progress**: Fixed CSS, worked on canvas functionality for the app.
+### Day 1: January 30, 2022 
 
-**Thoughts:** I really struggled with CSS, but, overall, I feel like I am slowly getting better at it. Canvas is still new for me, but I managed to figure out some basic functionality.
+**Today's Progress**: I completed 6-11 sub-sections of Section 2: Fundamentals - Part 1. This took approximately 2.5 hours.
 
-**Link to work:** [Calculator App](http://www.example.com)
+**Thoughts:** I have covered a lot of the basic fundamentals of JS before, however, this particular course went into much greater detail and filled in a few smaller knowledge gaps. I now have a greater understanding of JavaScript overall, including its origin, terminology such as the use of 'value', ES6 and what is considered 'modern JS'.
 
-### Day 0: February 30, 2016 (Example 2)
-##### (delete me or comment me out)
-
-**Today's Progress**: Fixed CSS, worked on canvas functionality for the app.
-
-**Thoughts**: I really struggled with CSS, but, overall, I feel like I am slowly getting better at it. Canvas is still new for me, but I managed to figure out some basic functionality.
-
-**Link(s) to work**: [Calculator App](http://www.example.com)
+**Link to work:** N/A
 
 
-### Day 1: June 27, Monday
+### Day 2: January 31, 2022 
 
-**Today's Progress**: I've gone through many exercises on FreeCodeCamp.
+**Today's Progress**: I completed 12-16 sub-sections of Section 2: Fundamentals - Part 1. This took approximately 3 hours.
 
-**Thoughts** I've recently started coding, and it's a great feeling when I finally solve an algorithm challenge after a lot of attempts and hours spent.
+**Thoughts**: Once again this particular course went into much greater detail on subjects/fundamentals I thought I already had an adequate understanding of and filled in smaller knowledge gaps I was unaware of. Today covered data types, variables, basic operators, operator precedence and I also completed a coding challenge that entailed the use of all of the previously mentioned fundamentals.
 
-**Link(s) to work**
-1. [Find the Longest Word in a String](https://www.freecodecamp.com/challenges/find-the-longest-word-in-a-string)
-2. [Title Case a Sentence](https://www.freecodecamp.com/challenges/title-case-a-sentence)
+
+**Link(s) to work**: N/A
+
+
+### Day 3: February 1, 2022

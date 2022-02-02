@@ -22,3 +22,7 @@ Having completed a variety of exercises from various different courses over the 
 
 
 ### Day 3: February 1, 2022
+
+**Today's Progress**: I completed 17-19 sub-sections of Section 2: Fundamentals - Part 1. The sub-sections covered strings and template literals, if...else statements and a coding challenge that entailed the use of all of the previously mentioned fundamentals. This took approximately 1 hour.
+
+**Thoughts**: Having covered string template literals and if...else statements in a previous course, I did not have any issues with these sub-sections. I did however learn that template literal strings can break/use multiple lines by simply using return, as opposed to using \n\. I will be using backtick quotes (`) for all of my strings from now on.

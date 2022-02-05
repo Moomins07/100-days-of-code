@@ -34,3 +34,10 @@ Having completed a variety of exercises from various different courses over the 
 **Today's Progress**: I completed 23-25 sub-sections of Section 2: Fundamentals - Part 1. The sub-sections covered boolean logic, logical operators and a coding challenge (#3) that entailed the use of all 3 subjects. This took approximately 2 hours.
 
 **Thoughts**: I have covered boolean logic and logical opperators briefly in a previous course. I did not struggle with either subject and completed the coding challenge plus bonus challenges with little trouble, in good time, and also with final code very similar to my lecturer's. I believe that I have a good understanding of both subjects. I would like to further research common circumstances in which the NOT (!) operator is used.
+
+
+### Day 6: February 4, 2022
+
+**Today's Progress**: I completed 26-27 sub-sections of Section 2: Fundamentals - Part 1. The sub-sections covered switch statements and statements & expressions. I re-wrote a switch statement as an if...else statement as a coding challenge. This took approximately 1.5 hours.
+
+**Thoughts**: I have covered switch statements briefly in a previous course and I had little trouble with the coding challenge, completing it in good time. I was not entirely clear on the differences between statements and expressions and I found it to be a grey area before the lecture. However, I feel confident that I now have a greater understanding of both subjects.

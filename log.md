@@ -1,6 +1,6 @@
 # 100 Days Of Code - Log
 
-Having completed a variety of exercises from various different courses over the last few months, I have decided to begin a JavaScript Udemy course from scratch and it is my goal to complete the course in it's entirety by the end of my 100days-of-code challenge. I believe that, by doing so, I will not only streamline my learning experience, but I will also set myself a clear goal/path that is realistic within the time frame that I have set. I am coding along with my lecturer, taking notes and completing ALL of the coding challenges presented to me in the course.
+Having completed a variety of exercises from various different courses over the last few months, I have decided to begin a JavaScript Udemy course from scratch and it is my goal to complete the course in it's entirety by the end of my 100days-of-code challenge. I believe that, by doing so, I will not only streamline my learning experience, but I will also set myself a clear goal/path that is realistic within the time frame that I have set. I am coding along with my lecturer, taking notes and completing ALL of the coding challenges presented to me in the course. You can find my notes and follow-along code here: https://github.com/Moomins07/udemy-course-notes.
 
 ### Day 1: January 30, 2022 
 
@@ -41,3 +41,10 @@ Having completed a variety of exercises from various different courses over the 
 **Today's Progress**: I completed 26-27 sub-sections of Section 2: Fundamentals - Part 1. The sub-sections covered switch statements and statements & expressions. I re-wrote a switch statement as an if...else statement as a coding challenge. This took approximately 1.5 hours.
 
 **Thoughts**: I have covered switch statements briefly in a previous course and I had little trouble with the coding challenge, completing it in good time. I was not entirely clear on the differences between statements and expressions and I found it to be a grey area before the lecture. However, I feel confident that I now have a greater understanding of both subjects.
+
+
+### Day 7: February 5, 2022
+
+**Today's Progress**: I completed 28-30 sub-sections of Section 2: Fundamentals - Part 1. The sub-sections covered ternary operators, a coding challenge putting ternary operators into practice and finally a history on JavaScript including a brief explanation of transpiling and polyfilling. Specifically, the coding challenge entailed the use of a ternary operator and recalling the value in a template literal. I have completed Section 2: Fundamentals - Part 1. This took approximately 2 hours.
+
+**Thoughts**: Ternary operators are relatively new to me as I don't recall spending a significant amount of time on the subject in a previous course. However, I did not have any issues with following the lecture or completing the coding challenge. I found Section 30 on the history of JavaScript very interesting as I was not aware of its origin until today.

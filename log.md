@@ -3,7 +3,7 @@
 Having completed a variety of exercises from various different courses over the last few months, I have decided to begin a JavaScript Udemy course from scratch and it is my goal to complete the course in it's entirety by the end of my 100days-of-code challenge. I believe that, by doing so, I will not only streamline my learning experience, but I will also set myself a clear goal/path that is realistic within the time frame that I have set. I am coding along with my lecturer, taking notes and completing ALL of the coding challenges presented to me in the course. You can find my notes and follow-along code here: https://github.com/Moomins07/udemy-course-notes.
 
 ### Day 1: January 30, 2022 
-
+### 01-Fundamentals-Part-1 [START]
 **Today's Progress**: I completed 6-11 sub-sections of Section 2: Fundamentals - Part 1. This took approximately 2.5 hours.
 
 **Thoughts:** I have covered a lot of the basic fundamentals of JS before, however, this particular course went into much greater detail and filled in a few smaller knowledge gaps. I now have a greater understanding of JavaScript overall, including its origin, terminology such as the use of 'value', ES6 and what is considered 'modern JS'.
@@ -50,3 +50,10 @@ Having completed a variety of exercises from various different courses over the 
 **Thoughts**: Ternary operators are relatively new to me as I don't recall spending a significant amount of time on the subject in a previous course. However, I did not have any issues with following the lecture or completing the coding challenge. I found Section 30 on the history of JavaScript very interesting as I was not aware of its origin until today.
 
 ### 01-Fundamentals-Part-1 [COMPLETE]
+
+
+### Day 8: February 6, 2022 
+### 01-Fundamentals-Part-2 [START]
+**Today's Progress**: My hour today was spent setting up the relevant files and completing subsection 32, 'activating strict mode' (first lecture of Fundamentals part 2) in which I learned about the benefits of using strict mode in JavaScript.
+
+**Thoughts:** All files and working environment is now prepared for the entirety of Fundamentals part 2. Activating strict mode in JavaScript is simple and hlds many benefits with very little downside to its use. I will be using strict mode for all of my scripts from now on.

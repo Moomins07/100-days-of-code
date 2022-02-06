@@ -4,6 +4,7 @@ Having completed a variety of exercises from various different courses over the 
 
 ### Day 1: January 30, 2022 
 ### 01-Fundamentals-Part-1 [START]
+
 **Today's Progress**: I completed 6-11 sub-sections of Section 2: Fundamentals - Part 1. This took approximately 2.5 hours.
 
 **Thoughts:** I have covered a lot of the basic fundamentals of JS before, however, this particular course went into much greater detail and filled in a few smaller knowledge gaps. I now have a greater understanding of JavaScript overall, including its origin, terminology such as the use of 'value', ES6 and what is considered 'modern JS'.
@@ -54,6 +55,7 @@ Having completed a variety of exercises from various different courses over the 
 
 ### Day 8: February 6, 2022 
 ### 01-Fundamentals-Part-2 [START]
+
 **Today's Progress**: My hour today was spent setting up the relevant files and completing subsection 32, 'activating strict mode' (first lecture of Fundamentals part 2) in which I learned about the benefits of using strict mode in JavaScript.
 
 **Thoughts:** All files and working environment is now prepared for the entirety of Fundamentals part 2. Activating strict mode in JavaScript is simple and hlds many benefits with very little downside to its use. I will be using strict mode for all of my scripts from now on.

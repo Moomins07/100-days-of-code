@@ -61,7 +61,7 @@ Having completed a variety of exercises from various different courses over the 
 **Thoughts:** All files and working environment is now prepared for the entirety of Fundamentals part 2. Activating strict mode in JavaScript is simple and hlds many benefits with very little downside to its use. I will be using strict mode for all of my scripts from now on.
 
 
-### Day 9: February 5, 2022
+### Day 9: February 7, 2022
 
 **Today's Progress**: I completed 50% of sub-section 33 of Section 2: Fundamentals - Part 1. I've taken relevant notes and written a basic function that returns data to the console.
 

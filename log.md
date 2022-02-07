@@ -59,3 +59,10 @@ Having completed a variety of exercises from various different courses over the 
 **Today's Progress**: My hour today was spent setting up the relevant files and completing subsection 32, 'activating strict mode' (first lecture of Fundamentals part 2) in which I learned about the benefits of using strict mode in JavaScript.
 
 **Thoughts:** All files and working environment is now prepared for the entirety of Fundamentals part 2. Activating strict mode in JavaScript is simple and hlds many benefits with very little downside to its use. I will be using strict mode for all of my scripts from now on.
+
+
+### Day 9: February 5, 2022
+
+**Today's Progress**: I completed 50% of sub-section 33 of Section 2: Fundamentals - Part 1. I've taken relevant notes and written a basic function that returns data to the console.
+
+**Thoughts**: Even having only completed 50% of the first lecture on functions, I feel that I have already clarified various grey areas and developed a better understanding. However, the function lectures are siginificantly longer than previous subsection lectures.

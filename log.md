@@ -66,3 +66,11 @@ Having completed a variety of exercises from various different courses over the 
 **Today's Progress**: I completed 50% of sub-section 33 of Section 2: Fundamentals - Part 1. I've taken relevant notes and written a basic function that returns data to the console.
 
 **Thoughts**: Even having only completed 50% of the first lecture on functions, I feel that I have already clarified various grey areas and developed a better understanding. However, the function lectures are siginificantly longer than previous subsection lectures.
+
+### (Unfortunately, Feb 8 was missed due to a medical emergency)
+
+### Day 10: February 9, 2022
+
+**Today's Progress**: 
+
+**Thoughts**: 

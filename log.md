@@ -63,7 +63,7 @@ Having completed a variety of exercises from various different courses over the 
 
 ### Day 9: February 7, 2022
 
-**Today's Progress**: I completed 50% of sub-section 33 of Section 2: Fundamentals - Part 1. I've taken relevant notes and written a basic function that returns data to the console.
+**Today's Progress**: I completed 50% of sub-section 33 of Section 2: Fundamentals - Part 1 on Functions. I've taken relevant notes and written a basic function that returns data to the console.
 
 **Thoughts**: Even having only completed 50% of the first lecture on functions, I feel that I have already clarified various grey areas and developed a better understanding. However, the function lectures are siginificantly longer than previous subsection lectures.
 
@@ -71,6 +71,6 @@ Having completed a variety of exercises from various different courses over the 
 
 ### Day 10: February 9, 2022
 
-**Today's Progress**: 
+**Today's Progress**: I completed sub-section 33 of Section 2: Fundamentals - Part 1 on Functions. I've also started Function declarations vs Function expressons. I've taken relevant notes and written a basic function that returns data to the console.
 
-**Thoughts**: 
+**Thoughts**: After the completion of the lecture on functions, I feel much more confident and knowledgeable on the subject, enough so to continue forward with the course. However, I would definitely like to supplement my knowledge on functions further to concrete that knowledge.

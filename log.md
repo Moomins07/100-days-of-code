@@ -81,9 +81,14 @@ Having completed a variety of exercises from various different courses over the 
 
 ### Day 11: February 22, 2022
 
-**Today's Progress**: I completed sub-section 34 of Section 2: Fundamentals - Part 2 on Functions. Function declarations vs Function expressons completed.
+**Today's Progress**: I completed sub-section 34 of Section 3: Fundamentals - Part 2 on Functions. Function declarations vs Function expressons completed.
 
 **Thoughts**: I now know the difference between declarations and expressions as well as circumstances in which one may be more useful than the other.
 
 
+### Day 12: February 23, 2022
+
+**Today's Progress**: Today was mostly a recap of previous lessons under Section 3 to re-familiarise myself after a long break. I also completed sub-section 35 'arrow functions'.
+
+**Thoughts**: A lesson re-cap felt necessary and I also feel that I will likely re-cap more previous lessons under Section 2. I am not entirely confident on arrow functions yet, I will further research the topic and re-cap the lesson again tomorrow.
 

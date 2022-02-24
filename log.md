@@ -92,3 +92,11 @@ Having completed a variety of exercises from various different courses over the 
 
 **Thoughts**: A lesson re-cap felt necessary and I also feel that I will likely re-cap more previous lessons under Section 2. I am not entirely confident on arrow functions yet, I will further research the topic and re-cap the lesson again tomorrow.
 
+
+### Day 13: February 24, 2022
+
+**Today's Progress**: Today, I completed sub-sections 36-37 of Section 3 Fundamentals part 2. The topics covered were Functions calling other functions and reviewing functions.
+
+**Thoughts**: I feel much more confident in my ability to use and understand functions. However, I certainly feel that I could further develop that knowledge and understanding.
+
+

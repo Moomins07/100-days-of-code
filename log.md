@@ -100,3 +100,11 @@ Having completed a variety of exercises from various different courses over the 
 **Thoughts**: I feel much more confident in my ability to use and understand functions. However, I certainly feel that I could further develop that knowledge and understanding.
 
 
+### Day 14: February 25, 2022
+
+**Today's Progress**: As mentioned in yesterday's thought's log, I decided to spend today re-capping 'reviewing functions' and properly updating my notes on that lesson.
+
+**Thoughts**: I feel that I have in fact further developed my knowledge on functions and now also have very useful notes that I can refer back to if need be.
+
+
+

@@ -107,4 +107,18 @@ Having completed a variety of exercises from various different courses over the 
 **Thoughts**: I feel that I have in fact further developed my knowledge on functions and now also have very useful notes that I can refer back to if need be.
 
 
+### Day 15: February 26, 2022
+
+**Today's Progress**: I completed the first coding challenge of Section 3 Fundamentals part 2. In the challenge, I was required to create multiple functions to fulfil certain tasks. This included using arrow functions, functions expressions, functins within functions and also an if-else statement. 
+
+**Thoughts**: Having finally put the knowledge and studying to use has greatly increased my confidence in the use of functions. I feel condfident moving on.
+
+
+### Day 16: February 27, 2022
+
+**Today's Progress**: Started sub-section 39 - introduction to arrays. Completed 50% of the lecture, continuing tomorrow. Script and notes up-to-date so far. 
+
+**Thoughts**: I had briefly covered arrays in previous courses, no issues so far. I'm looking forward to honing my understanding of arrays.
+
+
 

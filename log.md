@@ -121,4 +121,19 @@ Having completed a variety of exercises from various different courses over the 
 **Thoughts**: I had briefly covered arrays in previous courses, no issues so far. I'm looking forward to honing my understanding of arrays.
 
 
+### Day 17: February 28, 2022
+
+**Today's Progress**: Completed sub-section 39 - introduction to arrays. Script and notes up-to-date. 
+
+**Thoughts**: I had briefly covered arrays in previous courses, no issues so far. I'm looking forward to honing my understanding of arrays.
+
+
+### Day 18: March 2, 2022
+
+**Today's Progress**: Completed sub-section 40 - Basic array operations (Methods). Script and notes up-to-date.
+
+**Thoughts**: I had briefly covered array operations in previous courses, again, no issues so far. I'm confident in my ability to apply methods to my arrays.
+
+
+
 

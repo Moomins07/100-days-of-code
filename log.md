@@ -135,5 +135,12 @@ Having completed a variety of exercises from various different courses over the 
 **Thoughts**: I had briefly covered array operations in previous courses, again, no issues so far. I'm confident in my ability to apply methods to my arrays.
 
 
+(Break taken for medical reasons)
 
+
+## Day 19: March 25, 2022
+
+**Today's Progress**: Completed sub-sections 41 - 43. Coding Challenge #2 of this section, Introduction to Objects and finally dot vs bracket notations.
+
+**Thoughts**: I found coding challenge #2 to be a little difficult due to the break that I had taken and required a recap of previous lessons to complete. Objects are new to me, though I did find the lessons easy to follow and managed to complete a mini-coding challenge on objects without issue.  I feel that I need to re-familiarise myself with arrays and continue to research more in objects. I will achieve this by using other resources such a MDN.
 

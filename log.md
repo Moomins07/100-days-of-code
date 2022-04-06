@@ -144,3 +144,9 @@ Having completed a variety of exercises from various different courses over the 
 
 **Thoughts**: I found coding challenge #2 to be a little difficult due to the break that I had taken and required a recap of previous lessons to complete. Objects are new to me, though I did find the lessons easy to follow and managed to complete a mini-coding challenge on objects without issue.  I feel that I need to re-familiarise myself with arrays and continue to research more in objects. I will achieve this by using other resources such a MDN.
 
+
+## Day 20: April 01, 2022
+
+**Today's Progress**: Completed sub-sections 44 - 45. Coding Challenge #3 of this section and an introduction to Object methods.
+
+**Thoughts**: I found the object methods lecture easy to follow and did not find myself having to repeat many sections except to take notes. Whilst I left the lecture feeling confident, I would like to further my knowledge on object methods to solidify that knowledge. As for the coding challenge, I managed to complete all challenges without difficulty, however, I did find myself having to return to the video to clarify how I would insert certain data in a template literal.

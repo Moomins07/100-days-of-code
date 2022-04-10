@@ -150,3 +150,10 @@ Having completed a variety of exercises from various different courses over the 
 **Today's Progress**: Completed sub-sections 44 - 45. Coding Challenge #3 of this section and an introduction to Object methods.
 
 **Thoughts**: I found the object methods lecture easy to follow and did not find myself having to repeat many sections except to take notes. Whilst I left the lecture feeling confident, I would like to further my knowledge on object methods to solidify that knowledge. As for the coding challenge, I managed to complete all challenges without difficulty, however, I did find myself having to return to the video to clarify how I would insert certain data in a template literal.
+
+
+## Day 21: April 09, 2022
+
+**Today's Progress**: Completed sub-section 46. Iteration: the for loop.
+
+**Thoughts**: Followed the lecture without issue and found it to be quite straight forward, I had previously covered loops in a past course. I will continue to further research for loops to see further use of this particular loop.

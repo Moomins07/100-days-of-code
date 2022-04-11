@@ -157,3 +157,10 @@ Having completed a variety of exercises from various different courses over the 
 **Today's Progress**: Completed sub-section 46. Iteration: the for loop.
 
 **Thoughts**: Followed the lecture without issue and found it to be quite straight forward, I had previously covered loops in a past course. I will continue to further research for loops to see further use of this particular loop.
+
+
+## Day 22: April 11, 2022
+
+**Today's Progress**: Completed sub-section 47. Looping Arrays, Breaking and Continuing.
+
+**Thoughts**: I completed the lecture without any problems but, again, I feel that I can further develop my knowledge on this particular subject. I do not feel completely confident as of yet.

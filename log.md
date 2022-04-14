@@ -164,3 +164,11 @@ Having completed a variety of exercises from various different courses over the 
 **Today's Progress**: Completed sub-section 47. Looping Arrays, Breaking and Continuing.
 
 **Thoughts**: I completed the lecture without any problems but, again, I feel that I can further develop my knowledge on this particular subject. I do not feel completely confident as of yet.
+
+
+## Day 23: April 12, 2022
+
+**Today's Progress**: Completed sub-section 48. Looping backwards and loops in loops.
+
+**Thoughts**: Again, I feel that I completed the lecture and followed along without difficulty. However, it is a subject that I'd like to develop more confidence in. I will further research this particular topic, especially loops inside of loops.
+

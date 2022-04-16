@@ -172,3 +172,9 @@ Having completed a variety of exercises from various different courses over the 
 
 **Thoughts**: Again, I feel that I completed the lecture and followed along without difficulty. However, it is a subject that I'd like to develop more confidence in. I will further research this particular topic, especially loops inside of loops.
 
+
+## Day 24: April 15, 2022
+
+**Today's Progress**: Completed sub-section 49 and coding challenge #4, the last of this section.
+
+**Thoughts**: I completed the while loop lecture and followed along without any difficulty though I am not fully confident in my ability to use while loops appropriately. I completed the coding challenge in decent time, though I found myself stuck on the bonus challenge that required me to create a function that calculated the average of a sum of numbers in an array. I decided to re-do the challenge later to re-test myself and found that I was able to complete the challenge without issue. 

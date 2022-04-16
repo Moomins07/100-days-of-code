@@ -67,7 +67,6 @@ Having completed a variety of exercises from various different courses over the 
 
 **Thoughts**: Even having only completed 50% of the first lecture on functions, I feel that I have already clarified various grey areas and developed a better understanding. However, the function lectures are siginificantly longer than previous subsection lectures.
 
-### (Unfortunately, Feb 8 was missed due to a medical emergency)
 
 ### Day 10: February 9, 2022
 
@@ -178,3 +177,12 @@ Having completed a variety of exercises from various different courses over the 
 **Today's Progress**: Completed sub-section 49 and coding challenge #4, the last of this section.
 
 **Thoughts**: I completed the while loop lecture and followed along without any difficulty though I am not fully confident in my ability to use while loops appropriately. I completed the coding challenge in decent time, though I found myself stuck on the bonus challenge that required me to create a function that calculated the average of a sum of numbers in an array. I decided to re-do the challenge later to re-test myself and found that I was able to complete the challenge without issue. 
+
+### 03-Fundamentals-Part-2 [COMPLETE]
+
+### 05-Developer Skills and Editor Setup [START]
+## Day 25: April 16, 2022
+
+**Today's Progress**: Further configured VSCode for quality of life purposes. This included downloading an extension for VSCode called Prettier that formats and manages code. I then also set up my first User Snippet that automates typing console.log() through the use of abbreviated prefixes. Lastly, I downloaded another extension called TODOhighlight that can highlight certain prefixes, again just for QoL.
+
+**Thoughts**: Followed the lecture and steps without any difficulty, VSCode has been set up according to the instructions that I followed during the lecture. However, I did get stuck for a significant period of time when trying to configure and customise TODO Highlight via the .json settings. Thankfully, I eventually found the issue and made the changes I wanted.

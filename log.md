@@ -186,3 +186,10 @@ Having completed a variety of exercises from various different courses over the 
 **Today's Progress**: Further configured VSCode for quality of life purposes. This included downloading an extension for VSCode called Prettier that formats and manages code. I then also set up my first User Snippet that automates typing console.log() through the use of abbreviated prefixes. Lastly, I downloaded another extension called TODOhighlight that can highlight certain prefixes, again just for QoL.
 
 **Thoughts**: Followed the lecture and steps without any difficulty, VSCode has been set up according to the instructions that I followed during the lecture. However, I did get stuck for a significant period of time when trying to configure and customise TODO Highlight via the .json settings. Thankfully, I eventually found the issue and made the changes I wanted.
+
+
+## Day 26: April 17, 2022
+
+**Today's Progress**: Today I furthered configured my developer environment and installed a VSCode extension called 'Live Server' of which updates my browser console upon saving my code, removing the need to refresh my browser every time I save. I took this one step further and installed 'Nodejs' which essentially does the same thing as Live Server with the addition of terminal commands and more customisation.
+
+**Thoughts**: The lecture was easy to follow though I had a few issues whilst installing Nodejs. I was informed of high severity warnings upon installation that I was unable to fix by following the in-terminal steps, though I'm still able to use Nodejs. I also had issues using Git when I closed a terminal performing tasks prematurely. This was resolved by deleting the index.lock file in the .git folder. I still need to find out which Node files are worth pushing to a repository on Github as for now I have not done so.

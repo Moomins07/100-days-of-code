@@ -193,3 +193,31 @@ Having completed a variety of exercises from various different courses over the 
 **Today's Progress**: Today I furthered configured my developer environment and installed a VSCode extension called 'Live Server' of which updates my browser console upon saving my code, removing the need to refresh my browser every time I save. I took this one step further and installed 'Nodejs' which essentially does the same thing as Live Server with the addition of terminal commands and more customisation.
 
 **Thoughts**: The lecture was easy to follow though I had a few issues whilst installing Nodejs. I was informed of high severity warnings upon installation that I was unable to fix by following the in-terminal steps, though I'm still able to use Nodejs. I also had issues using Git when I closed a terminal performing tasks prematurely. This was resolved by deleting the index.lock file in the .git folder. I still need to find out which Node files are worth pushing to a repository on Github as for now I have not done so.
+
+
+## Day 27: April 29, 2022
+
+**Today's Progress**: Today I completed a few more sub-sections including 'Learning how to code' and 'How to think like a developer'
+
+**Thoughts**: Not much to say here as the lectures mostly covered short presentations outlining common issues that new programmers face. I did however take a lot away from these 2 lectures in particular as I am now more selfaware of bad habits and practices that can easily be avoided. Definitely given me a fresher perspective.
+
+
+## Day 28: May 01, 2022
+
+**Today's Progress**: More developer skill sub sections 'Using Google, Stackoverflow and MDN' and 'Debugging (Fixing errors)'.
+
+**Thoughts**: The first lecture essentially just covered using online resources to solve programming problems, which is something that I'm very familiar/confident with. The Debugging lecture was very informative and gave me a new way of looking at errors/bugs. The lecture covered an optimal way of tackling those errors using the Identify > Find > Fix > Prevent steps. 
+
+
+## Day 29: May 02, 2022
+
+**Today's Progress**: Following yesterday's lecture on Debugging, I completed sub section 'Debugging with the console and breakpoints' which dives deeper into finding and tackling errors more effectively using the console.
+
+**Thoughts**: I can see that using the console and breakpoints effectively is certainly a skill in itself. I am not confident in using the console and breakpoints but I now have a broad idea as to how to use these tools to my advantage.
+
+
+## Day 30: May 03, 2022
+
+**Today's Progress**: Today I completed a Coding Challenge at the end of the Developer Skills and Editor setup section.
+
+**Thoughts**: The coding challenge covered what had previously been learned in this section and emphasised on problem-solving. My first attempt at the challenge worked, however, it did not provide the *exact* result (function needed to output multiple strings on one single line, my code printed strings on a different line each iteration of loop). This was solved by creating an empty string variable and updating that string variable with each iteration of a loop. I enjoyed this challenge a lot and found myself going outside of the challenge requirements to further develop my function.

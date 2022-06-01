@@ -221,3 +221,26 @@ Having completed a variety of exercises from various different courses over the 
 **Today's Progress**: Today I completed a Coding Challenge at the end of the Developer Skills and Editor setup section.
 
 **Thoughts**: The coding challenge covered what had previously been learned in this section and emphasised on problem-solving. My first attempt at the challenge worked, however, it did not provide the *exact* result (function needed to output multiple strings on one single line, my code printed strings on a different line each iteration of loop). This was solved by creating an empty string variable and updating that string variable with each iteration of a loop. I enjoyed this challenge a lot and found myself going outside of the challenge requirements to further develop my function.
+
+### 05-Developer Skills and Editor Setup [COMPLETE]
+
+
+## Day 30-35: May 10-15, 2022
+
+**Today's Progress**: During this time, I decided to re-familiarise myself and re-complete every coding challenge that I had faced in the course until now. 
+
+**Thoughts**: Re-completing the coding challenges very eye-opening for me. Some of the challenges still had me stuck for a small period of time, as I had forgotten a few basic concepts. However, I was able to overcome every coding challenge whilst also further developing my code and in fact making it more efficient. I was then able to compare the code I was able to produce now with the previously written coding challenges. 
+
+
+### 06-HTML & CSS Crash course [START]
+
+## Day 36: May 18, 2022
+
+**Today's Progress**: During this time, I decided to re-familiarise myself and re-complete every coding challenge that I had faced in the course until now. 
+
+**Thoughts**: Re-completing the coding challenges very eye-opening for me. Some of the challenges still had me stuck for a small period of time, as I had forgotten a few basic concepts. However, I was able to overcome every coding challenge whilst also further developing my code and in fact making it more efficient. I was then able to compare the code I was able to produce now with the previously written coding challenges. 
+
+
+
+
+

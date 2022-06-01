@@ -236,11 +236,19 @@ Having completed a variety of exercises from various different courses over the 
 
 ## Day 36: May 18, 2022
 
-**Today's Progress**: During this time, I decided to re-familiarise myself and re-complete every coding challenge that I had faced in the course until now. 
+**Today's Progress**: Today I completed sub-setions 63, 64 and 65. This included a section intro, basic html structure & elements and lastly attributes, classes and IDs.
 
-**Thoughts**: Re-completing the coding challenges very eye-opening for me. Some of the challenges still had me stuck for a small period of time, as I had forgotten a few basic concepts. However, I was able to overcome every coding challenge whilst also further developing my code and in fact making it more efficient. I was then able to compare the code I was able to produce now with the previously written coding challenges. 
-
-
+**Thoughts**: Previous to beginning this Udemy course, I had spent a significant amount of time using HTML and CSS. I am very familiar with these subjects and I did not spend longer than necessary on this section. There were a few concepts I had forgotten and this short crash course once again has me up to speed.
 
 
+## Day 37: May 19, 2022
+
+**Today's Progress**: I completed the last 2 sub-sections of the HTML crash course 66 & 67 which included basic styling with CSS and Introduction to the CSS box model.
+
+**Thoughts**: Again, I am very familiar with HTML and CSS and I did not have any issues following the lectures. There were once again a few syntax that I had forgotten about such as border-box. The lecturer kept this section very brief.
+
+### 06-HTML & CSS Crash course [COMPLETE]
+
+
+### 07-JavaScript in the Browser: DOM and Events Fundamentals   [START]
 

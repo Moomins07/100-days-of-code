@@ -252,3 +252,9 @@ Having completed a variety of exercises from various different courses over the 
 
 ### 07-JavaScript in the Browser: DOM and Events Fundamentals   [START]
 
+## Day 38: May 27, 2022
+
+**Today's Progress**: I completed sub-sections 68 - 71 which included 'section intro', 'section roadmap', 'PROJECT#1 Guess my number!' and 'What's the DOM & DOM manipulation'.
+
+**Thoughts**: Having spent the last few months mostly focussing on the application of fundamentals in VSCode, it's a breath of fresh air to finally see my code applied to something that I can visually see working in the DOM. It's a very basic project that uses simple logic wherein the user has to try and guess a pre-determined number between 1-100. The user will then be told if the number is too low, too high or correct. There is also a simple score counter that reduces by 1 from 20 every time the user guesses incorrectly. So far, I have thoroughly enjoyed learning about the DOM and manipulation in the DOM.
+

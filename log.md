@@ -225,7 +225,7 @@ Having completed a variety of exercises from various different courses over the 
 ### 05-Developer Skills and Editor Setup [COMPLETE]
 
 
-## Day 30-35: May 10-15, 2022
+## Day 30-37: May 10-17, 2022
 
 **Today's Progress**: During this time, I decided to re-familiarise myself and re-complete every coding challenge that I had faced in the course until now. 
 
@@ -234,14 +234,14 @@ Having completed a variety of exercises from various different courses over the 
 
 ### 06-HTML & CSS Crash course [START]
 
-## Day 36: May 18, 2022
+## Day 38: May 18, 2022
 
 **Today's Progress**: Today I completed sub-setions 63, 64 and 65. This included a section intro, basic html structure & elements and lastly attributes, classes and IDs.
 
 **Thoughts**: Previous to beginning this Udemy course, I had spent a significant amount of time using HTML and CSS. I am very familiar with these subjects and I did not spend longer than necessary on this section. There were a few concepts I had forgotten and this short crash course once again has me up to speed.
 
 
-## Day 37: May 19, 2022
+## Day 39: May 19, 2022
 
 **Today's Progress**: I completed the last 2 sub-sections of the HTML crash course 66 & 67 which included basic styling with CSS and Introduction to the CSS box model.
 
@@ -252,14 +252,14 @@ Having completed a variety of exercises from various different courses over the 
 
 ### 07-JavaScript in the Browser: DOM and Events Fundamentals   [START]
 
-## Day 38: May 27, 2022
+## Day 40: May 27, 2022
 
 **Today's Progress**: I completed sub-sections 68 - 71 which included 'section intro', 'section roadmap', 'PROJECT#1 Guess my number!' and 'What's the DOM & DOM manipulation'.
 
 **Thoughts**: Having spent the last few months mostly focussing on the application of fundamentals in VSCode, it's a breath of fresh air to finally see my code applied to something that I can visually see working in the DOM. It's a very basic project that uses simple logic wherein the user has to try and guess a pre-determined number between 1-100. The user will then be told if the number is too low, too high or correct. There is also a simple score counter that reduces by 1 from 20 every time the user guesses incorrectly. So far, I have thoroughly enjoyed learning about the DOM and manipulation in the DOM.
 
 
-## Day 39: May 31, 2022
+## Day 41: May 31, 2022
 
 **Today's Progress**: I completed sub-sections 72 & 73 which included 'Selecting and Manipulating Elements' and 'Handling Click Events'.
 

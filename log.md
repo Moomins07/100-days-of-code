@@ -258,3 +258,10 @@ Having completed a variety of exercises from various different courses over the 
 
 **Thoughts**: Having spent the last few months mostly focussing on the application of fundamentals in VSCode, it's a breath of fresh air to finally see my code applied to something that I can visually see working in the DOM. It's a very basic project that uses simple logic wherein the user has to try and guess a pre-determined number between 1-100. The user will then be told if the number is too low, too high or correct. There is also a simple score counter that reduces by 1 from 20 every time the user guesses incorrectly. So far, I have thoroughly enjoyed learning about the DOM and manipulation in the DOM.
 
+
+## Day 39: May 31, 2022
+
+**Today's Progress**: I completed sub-sections 72 & 73 which included 'Selecting and Manipulating Elements' and 'Handling Click Events'.
+
+**Thoughts**: Again, focussing on the Guess my number game, the lecturer went into further detail as to how to select certain elements on the page and how we may go about manipulating that element. I have now also began to use the eventListener method, allowing the user to interact with the webpage and to produce a reaction from that event. Fun stuff!
+

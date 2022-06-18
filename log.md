@@ -279,3 +279,10 @@ Having completed a variety of exercises from various different courses over the 
 
 **Thoughts**: In the first lecture, I learned how to make changes to the styling of the webpage through the use of JavaScript to manipulate the DOM. Quite a straight forward lecture, fun to see visual changes being made to the website through eventListeners.
 Secondly, I completed a Coding Challenge wherein I was asked to create a 'reset' button for the game. Essentially I was required to restore initial values, such as clearing the form input box and resetting the score. No issues here, completed quite quickly.
+
+
+## Day 44: July 07, 2022
+
+**Today's Progress**: I completed sub-sections 77, 78 and 79. 'Implementing highscores', 'Refactoring our code, DRY principle' and 'Project #2: Modal window'.
+
+**Thoughts**: Implementing highscores was quite straight forward in the fact that it was essentially applying typical if-else logic to ensure that the highscore persisted through game resets too. 'Refactoring our code' was a very interesting lecture as it delved into much greater detail with regards to 'Don't Repeat Yourself(DRY)', which entailed taking repeated code and placing it in a function. Lastly, Project#2 Modal window was a very fun, and very important lecture as it was the first glimpse at using classList to add, remove and even toggle CSS classes on certain DOM elements. Overall, I found all of the lectures very enjoyable and easy to follow. 

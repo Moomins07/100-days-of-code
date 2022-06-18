@@ -266,14 +266,14 @@ Having completed a variety of exercises from various different courses over the 
 **Thoughts**: Again, focussing on the Guess my number game, the lecturer went into further detail as to how to select certain elements on the page and how we may go about manipulating that element. I have now also began to use the eventListener method, allowing the user to interact with the webpage and to produce a reaction from that event. Fun stuff!
 
 
-## Day 42: July 01, 2022
+## Day 42: June 01, 2022
 
 **Today's Progress**: I completed sub-section 74 'Implementing the game logic'.
 
 **Thoughts**: This was a particularly fun lecture as I finally began to code the logic into the number guessing game. This entailed using if-else statements and also required me to use an if statement within an if-else statement for the first time. Overall, a very enjoyable lesson.
 
 
-## Day 43: July 05, 2022
+## Day 43: June 05, 2022
 
 **Today's Progress**: I completed sub-sections 75 & 76 'Manipulating CSS styles' and 'Coding Challenge #1'.
 
@@ -281,7 +281,7 @@ Having completed a variety of exercises from various different courses over the 
 Secondly, I completed a Coding Challenge wherein I was asked to create a 'reset' button for the game. Essentially I was required to restore initial values, such as clearing the form input box and resetting the score. No issues here, completed quite quickly.
 
 
-## Day 44: July 07, 2022
+## Day 44: June 07, 2022
 
 **Today's Progress**: I completed sub-sections 77, 78 and 79. 'Implementing highscores', 'Refactoring our code, DRY principle' and 'Project #2: Modal window'.
 

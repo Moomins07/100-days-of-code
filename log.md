@@ -180,6 +180,8 @@ Having completed a variety of exercises from various different courses over the 
 
 ### 03-Fundamentals-Part-2 [COMPLETE]
 
+# Section 04 N/A [Course navigation]
+
 ### 05-Developer Skills and Editor Setup [START]
 ## Day 25: April 16, 2022
 

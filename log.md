@@ -1,6 +1,6 @@
 # 100 Days Of Code - Log
 
-Having completed a variety of exercises from various different courses over the last few months, I have decided to begin a JavaScript Udemy course from scratch and it is my goal to complete the course in it's entirety by the end of my 100days-of-code challenge. I believe that, by doing so, I will not only streamline my learning experience, but I will also set myself a clear goal/path that is realistic within the time frame that I have set. I am coding along with my lecturer, taking notes and completing ALL of the coding challenges presented to me in the course. You can find my notes and follow-along code here: https://github.com/Moomins07/udemy-course-notes.
+Having completed a variety of exercises from various different courses over the last few months, I have decided to begin a JavaScript Udemy course from scratch and it is my goal to complete the course in it's entirety by the end of my 100days-of-code challenge. I believe that, by doing so, I will not only streamline my learning experience, but I will also set myself a clear goal/path that is realistic within the time frame that I have set. I am coding along with my lecturer, taking notes and completing ALL of the coding challenges presented to me in the course. You can find my notes and code here: https://github.com/Moomins07/udemy-course-notes.
 
 ### Day 1: January 30, 2022 
 ### 01-Fundamentals-Part-1 [START]
@@ -286,3 +286,12 @@ Secondly, I completed a Coding Challenge wherein I was asked to create a 'reset'
 **Today's Progress**: I completed sub-sections 77, 78 and 79. 'Implementing highscores', 'Refactoring our code, DRY principle' and 'Project #2: Modal window'.
 
 **Thoughts**: Implementing highscores was quite straight forward in the fact that it was essentially applying typical if-else logic to ensure that the highscore persisted through game resets too. 'Refactoring our code' was a very interesting lecture as it delved into much greater detail with regards to 'Don't Repeat Yourself(DRY)', which entailed taking repeated code and placing it in a function. Lastly, Project#2 Modal window was a very fun, and very important lecture as it was the first glimpse at using classList to add, remove and even toggle CSS classes on certain DOM elements. Overall, I found all of the lectures very enjoyable and easy to follow. 
+
+
+## Day 45: June 08, 2022
+
+**Today's Progress**: I completed sub-sections 80 and 81. 'Working with classes' & "Handling an 'Esc' Keypress event".
+
+**Thoughts**: Learning to make the website interactable is very enjoyable. In 'Working with classes', I learned how to use classList to both remove and add a class to an element to achieve the required effect. I need to remember that when using classList, I did not need to add a dot/fullstop at the beginning of the class name. 
+E.g. "hidden" NOT ".hidden". In the "Handling an 'Esc' Keypress event" lecture, I learned how to make an element react to a keypress, or more specifically, a 'keydown' event. The most important piece of information that I learned during this lecture is how to specifically tell JavaScript which key we want it to execute on by using and accessing the event handler function. Obviously, I have not even scratched the surface as to the possibilities using the event handler function.
+

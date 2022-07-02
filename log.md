@@ -325,3 +325,10 @@ Lastly, 'Switching the Active Player' was more complex as I stored the 'players'
 
 **Thoughts**: I am excited to further my understanding and knowledge of JavaScript with the upcoming theory lectures, but there was a lot of information to retain during these lectures. 
 In 'A High Level Overview of JavaScript' the lecturer briefly explains a variety of topics related to the functionality of JavaScript, such as what 'high level' means. Progressively in the following two lectures, sections 90 and 91, the lecturer begins to explain the topics mentioned in the first lecture in greater detail. I am using flash cards to help retain the information that I have learned during these lectures. I definitely have a better understanding as to how JavaScript works behind the scenes, I just hope I remember all of the information!
+
+
+## Day 49: June 12, 2022
+
+**Today's Progress**: I completed sub-sections [92, 93 & 94. 'Scope and The Scope Chain', 'Scoping in Practice' and 'Variable Environment: Hoisting and The TDZ'.
+
+**Thoughts**: I can see just how important it is for a developer to have a greater understanding of the Scope Chain in JavaScript, especially since there are very subtle but important changes to the scope that can occur. As for scoping, I will absolutely return to my notes and re-watch the lectures to ensure that I have solidified my understanding of the scope as I am not entirely confident. 'Hoisting and The TDZ' was also a very important lecture that I will return to in the future, I am confident now however that I won't ever be using 'var' to declare my variables! Overall, I have a much better understanding as to how Scoping and the TDZ work, but I feel that I can further my knowledge and become even more confident on the subject.

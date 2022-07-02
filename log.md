@@ -340,9 +340,10 @@ In 'A High Level Overview of JavaScript' the lecturer briefly explains a variety
 
 **Thoughts**: It is clear that an understanding of 'Hoisting and The TDZ' is important. It is a lecture that I will return to in the future, but I am confident now however that I won't ever be using 'var' to declare my variables! 'TDZ in practice' really displayed just how finicky JS can be when it comes to hoisting. I feel confident on the subject, but as mentioned above, I will be returning to the lectures to further solidify my understanding.
 
+## [Please note that around this time, I have begun to spend less time taking notes and spend more time commenting my code in place of. Refer to script.js in the 'starter' folders.]
 
 ## Day 51: June 14, 2022
 
 **Today's Progress**: I completed sub-sections 96, 97 and 98. 'The this Keyword', 'The this Keyword in Practice' & 'Regular Functions vs. Arrow Functions'.
 
-**Thoughts**: It is clear that 
+**Thoughts**: I have a much better understanding of the 'this' keyword, but I am by no means confident on its use, especially when used with arrow functions due to its interaction with the scope. In 'Regular functions vs. Arrow Functions', I essentially learned that it is generally best practice not to use an arrow function for a method, as arrow functions don't have access to their own 'this' keyword. Again, I am not confident and I will return to the lectures in the future.

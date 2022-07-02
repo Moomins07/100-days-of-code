@@ -52,9 +52,9 @@ Having completed a variety of exercises from various different courses over the 
 
 ### 01-Fundamentals-Part-1 [COMPLETE]
 
-
-### Day 8: February 6, 2022 
+ 
 ### 01-Fundamentals-Part-2 [START]
+### Day 8: February 6, 2022
 
 **Today's Progress**: My hour today was spent setting up the relevant files and completing subsection 32, 'activating strict mode' (first lecture of Fundamentals part 2) in which I learned about the benefits of using strict mode in JavaScript.
 
@@ -235,7 +235,6 @@ Having completed a variety of exercises from various different courses over the 
 
 
 ### 06-HTML & CSS Crash course [START]
-
 ## Day 38: May 18, 2022
 
 **Today's Progress**: Today I completed sub-setions 63, 64 and 65. This included a section intro, basic html structure & elements and lastly attributes, classes and IDs.
@@ -253,7 +252,6 @@ Having completed a variety of exercises from various different courses over the 
 
 
 ### 07-JavaScript in the Browser: DOM and Events Fundamentals   [START]
-
 ## Day 40: May 27, 2022
 
 **Today's Progress**: I completed sub-sections 68 - 71 which included 'section intro', 'section roadmap', 'PROJECT#1 Guess my number!' and 'What's the DOM & DOM manipulation'.
@@ -320,7 +318,6 @@ Lastly, 'Switching the Active Player' was more complex as I stored the 'players'
 
 
 ### 08-How JavaScript Works Behind the Scenes   [START]
-
 ## Day 48: June 11, 2022
 
 **Today's Progress**: I completed sub-sections [87, 88 (Section intro and roadmap)], 89, 90 and 91. 'A High-Level Overview of JavaScript', 'The JavaScript Engine and Runtime' and 'Execution Contexts and The Call Stack'.
@@ -362,7 +359,6 @@ In 'A High Level Overview of JavaScript' the lecturer briefly explains a variety
 ## [PC brokedown for several weeks]
 
 ### 09-Data Structures, Modern Operators and Strings    [START]
-
 ## Day 53: July 02, 2022
 
 **Today's Progress**: 

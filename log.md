@@ -347,3 +347,22 @@ In 'A High Level Overview of JavaScript' the lecturer briefly explains a variety
 **Today's Progress**: I completed sub-sections 96, 97 and 98. 'The this Keyword', 'The this Keyword in Practice' & 'Regular Functions vs. Arrow Functions'.
 
 **Thoughts**: I have a much better understanding of the 'this' keyword, but I am by no means confident on its use, especially when used with arrow functions due to its interaction with the scope. In 'Regular functions vs. Arrow Functions', I essentially learned that it is generally best practice not to use an arrow function for a method, as arrow functions don't have access to their own 'this' keyword. Again, I am not confident and I will return to the lectures in the future.
+
+
+## Day 52: June 15, 2022
+
+**Today's Progress**: I completed sub-sections 99 & 100. 'Primitives vs Objects (Primitives vs. Reference Types)' & 'Primitives vs. Objects in Practice'.
+
+**Thoughts**: Both of these lectures were extremely interesting as I finally learned about the Call Stack and Heap in greater detail. I now understand that an object is stored and called from the heap using a reference to that piece of memory in the heap. (Hence reference type). This is why we cannot simply just copy an object into a new identifier and make changes, it's still the same reference. We have to use the 'assign' method to copy at a 'shallow level'. Overall, although I am not entirely confident on all the subjects covered in this section, I am very happy with my progress so far.
+
+### 08-How JavaScript Works Behind the Scenes   [COMPLETE]
+
+# [PC brokedown for several weeks]
+
+### 09-Data Structures, Modern Operators and Strings    [START]
+
+## Day 53: July 02, 2022
+
+**Today's Progress**: 
+
+**Thoughts**: 

@@ -308,3 +308,8 @@ Much easier to follow!
 Lastly, 'Switching the Active Player' was more complex as I stored the 'players' in an Array as player 0 and player 1 due to Arrays being 0-based. It was also in this lecture that I've begun to see just how useful template literals are and the potential they have to make code easier and cleaner. I certainly haven't retained all of the information in this lecture but it's been a very educational one regardless.
 
 
+## Day 47: June 10, 2022
+
+**Today's Progress**: I completed sub-sections 85 & 86. 'Holding Current Score' and ' Resetting the Game'.
+
+**Thoughts**: In 'Holding the Current Score', I have begun to comment my code more in a way that I'm breaking down what I want the function to do in steps before I start adding code. The rest of the lecture was mostly coding logic and refactoring our code. I also used a Boolean here for the first time to disallow the user from interacting with the game when a winner is declared. 'Resetting the Game' was more of a coding challenge than it was a lecture as I was required to code the conditions to bring the game back to its 'starting conditions'. It was during this lecture that I declared empty global variables for the first time due to scope.

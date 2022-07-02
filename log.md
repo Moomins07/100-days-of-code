@@ -329,6 +329,13 @@ In 'A High Level Overview of JavaScript' the lecturer briefly explains a variety
 
 ## Day 49: June 12, 2022
 
-**Today's Progress**: I completed sub-sections [92, 93 & 94. 'Scope and The Scope Chain', 'Scoping in Practice' and 'Variable Environment: Hoisting and The TDZ'.
+**Today's Progress**: I completed sub-sections 92 & 93. 'Scope and The Scope Chain' and 'Scoping in Practice'.
 
-**Thoughts**: I can see just how important it is for a developer to have a greater understanding of the Scope Chain in JavaScript, especially since there are very subtle but important changes to the scope that can occur. As for scoping, I will absolutely return to my notes and re-watch the lectures to ensure that I have solidified my understanding of the scope as I am not entirely confident. 'Hoisting and The TDZ' was also a very important lecture that I will return to in the future, I am confident now however that I won't ever be using 'var' to declare my variables! Overall, I have a much better understanding as to how Scoping and the TDZ work, but I feel that I can further my knowledge and become even more confident on the subject.
+**Thoughts**: I can see just how important it is for a developer to have a greater understanding of the Scope Chain in JavaScript, especially since there are very subtle but important changes to the scope that can occur. As for scoping, I will absolutely return to my notes and re-watch the lectures to ensure that I have solidified my understanding of the scope as I am not entirely confident. Overall, I have a much better understanding as to how Scoping works, but I feel that I can further my knowledge and become even more confident on the subject.
+
+
+## Day 50: June 13, 2022
+
+**Today's Progress**: I completed sub-sections 94 & 95 'Variable Environment: Hoisting and The TDZ' and 'Hoisting and TDZ in Practice'.
+
+**Thoughts**: It is clear that an understanding of 'Hoisting and The TDZ' is important. It is a lecture that I will return to in the future, but I am confident now however that I won't ever be using 'var' to declare my variables! 'TDZ in practice' really displayed just how finicky JS can be when it comes to hoisting. I feel confident on the subject, but as mentioned above, I will be returning to the lectures to further solidify my understanding.

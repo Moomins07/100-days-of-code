@@ -180,7 +180,7 @@ Having completed a variety of exercises from various different courses over the 
 
 ### 03-Fundamentals-Part-2 [COMPLETE]
 
-# Section 04 N/A [Course navigation]
+## Section 04 N/A [Course navigation]
 
 ### 05-Developer Skills and Editor Setup [START]
 ## Day 25: April 16, 2022
@@ -359,7 +359,7 @@ In 'A High Level Overview of JavaScript' the lecturer briefly explains a variety
 
 ### 08-How JavaScript Works Behind the Scenes   [COMPLETE]
 
-# [PC brokedown for several weeks]
+## [PC brokedown for several weeks]
 
 ### 09-Data Structures, Modern Operators and Strings    [START]
 

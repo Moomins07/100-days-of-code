@@ -295,3 +295,16 @@ Secondly, I completed a Coding Challenge wherein I was asked to create a 'reset'
 **Thoughts**: Learning to make the website interactable is very enjoyable. In 'Working with classes', I learned how to use classList to both remove and add a class to an element to achieve the required effect. I need to remember that when using classList, I did not need to add a dot/fullstop at the beginning of the class name. 
 E.g. "hidden" NOT ".hidden". In the "Handling an 'Esc' Keypress event" lecture, I learned how to make an element react to a keypress, or more specifically, a 'keydown' event. The most important piece of information that I learned during this lecture is how to specifically tell JavaScript which key we want it to execute on by using and accessing the event handler function. Obviously, I have not even scratched the surface as to the possibilities using the event handler function.
 
+
+## Day 46: June 09, 2022
+
+**Today's Progress**: I completed sub-sections 82, 83 and 84. 'Project #3: Pig Game', 'Rolling the Dice' and 'Switching the Active Player'.
+
+**Thoughts**: There was a lot to cover in these 3 lectures and it took a significant amount of time to complete them. In 'Project #3: Pig game', I covered the overall game concept, logic/pseudo code and certain code statements. I have now begun to store querySelectors/getElementById in variables to make recalling them easier and code cleaner. 'Rolling the Dice' was a fun lecture. It was during this lecture that I coded the functionality of the dice rolling using a flow chart to better understand what is required. E.g. My notes state the following: 
+Step 1: Generate random number.
+Step 2: Display that Dice number.
+Step 3: Roll conditions.
+Much easier to follow!
+Lastly, 'Switching the Active Player' was more complex as I stored the 'players' in an Array as player 0 and player 1 due to Arrays being 0-based. It was also in this lecture that I've begun to see just how useful template literals are and the potential they have to make code easier and cleaner. I certainly haven't retained all of the information in this lecture but it's been a very educational one regardless.
+
+

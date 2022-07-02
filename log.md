@@ -313,3 +313,15 @@ Lastly, 'Switching the Active Player' was more complex as I stored the 'players'
 **Today's Progress**: I completed sub-sections 85 & 86. 'Holding Current Score' and ' Resetting the Game'.
 
 **Thoughts**: In 'Holding the Current Score', I have begun to comment my code more in a way that I'm breaking down what I want the function to do in steps before I start adding code. The rest of the lecture was mostly coding logic and refactoring our code. I also used a Boolean here for the first time to disallow the user from interacting with the game when a winner is declared. 'Resetting the Game' was more of a coding challenge than it was a lecture as I was required to code the conditions to bring the game back to its 'starting conditions'. It was during this lecture that I declared empty global variables for the first time due to scope.
+
+### 07-JavaScript in the Browser: DOM and Events Fundamentals   [COMPLETE]
+
+
+### 08-How JavaScript Works Behind the Scenes   [START]
+
+## Day 48: June 11, 2022
+
+**Today's Progress**: I completed sub-sections [87, 88 (Section intro and roadmap)], 89, 90 and 91. 'A High-Level Overview of JavaScript', 'The JavaScript Engine and Runtime' and 'Execution Contexts and The Call Stack'.
+
+**Thoughts**: I am excited to further my understanding and knowledge of JavaScript with the upcoming theory lectures, but there was a lot of information to retain during these lectures. 
+In 'A High Level Overview of JavaScript' the lecturer briefly explains a variety of topics related to the functionality of JavaScript, such as what 'high level' means. Progressively in the following two lectures, sections 90 and 91, the lecturer begins to explain the topics mentioned in the first lecture in greater detail. I am using flash cards to help retain the information that I have learned during these lectures. I definitely have a better understanding as to how JavaScript works behind the scenes, I just hope I remember all of the information!

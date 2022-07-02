@@ -336,6 +336,13 @@ In 'A High Level Overview of JavaScript' the lecturer briefly explains a variety
 
 ## Day 50: June 13, 2022
 
-**Today's Progress**: I completed sub-sections 94 & 95 'Variable Environment: Hoisting and The TDZ' and 'Hoisting and TDZ in Practice'.
+**Today's Progress**: I completed sub-sections 94 & 95. 'Variable Environment: Hoisting and The TDZ' and 'Hoisting and TDZ in Practice'.
 
 **Thoughts**: It is clear that an understanding of 'Hoisting and The TDZ' is important. It is a lecture that I will return to in the future, but I am confident now however that I won't ever be using 'var' to declare my variables! 'TDZ in practice' really displayed just how finicky JS can be when it comes to hoisting. I feel confident on the subject, but as mentioned above, I will be returning to the lectures to further solidify my understanding.
+
+
+## Day 51: June 14, 2022
+
+**Today's Progress**: I completed sub-sections 96, 97 and 98. 'The this Keyword', 'The this Keyword in Practice' & 'Regular Functions vs. Arrow Functions'.
+
+**Thoughts**: It is clear that 

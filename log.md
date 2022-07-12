@@ -357,10 +357,12 @@ In 'A High Level Overview of JavaScript' the lecturer briefly explains a variety
 ### 08-How JavaScript Works Behind the Scenes   [COMPLETE]
 
 ## [PC brokedown for several weeks]
+## [Hand injury followed]
 
 ### 09-Data Structures, Modern Operators and Strings    [START]
-## Day 53: July 02, 2022
+## Day 53: July 12, 2022
 
-**Today's Progress**: 
+**Today's Progress**: Today I completed sub-sections 101, 102 & 103 - Destructuring Arrays.
+I used destructuring to assign variables to returned values from an object method, assign variables to nested array elements, and also learned how to use destructuring to set 'default values'.
 
-**Thoughts**: 
+**Thoughts**: I followed the lecture without any issues, it's very clear to see how useful and important destructuring will be as it greatly simplified the solution process to assigning and re-assigning variables from array elements. Though I was confident following the lecture, I am not confident in my ability to use destructuring where appropriate.

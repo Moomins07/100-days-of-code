@@ -366,3 +366,11 @@ In 'A High Level Overview of JavaScript' the lecturer briefly explains a variety
 I used destructuring to assign variables to returned values from an object method, assign variables to nested array elements, and also learned how to use destructuring to set 'default values'.
 
 **Thoughts**: I followed the lecture without any issues, it's very clear to see how useful and important destructuring will be as it greatly simplified the solution process to assigning and re-assigning variables from array elements. Though I was confident following the lecture, I am not confident in my ability to use destructuring where appropriate.
+
+
+## Day 54: July 13, 2022
+
+**Today's Progress**: Today I completed sub-section 104 - Destructuring Objects.
+I used destructuring to assign variables to object properties, to set default values, to mutate variables, to destructure nested objects and most importantly I learned how to destructure using functions.
+
+**Thoughts**: I felt that I followed the lesson quite smoothly until I approached destructuring with functions. I am not confident in my ability to use functions to destructure an object, but I can see how useful doing so will be, so that I am able to get a good idea as to how many parameters a function may need. Overall, there was a lot of information in this lecture and I will absolutely need to return to it in the future.

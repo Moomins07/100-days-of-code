@@ -374,3 +374,10 @@ I used destructuring to assign variables to returned values from an object metho
 I used destructuring to assign variables to object properties, to set default values, to mutate variables, to destructure nested objects and most importantly I learned how to destructure using functions.
 
 **Thoughts**: I felt that I followed the lesson quite smoothly until I approached destructuring with functions. I am not confident in my ability to use functions to destructure an object, but I can see how useful doing so will be, so that I am able to get a good idea as to how many parameters a function may need. Overall, there was a lot of information in this lecture and I will absolutely need to return to it in the future.
+
+## Switched to C# course for upcoming opportunity.
+## Day 55: July 15, 2022
+
+**Today's Progress**: Today I completed the first 2 units of the "Take your first steps with C#" course. "Write your first C# code" and "Store and retrieve data using literal and variable values in C#". More importantly I learned how to declare variables in C#, as well as the various data types, vastly different from JavaScript as C# is not a dynamic language.
+
+**Thoughts**: Having spent a significant amount of time just learning JavaScript, it's very fun to learn a new language, especially a language such as C# that is a lw-level language. Overall, I found the course easy to follow and very enjoyable although I will have to adjust slightly as my previous JS lectures have mostly been through visual videos.

@@ -378,6 +378,13 @@ I used destructuring to assign variables to object properties, to set default va
 ## Switched to C# course for upcoming opportunity.
 ## Day 55: July 15, 2022
 
-**Today's Progress**: Today I completed the first 2 units of the "Take your first steps with C#" course. "Write your first C# code" and "Store and retrieve data using literal and variable values in C#". More importantly I learned how to declare variables in C#, as well as the various data types, vastly different from JavaScript as C# is not a dynamic language.
+**Today's Progress**: Today I completed the first 2 modules of the "Take your first steps with C#" course. "Write your first C# code" and "Store and retrieve data using literal and variable values in C#". More importantly I learned how to declare variables in C#, as well as the various data types, vastly different from JavaScript as C# is not a dynamic language.
 
 **Thoughts**: Having spent a significant amount of time just learning JavaScript, it's very fun to learn a new language, especially a language such as C# that is a lw-level language. Overall, I found the course easy to follow and very enjoyable although I will have to adjust slightly as my previous JS lectures have mostly been through visual videos.
+
+
+## Day 56: July 17, 2022
+
+**Today's Progress**: Today I completed 2 more modules of the "Take your first steps with C#" course. "Perform basic string formatting in C#" and "Perform basic operations on numbers in C#". Topics to note are learning to use verbatim literal strings, template literals (string interpolation) and how to combine the two. In the operations module, I learned about the order of execution in mathematical equations (PEMDAS) and implicit type coercion.
+
+**Thoughts**: There are a lot of similarities between JavaScript and C#. It's very enjoyable to start a new language and to be able to apply knowledge that I've gained whilst learning JavaScript. It is because of this that I can spend significantly less time on these lessons, and even less time taking notes. I feel however that I have once again spent much too long on notes and need to greatly reduce the time even further spent doing so.

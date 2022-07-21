@@ -388,3 +388,12 @@ I used destructuring to assign variables to object properties, to set default va
 **Today's Progress**: Today I completed 2 more modules of the "Take your first steps with C#" course. "Perform basic string formatting in C#" and "Perform basic operations on numbers in C#". Topics to note are learning to use verbatim literal strings, template literals (string interpolation) and how to combine the two. In the operations module, I learned about the order of execution in mathematical equations (PEMDAS) and implicit type coercion.
 
 **Thoughts**: There are a lot of similarities between JavaScript and C#. It's very enjoyable to start a new language and to be able to apply knowledge that I've gained whilst learning JavaScript. It is because of this that I can spend significantly less time on these lessons, and even less time taking notes. I feel however that I have once again spent much too long on notes and need to greatly reduce the time even further spent doing so.
+
+
+## Still progressing with JavaScript course.
+## Day 57: July 21, 2022
+
+**Today's Progress**: Following from Day 54, I have completed sections 105 & 106. The Spread Operator(...) and Rest Pattern and parameters. I learned to use the spread operator in a variety of ways, such as generally unpacking elements in an array, merging arrays, function arguments, and also even copying arrays/objects on a shallow level. In the Rest pattern lecture, I learned the difference between spread/rest, as they use the same syntax. Most importantly, as the rest pattern comes before assignment, I learned how to use it in destructuring.
+
+**Thoughts**: I remember once briefly coming across this magical syntax and wondering how it worked and why it made certain coding solutions so much easier. It's very clear to see just how game-changing both the spread operator and rest pattern are to coding. It's the kind of knowledge that boosts my motivation to dive deeper.
+

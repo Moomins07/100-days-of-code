@@ -108,7 +108,7 @@ Having completed a variety of exercises from various different courses over the 
 
 ### Day 15: February 26, 2022
 
-**Today's Progress**: I completed the first coding challenge of Section 3 Fundamentals part 2. In the challenge, I was required to create multiple functions to fulfil certain tasks. This included using arrow functions, functions expressions, functins within functions and also an if-else statement. 
+**Today's Progress**: I completed the first coding challenge of Section 3 Fundamentals part 2. In the challenge, I was required to create multiple functions to fulfil certain tasks. This included using arrow functions, functions expressions, functions within functions and also an if-else statement. 
 
 **Thoughts**: Having finally put the knowledge and studying to use has greatly increased my confidence in the use of functions. I feel condfident moving on.
 

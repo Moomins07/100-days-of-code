@@ -410,3 +410,11 @@ I used destructuring to assign variables to object properties, to set default va
 **Today's Progress**: Today I decided that I'd begin supplementing my Udemy course with project-based learning. To start, I decided to re-do a console-based rock, paper, scissior game that I coded around 6 months ago, of which you can find in my GitHub repo. This time, I decided to also create a GUI. I also managed to complete the logic of the game to an extent that I felt happy with. However, this did take around 5-6 hours of non-stop coding.
 
 **Thoughts**: I am happy with the result, as I did manage to make the GUI look 'decent' whilst getting the game to run as intended. I definitely need to code more projects, as I felt very rusty and found myself struggling to write what I had considered rather basic code. I got stuck for around 2-3 hours as a piece of logic was not working as intended, I struggled to locate the bug but eventually found that it was due to a global variable being on ther wrong side of an assignment operator, and so the variable was returning as undefined. Such a simple mistake cost a huge amount of time and frustration, but I eentually managed. Except for that hiccup, the rest of the logic did not take too long, in fact I think the styling took longer as I experimented with hover-over animations to make the buttons fancier!
+
+
+## Day 60: July 24, 2022
+
+**Today's Progress**: I have bgan to re-familiarise myself with TOP (The Odin Project), which is an online course that focuses heavily on project-based learning. The course uses Nodejs and JavaScript which is of course the language that I have chosen to learn and focus on. To start, I went back through the Foundations course, found an exercise repo that I forked earlier this year and worked back through those exercises.
+
+**Thoughts**: Note that the exercises completed today focused on HTML and CSS. It was a lot of fun to go back through exercises that I completed half a year ago, especially as I recall doing them and specifically remember getting stuck on several. Although I was re-familiarising myself with a lot of the HTML/CSS from half a year ago, I found myself completing the exercises with little to no issues. In fact, I completed several folders of exercises in a single evening. Very happy with today's progress, certainly in a better position to begin more projects.
+

@@ -414,7 +414,18 @@ I used destructuring to assign variables to object properties, to set default va
 
 ## Day 60: July 24, 2022
 
-**Today's Progress**: I have bgan to re-familiarise myself with TOP (The Odin Project), which is an online course that focuses heavily on project-based learning. The course uses Nodejs and JavaScript which is of course the language that I have chosen to learn and focus on. To start, I went back through the Foundations course, found an exercise repo that I forked earlier this year and worked back through those exercises.
+**Today's Progress**: I have begun to re-familiarise myself with TOP (The Odin Project), which is an online course that focuses heavily on project-based learning. The course uses Nodejs and JavaScript which is of course the language that I have chosen to learn and focus on. To start, I went back through the Foundations course, found an exercise repo that I forked earlier this year and worked back through those exercises.
 
 **Thoughts**: Note that the exercises completed today focused on HTML and CSS. It was a lot of fun to go back through exercises that I completed half a year ago, especially as I recall doing them and specifically remember getting stuck on several. Although I was re-familiarising myself with a lot of the HTML/CSS from half a year ago, I found myself completing the exercises with little to no issues. In fact, I completed several folders of exercises in a single evening. Very happy with today's progress, certainly in a better position to begin more projects.
+
+
+## Day 61: July 25, 2022
+
+**Today's Progress**: Continuing to re-familiarising myself with TOP, part of the curriculum required me to create a RPS game in the console. 
+I originally completed this back in January 2022 using a lot of guidance:
+https://github.com/Moomins07/rock-paper-scissors
+However, I decided to re-create the same project from scratch with extra functionality with little to no guidance. I completed the project in just over an hour.
+
+**Thoughts**: It was a lot of fun to re-create this project, especially as I recall how much I had struggled with the original project back in January. 
+This time around, I used pseudo-code and added extra functionality, such as a while loop that would re-prompt the user if the input did not match the if statements conditions. I also played around with short-circuiting and managed to do so successfully. Other notes: I'm also commenting my code more, I'm placing more code in functions and using global variables more often. The only global code is 4 variables and a function that is invoked to begin the game. Overall, I'm very happy with the result, especially as I did not feel the need to use guidance or docs!
 

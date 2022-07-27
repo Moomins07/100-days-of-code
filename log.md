@@ -429,3 +429,9 @@ However, I decided to re-create the same project from scratch with extra functio
 **Thoughts**: It was a lot of fun to re-create this project, especially as I recall how much I had struggled with the original project back in January. 
 This time around, I used pseudo-code and added extra functionality, such as a while loop that would re-prompt the user if the input did not match the if statements conditions. I also played around with short-circuiting and managed to do so successfully. Other notes: I'm also commenting my code more, I'm placing more code in functions and using global variables more often. The only global code is 4 variables and a function that is invoked to begin the game. Overall, I'm very happy with the result, especially as I did not feel the need to use guidance or docs!
 
+
+## Day 62: July 27, 2022
+
+**Today's Progress**: Continuing with TOP, I've now moved on to Test Driven Development (TDD). I'm required to complete several exercises wherein I must create functions that meet certain test requirements. I completed most of the exercises today, within around 5-6 hours, but I still have several left.
+
+**Thoughts**: The TDD section has been, by far, the most challenging so far and I found myself getting stuck on a lot of the coding challenges. Specifically, I got stuck on a challenge that required me to create a function that is capable of removing multiple elements from an array for several hours; so far, I have only managed to make this function complete 2 out of the 7 test requirements. I achieved this by looping through a rest parameter array and using the splice()/indexOf method. Whilst it was very demoralizing to be stuck on one coding challenge for multiple hours, I perservered and managed to get some of the tests to pass, a bitter sweet victory. I am looking forward to hopefully getting all the tests to pass tomorrow.

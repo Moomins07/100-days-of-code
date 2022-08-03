@@ -470,3 +470,10 @@ This time around, I used pseudo-code and added extra functionality, such as a wh
 **Today's Progress**: Today was 'Revisiting Rock Paper Scissors' with TOP. I was tasked to refactor some older code from a previous project (console RPS game) to make that code interactable on the webpage using DOM manipulation. As I had already done this previously (Day 59), I decided to refactor the code, but made the actual styling extremely basic, focussing more on the logic and result.
 
 **Thoughts**: I felt like this time around, I had very little issue refactoring the code and deciding on how I wanted the logic to work. A problem to note however is that, for some reason, the buttons on the webpage did not register the first click, the game would only begin on the second click. I was not able to find a solution, but other than that the code seemed to work fine. 
+
+
+## Day 68: August 3, 2022
+
+**Today's Progress**: Today was a quick lesson re-cap on for-of loops and enhanced object literals on my Udemy course. Sub-sections 111 and 112.
+
+**Thoughts**: No issues following the lectures, both lectures include syntax that I'd definitely like to become more familiar with and use in my own future projects. I'd like to experiment more with the possibilities using for-of loops and being able to assign property names using expressions.

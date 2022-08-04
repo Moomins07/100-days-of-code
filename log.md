@@ -477,3 +477,10 @@ This time around, I used pseudo-code and added extra functionality, such as a wh
 **Today's Progress**: Today was a quick lesson re-cap on for-of loops and enhanced object literals on my Udemy course. Sub-sections 111 and 112.
 
 **Thoughts**: No issues following the lectures, both lectures include syntax that I'd definitely like to become more familiar with and use in my own future projects. I'd like to experiment more with the possibilities using for-of loops and being able to assign property names using expressions.
+
+
+## Day 69: August 4, 2022
+
+**Today's Progress**: Continuing with TOP, I was tasked with the project 'etch-a-sketch' which was basically making a large box of divs that would change their background colour upon mouse-over; I also implemented code that made the colours RGB and random. I've managed to complete most of the tasks, except for the last which requires me to gradually change the opacity of the boxes depending on how many times they change colour. I need to code a little bit more of logic too.
+
+**Thoughts**: So far, this project has been very enjoyable and also extremely educational. I finally used a little bit of CSS grid, as well as learning how to use loops to create a box of smaller divs. More importantly, I finally used classList.add effectively as it allowed me to querySelectAll of that class (all of the divs), which then allowed me to loop through a nodelist to apply the mouse-over effect to all of the divs of that class. I also used the typical array of data, random number code and template literals to create the RGB functionality. Overall, a very fun project so far and I'm looking forward to completing it tomorrow.

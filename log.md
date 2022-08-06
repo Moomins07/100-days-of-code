@@ -491,3 +491,10 @@ This time around, I used pseudo-code and added extra functionality, such as a wh
 **Today's Progress**: Today I continued with the TOP etch-a-sketch project. I fixed an if-else statement that checked if the prompt input is a number, and checked if the gridsize is > 50. I then also realised that my divs were not resetting and they continued to pile up on the page. I implemented a function that would check if the main container contained a div, and if so, used a while loop to remove all firstChild (divs). Further more, as 'extras credit', I implemented logic so that the divs would not only switch colour upon hover-over but also gradually lose 0.1 opacity until they disappear after 10 executions.
 
 **Thoughts**: Again, this project has been incredibly educational and enjoyable. I've learned how to iterate through a nodelist, how to use CSS grid, more DOM methods suchs as firstChild, appendChild etc, and found more use-cases of while loops and template literals. Overall, whilst my code could be neater, I am very happy with the result of the project.
+
+
+## Day 71: August 6, 2022
+
+**Today's Progress**: As part of a job opportunity, I spent most of today following online video tutorials on Umbraco. I also researched HTML templates and began developing a test website that I plan to implement tomorrow.
+
+**Thoughts**: I have a greater understanding of what CMS is and how useful it will be. I found the Umbraco tutorials a little difficult to follow as the lecturer often skipped a lot of important information, as well as the there apparently being a bug on Umbraco's end that has still not been resolved, resulting in code producing errors. It was because of this that I spent a lot of time debugging as opposed to actually learning to use the software. I am not yet confident in my ability to use Umbraco.

@@ -498,3 +498,10 @@ This time around, I used pseudo-code and added extra functionality, such as a wh
 **Today's Progress**: As part of a job opportunity, I spent most of today following online video tutorials on Umbraco. I also researched HTML templates and began developing a test website that I plan to implement tomorrow.
 
 **Thoughts**: I have a greater understanding of what CMS is and how useful it will be. I found the Umbraco tutorials a little difficult to follow as the lecturer often skipped a lot of important information, as well as there apparently being a bug on Umbraco's end that has still not been resolved, resulting in code producing errors. It was because of this that I spent a lot of time debugging as opposed to actually learning to use the software. I am not yet confident in my ability to use Umbraco.
+
+
+## Day 72: August 7, 2022
+
+**Today's Progress**: Following yesterday's progress, I decided to spend today learning Bootstrap as my first CSS framework as I plan to use it in an upcoming project. I completed freeCodeCamp's Bootstrap course and I am now also in the middle of a Udemy course that goes into further detail on Bootstrap. I decided that I would not implement the test website that I had developed yesterday.
+
+**Thoughts**: I'm finding Bootstrap a lot of fun to learn, as it's a framework, I'm able to see results on screen very quickly. I can see just how accessible and useful Bootstrap is and I'm looking forward to being able to implement it into upcoming projects, and really begin to test its limits. I found the freeCodeCamp course on Bootstrap easy to follow, but lacking a lot of information. Fortunately, the information that I felt the FCC course was missing, I found in a Udemy course I bought at the beginning of the year. I'll continue more Bootstrap tomorrow and plan to begin also begin a project.

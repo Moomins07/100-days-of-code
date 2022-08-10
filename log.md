@@ -505,3 +505,17 @@ This time around, I used pseudo-code and added extra functionality, such as a wh
 **Today's Progress**: Following yesterday's progress, I decided to spend today learning Bootstrap as my first CSS framework as I plan to use it in an upcoming project. I completed freeCodeCamp's Bootstrap course and I am now also in the middle of a Udemy course that goes into further detail on Bootstrap. I decided that I would not implement the test website that I had developed yesterday.
 
 **Thoughts**: I'm finding Bootstrap a lot of fun to learn, as it's a framework, I'm able to see results on screen very quickly. I can see just how accessible and useful Bootstrap is and I'm looking forward to being able to implement it into upcoming projects, and really begin to test its limits. I found the freeCodeCamp course on Bootstrap easy to follow, but lacking a lot of information. Fortunately, the information that I felt the FCC course was missing, I found in a Udemy course I bought at the beginning of the year. I'll continue more Bootstrap tomorrow and plan to begin also begin a project.
+
+
+## Day 73: August 8, 2022
+
+**Today's Progress**: I continued with the Udemy bootstrap course and specifically took notes on what I could find particularly useful. I began work on a project/website later the same day, implementing a lot of the new Bootstrap features that I had learned.
+
+**Thoughts**: I managed to find a decent template for reference and managed to get a result that I was happy with today, but there are several features that I would like to implement that I do not know how to implement yet. I had spent a lot of time today researching features that I would like to add later.
+
+
+## Day 74: August 9, 2022
+
+**Today's Progress**: Today I finished the homepage to the website I had began developing and started on the second block of the website that will include cards. I added a dynamic animation to the homepage, which is fully working and currently fully resposive. However, I still need to add a 'scroll snap' feature and I have begun researching the code that would allow me to do. Following this, I realised that I need to properly section the website via HTML and ensure that those sections use 100% of the view port, as scroll snap will not work without this implemented. Good progress so far, but still a long way to go in terms of researching certain features.
+
+**Thoughts**: I managed to f

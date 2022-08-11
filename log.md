@@ -516,6 +516,13 @@ This time around, I used pseudo-code and added extra functionality, such as a wh
 
 ## Day 74: August 9, 2022
 
-**Today's Progress**: Today I finished the homepage to the website I had began developing and started on the second block of the website that will include cards. I added a dynamic animation to the homepage, which is fully working and currently fully resposive. However, I still need to add a 'scroll snap' feature and I have begun researching the code that would allow me to do. Following this, I realised that I need to properly section the website via HTML and ensure that those sections use 100% of the view port, as scroll snap will not work without this implemented. Good progress so far, but still a long way to go in terms of researching certain features.
+**Today's Progress**: Today I finished the homepage to the website I had began developing and started on the second block of the website that will include cards. I added a dynamic animation to the homepage, which is fully working and currently fully responsive. However, I still need to add a 'scroll snap' feature and I have begun researching the code that would allow me to do so. 
 
-**Thoughts**: I managed to f
+**Thoughts**: I need to research several features to meet certain homepage requirements. I realised that I need to properly section the website via HTML and ensure that those sections use 100% of the view port, as scroll snap will not work without this implemented. Good progress so far, but still a long way to go.
+
+
+## Day 75: August 11, 2022
+
+**Today's Progress**: Spent most of my time today stting up section blocks and implementing a hamburger menu for the main page. I also spent a significant amount of time researching scroll snapping and trying to make the website blocks responsive as the sections are overflowing.
+
+**Thoughts**: The nav bar is fully responsive and works as intended, very happy with the result. I was also able to set up the sections to the website in future preparation for scroll snapping, but I've noticed that, for some reason, the sections aren't flexible and content overflows from one page to the other. I plan to research more and have this resolved by tomorrow. Furthermore, I noticed that something is causing the website to overflow on the right side, creating a small amount of whitespace and introducing a horizontal scrollbar, which also needs resolving. I'm currently stumped as to what could cause the overflow on the right as it doesn't seem to be an element or a styling.

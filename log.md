@@ -575,3 +575,11 @@ This time around, I used pseudo-code and added extra functionality, such as a wh
 **Today's Progress**: More tweaks to the Umbraco site. Today I noticed that the card images were lacking an overlay causing the white text to blend into some parts of the images, so I added a slightly gradient black mask to the cards. Following that, I began developing the master-template that will be used for the main page links on the Umbraco site. This time around I've solely used Bootstrap to mitigate conflicts with an external stylesheet. I've completed most of the page, but I still need to implement a footer.
 
 **Thoughts**: Changes to the cards on the homepage was very straightforward, it just required a few adjustments to some styling. Using Bootstrap to build a 'typical' site layout with a full coloured navbar has been a lot of fun. The more I use Bootstrap, I begin to see just how powerful and convenient frameworks are, I'm looking forward to completing more work with Bootstrap and eventually learning Tailwind CSS. I'm quite happy with the master-template I've created so far, I plan to potentially look into learning SASS so that I can begin to manipulate the Bootstrap elements a bit more and make the site look less 'Bootstrappy'. Overall, a lot of progress in much smaller amount of time today. 
+
+
+## Day 83: August 25, 2022
+
+**Today's Progress**: Today I continued development on the to-be Umbraco master-template. I re-built the homepage footer at the bottom of the master-template using Boostrap and made some content adjustments.
+
+**Thoughts**: Using solely Bootstrap, I've been able to produce quicker results, and ran into less conflicts with regards to responsiveness and content layout. Unfortunately I was not able to simply copy and paste my homepage footer into the master-template as I was not able to link my main stylesheet. This lead to me having to essentially re-build the footer and copy it as best I could. I am happy with the result. 
+

@@ -583,3 +583,10 @@ This time around, I used pseudo-code and added extra functionality, such as a wh
 
 **Thoughts**: Using solely Bootstrap, I've been able to produce quicker results, and ran into less conflicts with regards to responsiveness and content layout. Unfortunately I was not able to simply copy and paste my homepage footer into the master-template as I was not able to link my main stylesheet. This lead to me having to essentially re-build the footer and copy it as best I could. I am happy with the result. 
 
+
+## Day 84: August 26, 2022
+
+**Today's Progress**: Made some more tweaks to the Umbraco master-template, used inline-styling to set the logo to 50% width. I also finally used some JavaScript to make the arrow panel-snap button disappear when the navbar is selected, this was needed as I also made the position of the header relative and no longer absolute, meaning that the header needed space to move down the page. Following this, I made the navbar links a solid white and replaced the hover-over text-color change effect with an animated underline.
+
+**Thoughts**: I did not get stuck on as much today, as most of the time I was able to get the result I wanted without too much tweaking. I enjoyed playing around with a little bit of JavaScript and changing the animation on the navbar links. I'm noticing that a lot of styling I push to Umbraco/Root folder aren't rendering as they should and seem to break or change slightly. The results I get developing locally do not reflect how the website will look once I upload it. This is particular is causing a lot of unnecessary headache. 
+

@@ -590,3 +590,16 @@ This time around, I used pseudo-code and added extra functionality, such as a wh
 
 **Thoughts**: I did not get stuck on as much today, as most of the time I was able to get the result I wanted without too much tweaking. I enjoyed playing around with a little bit of JavaScript and changing the animation on the navbar links. I'm noticing that a lot of styling I push to Umbraco/Root folder aren't rendering as they should and seem to break or change slightly. The results I get developing locally do not reflect how the website will look once I upload it. This is particular is causing a lot of unnecessary headache. 
 
+
+## Day 85: August 27, 2022
+
+**Today's Progress**: Today was mostly tweaking the cards on page 2 as the current design does not match the design given to me by the design team. I tried to keep as much of the current card code as possible but just seems to cause more issues than necessary when I attempt to move text below the cards. Following this, I made a few more tweaks to the navbar hover animation as it seemed to break on smaller screen sizes.
+
+**Thoughts**: The cards seem to be giving me the most issues right now as Bootstrap, ironically, does not seem to be co-operating and the grid-responsive design is not working as intended. Also, as recorded yesterday, I'll produce a certain result locally that will look entirely different once uploaded and rendered to the main Umbraco site. 
+
+
+## Day 86: August 28, 2022
+
+**Today's Progress**: Once again, today was more card work as I continue to have trouble with them. I'm also continously tweaking the spacing on the site as changing the cards tends to break the responsiveness.
+
+**Thoughts**: The cards are painfully uncooperative, as the Bootstrap grid system just seems to stop working entirely as I try to make minor alterations to the sizes and responsiveness of the cards. In fact, because of this I found myself replacing the original cards I had on page 2 completely, as opposed to just making slight changes to the original cards. Whilst this has somewhat reduced the amount of bugs I run into, the cards continue to break at different breakpoints. I hope I'll have the cards fixed by tomorrow so that I can continue with the master template. 

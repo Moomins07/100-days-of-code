@@ -638,3 +638,17 @@ This time around, I used pseudo-code and added extra functionality, such as a wh
 **Today's Progress**: Today I locally developed the layout for the 'Sim Practice' page on the Umbraco site followed by moving the page over to Umbraco. 
 
 **Thoughts**: I did not have any issues developing the page layout as I developed it in multiple sections using Bootstrap. The design that I was following was also clearly sectioned making it easier for me to follow. However, Umbraco still seems to be very slow to update pages. This time it took upwards of an hour before I was able to see the content/layout added to the Sim Practice page. This is an ongoing issue that I haven't found much information on, definitely something I'll need to look into further once I begin developing the other site pages.
+
+
+## Day 91: September 04, 2022
+
+**Today's Progress**: I began Harvard's CS50 Introduction to Computer Science course and watched the first full lecture, took relevant notes and began working on the first-week course project, which is just a simple Scratch game. I then also made some tweaks to the Umbraco site again, making sure links are working correctly and beginning to implement some content boxes again.
+
+**Thoughts**: I mostly played around with Scratch today, signed up and checked over the course requirements, found sprites that I'd like to use etc. The Umbraco site continues to have an updating issue, but I seemed to have found a fix. I found that if I go into Settings > Docuements types > The page I want to update > Click Save followed by reloading the templates and Content pages, it updates. I am not 100% on this however. 
+
+
+## Day 92: September 05, 2022
+
+**Today's Progress**: Continuing with the CS50 course, I spent most of today working on my Scratch project, which admittedly took much longer than anticipated. I did manage to finish and upload the project.
+
+**Thoughts**: Although the concept of Scratch seems quite simple, it definitely did its job of emphasising the importance of dividing and conquering coding problems. I was unsure as to how to use Scratch, whilst also then trying to implement an idea I had for a basic game. I found myself stuck to begin with, until I eventually found somewhat of a 'flow' and began to implement logic without much trouble. The game definitely isn't perfect, but I got it to a 'decent' standard and ticked off all of the project requirements. Note however, I did find myself Googling at times to get a certain piece of logic to work.

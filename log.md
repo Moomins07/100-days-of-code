@@ -653,3 +653,10 @@ This time around, I used pseudo-code and added extra functionality, such as a wh
 
 **Thoughts**: Although the concept of Scratch seems quite simple, it definitely did its job of emphasising the importance of dividing and conquering coding problems. I was unsure as to how to use Scratch, whilst also then trying to implement an idea I had for a basic game. I found myself stuck to begin with, until I eventually found somewhat of a 'flow' and began to implement logic without much trouble. The game definitely isn't perfect, but I got it to a 'decent' standard and ticked off all of the project requirements. Note however, I did find myself Googling at times to get a certain piece of logic to work. You can see the finished Scratch project here:
 https://scratch.mit.edu/projects/728128879/
+
+
+## Day 94: September 06, 2022
+
+**Today's Progress**: Today I continued work on The Odin Project foundation course's finale calculator project.
+
+**Thoughts**: As mentioned previously, I find myself feeling very rusty using JavaScript. I did not have an issue creating the functions to perform operations, but I found myself feeling stuck when it came to coding the DOM manipulation. Using data-sets within the HTML, I have been able to use logic based on whether or not a button has an 'action' to determine what button has been clicked. I created an event listener for clicks that would populate the calculator display with the numbers pressed, every click updating a global variable that then returns to the calc display to make sure we can have larger numbers. However, I found myself stuck at this point. I coded the 'C' key to reset the global variable and re-populate the calc display. From here, I was unsure how to code the actual logic to the calculator. I'm opting against following any tutorials, I will research the problems individually as and when they arrive. I hope to have this project done soon so that I can continue on to the larger parts of the course.

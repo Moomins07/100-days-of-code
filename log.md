@@ -667,3 +667,17 @@ https://scratch.mit.edu/projects/728128879/
 **Today's Progress**: Continuing work on The Odin Project foundation course's finale calculator project.
 
 **Thoughts**: As mentioned previously, this time around I attempted to solve as much as possible without referring to online tutorials. Today, I managed to somewhat get some of the functionality to work. I added extra conditions to the numbers section of the event listener wherein it now checks to see if '0' is currently the textContent within the display. I have made 0 the default textContent, and so if it is 0, the textContent of the pressed key replaces the 0 and continues to update with whatever key is pressed next. I then coded the operator keys to set the textContent to default '0' followed by storing whatever was in the display at the time within a variable called firstValue. I also parseFloat the textContent before storing it within a variable for future decimal functionality. I am not yet sure how to check which operator key was pressed previously and so for now I have simply coded the 'equals' key to first check if firstValue !== undefined, if true, I set display.textContent to the result of the 'addition' function I made previously, which I pass firstValue and current display.textContent through. This seemed to work well when I tested the addition function, and I was able to chain multiple presses of the operators and equals key to continually 'add' the numbers together. Tomorrow I hope to code the logic that will allow me to add the relevant functions to the appropriate operators. Overall, happy with progress so far, victory is around the corner.
+
+
+## Day 96: September 08, 2022
+
+**Today's Progress**: Continuing work on The Odin Project foundation course's finale calculator project.
+
+**Thoughts**: I was able to research into the logic behind storing the current value on screen and being able to 'store' which operator was previously selected by the user. I achieved this by adding calculator.data-set.previousKeyType = 'operator' and adding an extra piece of OR logic to the if statement that checks if display is currently === '0' upon pressing the operator key. However, I had issues with my text not updating correctly on screen after an operator is pressed. The display would only update 1 number at a time. 
+
+
+## Day 97: September 09, 2022
+
+**Today's Progress**: Continuing work on The Odin Project foundation course's finale calculator project.
+
+**Thoughts**: Upon further investigation into why my calculator display does not update correctly after an operator key is pressed, I realised it is because I am checking if previousKeyType === 'operator' in the OR section of the if statement. The 'else' section of that block is what allows the strings to concatenate, and obviously previousKeyType === 'operator' remains true, therefore we never enter the else statement. To solve this, as part of if statement, I set calculator.data-set.previousKeyType to false. I originally kept trying to set the variable of previousKeyType to false, which obviously did not work. After this, I decided to change the struture of my code entirely and used a switch statement instead of lots of if statements, and then decided to insert calculations into the switch cases as opposed to my original plan of adding calculations in the equals key. I still need to iron out the kinks, but I'm almost there.

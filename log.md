@@ -681,3 +681,10 @@ https://scratch.mit.edu/projects/728128879/
 **Today's Progress**: Continuing work on The Odin Project foundation course's finale calculator project.
 
 **Thoughts**: Upon further investigation into why my calculator display does not update correctly after an operator key is pressed, I realised it is because I am checking if previousKeyType === 'operator' in the OR section of the if statement. The 'else' section of that block is what allows the strings to concatenate, and obviously previousKeyType === 'operator' remains true, therefore we never enter the else statement. To solve this, as part of if statement, I set calculator.data-set.previousKeyType to false. I originally kept trying to set the variable of previousKeyType to false, which obviously did not work. After this, I decided to change the struture of my code entirely and used a switch statement instead of lots of if statements, and then decided to insert calculations into the switch cases as opposed to my original plan of adding calculations in the equals key. I still need to iron out the kinks, but I'm almost there.
+
+
+## Day 98: September 10, 2022
+
+**Today's Progress**: Today I began to implement a list of changes to the Umbraco website. Mostly small tweaks.
+
+**Thoughts**: I've managed to implement/develop most of the requested tweaks locally without too many issues. However, I continue to have issues with image sizing, especially when it comes to the site logo as I've began to use media queries more for specific responsiveness, such as hiding certain elements. The logo seems to be very uncooperative when it comes to using % and vw sizing at certain resolution breakpoints, but I assume this is simply due to my lack of knowledge and experience using media queries. I think it may be due to the base size of the image logo being quite large? I will continue to experiment tomorrow. I am happy with todays progress, I'm hoping to have everything moved over to Umbraco soon.

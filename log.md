@@ -688,3 +688,10 @@ https://scratch.mit.edu/projects/728128879/
 **Today's Progress**: Today I began to implement a list of changes to the Umbraco website. Mostly small tweaks.
 
 **Thoughts**: I've managed to implement/develop most of the requested tweaks locally without too many issues. However, I continue to have issues with image sizing, especially when it comes to the site logo as I've began to use media queries more for specific responsiveness, such as hiding certain elements. The logo seems to be very uncooperative when it comes to using % and vw sizing at certain resolution breakpoints, but I assume this is simply due to my lack of knowledge and experience using media queries. I think it may be due to the base size of the image logo being quite large? I will continue to experiment tomorrow. I am happy with todays progress, I'm hoping to have everything moved over to Umbraco soon.
+
+
+## Day 99: September 12, 2022
+
+**Today's Progress**: Continuing work on The Odin Project foundation course's finale calculator project. 
+
+**Thoughts**: The calculator has most of the basic functionality now and works to a 'beginner' standard. However, there are numerous bugs as expected as you begin to play around with it more. I spent several hours today playing around with the code in hope to fix a few of those bugs, but to no avail. As the calculator works at a basic level and I feel that I've already learned a lot, I am contemplating moving on with The Odin Project and finally considering the Foundation course completed. Very happy that I've come as far as I have with The Odin Project, especially since it is not a 'hand-holding' course. Hopefully I will have a few more changes made to the calculator tomorrow that will allow me to leave the project behind with a guilt-free conscience.

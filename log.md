@@ -695,3 +695,24 @@ https://scratch.mit.edu/projects/728128879/
 **Today's Progress**: Continuing work on The Odin Project foundation course's finale calculator project. 
 
 **Thoughts**: The calculator has most of the basic functionality now and works to a 'beginner' standard. However, there are numerous bugs as expected as you begin to play around with it more. I spent several hours today playing around with the code in hope to fix a few of those bugs, but to no avail. As the calculator works at a basic level and I feel that I've already learned a lot, I am contemplating moving on with The Odin Project and finally considering the Foundation course completed. Very happy that I've come as far as I have with The Odin Project, especially since it is not a 'hand-holding' course. Hopefully I will have a few more changes made to the calculator tomorrow that will allow me to leave the project behind with a guilt-free conscience.
+
+
+## Day 100: September 13, 2022
+
+**Today's Progress**: Working on updating and adding more pages to the Umbraco website. 
+
+**Thoughts**: I was able to create a new page from scratch for the Flight Simulator page in a decent amount of time but I'm having issues with hooking up a CSS stylesheet to the HTML page. Unable to find a solution myself, I sought help, wherein my mentor was able to narrow the issue down to being something to do with my files not being accessed locally, as my main stylesheet is not being found through a local directory, but instead through a link to the site that I am working on. I'm planning to research more into the issue today and I have a few work-around solutions if I am not able to get a result. Once I resolve this particular issue, the rest of the site should be completed quickly.
+
+
+#  COMPLETED!
+
+I finally convinced myself to set out at the end of 2021 to pursue a career in tech/programming as it has been an interest of mine for as long as I can remember. Having picked up coding and dropping it countless times across decades, I decided that this time would be different. It has indeed been very different this time!
+Across the year, 2022, that I've been partaking in the 100DaysOfCoding challenge, a lot has happened. From broken bones to a broken PC, but the one constant that I've looked forward to is coding. I was not sure I'd make it as far as I have, I doubted myself every step of the way, I still do, but I will continue to code and grow. 
+
+However, I would not be where I am currently with my coding journey without the incredible tech communities, friends and family.
+Thank you to my wife who endured hours of my babbling whilst I broke down coding problems out loud.
+Thank you to the following communities: Twitter tech, The Odin project, Michael Dev on YT and Danny Thompson's 'Commit your Code'.
+Thank you to my friends for the words of motivation and coding help when I reached out.
+Lastly, a certain individual that suggested I partake in the 100DayChallenge, and has unconditionally invested into me and provided me with invaluable opportunities and mentoring. Thank you C.
+
+Back to coding!

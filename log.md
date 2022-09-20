@@ -704,7 +704,7 @@ https://scratch.mit.edu/projects/728128879/
 **Thoughts**: I was able to create a new page from scratch for the Flight Simulator page in a decent amount of time but I'm having issues with hooking up a CSS stylesheet to the HTML page. Unable to find a solution myself, I sought help, wherein my mentor was able to narrow the issue down to being something to do with my files not being accessed locally, as my main stylesheet is not being found through a local directory, but instead through a link to the site that I am working on. I'm planning to research more into the issue today and I have a few work-around solutions if I am not able to get a result. Once I resolve this particular issue, the rest of the site should be completed quickly.
 
 
-#  COMPLETED!
+#  100 DAYS COMPLETED!
 
 I finally convinced myself to set out at the end of 2021 to pursue a career in tech/programming, as it has been an interest of mine for a long time.
 Across the year, 2022, that I've been partaking in the 100DaysOfCoding challenge, a lot has happened. The one constant that I've looked forward to is coding. I was not sure I'd make it as far as I have, I doubted myself every step of the way, I still do, but I will continue to code and grow. 
@@ -714,3 +714,6 @@ A thank you to all that helped me along my journey, especially my wife who endur
 And a big thank you to C that suggested I partake in the 100DayChallenge, and has unconditionally invested into me and provided me with invaluable opportunities and mentoring.
 
 Back to coding!
+
+
+# POST - 100 DAYS CHALLENGE LOG

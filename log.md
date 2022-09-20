@@ -706,13 +706,11 @@ https://scratch.mit.edu/projects/728128879/
 
 #  COMPLETED!
 
-I finally convinced myself to set out at the end of 2021 to pursue a career in tech/programming as it has been an interest of mine for as long as I can remember. Having picked up coding and dropping it countless times across decades, I decided that this time would be different. It has indeed been very different this time!
-Across the year, 2022, that I've been partaking in the 100DaysOfCoding challenge, a lot has happened. From broken bones to a broken PC, but the one constant that I've looked forward to is coding. I was not sure I'd make it as far as I have, I doubted myself every step of the way, I still do, but I will continue to code and grow. 
+I finally convinced myself to set out at the end of 2021 to pursue a career in tech/programming, as it has been an interest of mine for a long time.
+Across the year, 2022, that I've been partaking in the 100DaysOfCoding challenge, a lot has happened. The one constant that I've looked forward to is coding. I was not sure I'd make it as far as I have, I doubted myself every step of the way, I still do, but I will continue to code and grow. 
 
 However, I would not be where I am currently with my coding journey without the incredible tech communities, friends and family.
-Thank you to my wife who endured hours of my babbling whilst I broke down coding problems out loud.
-Thank you to the following communities: Twitter tech, The Odin project, Michael Dev on YT and Danny Thompson's 'Commit your Code'.
-Thank you to my friends for the words of motivation and coding help when I reached out.
-Lastly, a certain individual that suggested I partake in the 100DayChallenge, and has unconditionally invested into me and provided me with invaluable opportunities and mentoring. Thank you C.
+A thank you to all that helped me along my journey, especially my wife who endured hours of my babbling whilst I broke down coding problems out loud.
+And a big thank you to C that suggested I partake in the 100DayChallenge, and has unconditionally invested into me and provided me with invaluable opportunities and mentoring.
 
 Back to coding!

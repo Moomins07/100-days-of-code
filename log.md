@@ -715,5 +715,11 @@ And a big thank you to C that suggested I partake in the 100DayChallenge, and ha
 
 Back to coding!
 
-
+### (Spent most of my time working on Umbraco site 13 - 21)
 # POST - 100 DAYS CHALLENGE LOG
+
+## Day 101: September 21, 2022
+
+**Today's Progress**: Spent today making more tweaks to Umbraco site, such as adding more pages to link to certain page buttons. 
+
+**Thoughts**: The issue I faced with adding more external pages to the website is that the partial view code would continue to add those pages to the nav bar, cluttering it up. To avoid this issue, I created separate master templates and added those various external pages under the master templates to ensure that the nav bar only included the pages under their master template. By doing so, I was able to create 3 different websites with 3 different navbars.

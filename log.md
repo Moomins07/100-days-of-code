@@ -722,4 +722,6 @@ Back to coding!
 
 **Today's Progress**: Spent today making more tweaks to Umbraco site, such as adding more pages to link to certain page buttons. 
 
-**Thoughts**: The issue I faced with adding more external pages to the website is that the partial view code would continue to add those pages to the nav bar, cluttering it up. To avoid this issue, I created separate master templates and added those various external pages under the master templates to ensure that the nav bar only included the pages under their master template. By doing so, I was able to create 3 different websites with 3 different navbars.
+**Thoughts**: The issue I faced with adding more external pages to the website is that the partial view code would continue to add those pages to the nav bar, cluttering it up. To avoid this issue, I created separate master templates and added those various external pages under the master templates to ensure that the nav bar only included the pages under their master template. By doing so, I was able to create 3 different websites with 3 different navbars. 
+Edit: Later that night, officially completed The Odin Project foundation course, finishing the last few sections that required me to research the differences bewteen front-end and back-end, followed by choosing which path I'd like to take with the rest of the course. Ruby on Rails or Nodejs. I chose Nodejs.
+ 

@@ -1,7 +1,7 @@
 # 100 Days Of Code V2- Log
 
-Having completed a 100DaysOfCode Challenge a few months back I've decided to begin a 100 days of code challenge again! 
-I found myself much more consistent when taking part in the challenge, and so here we are again.
+[Having completed a 100DaysOfCode Challenge a few months back I've decided to begin a 100 days of code challenge again! 
+I found myself much more consistent when taking part in the challenge, and so here we are again.]
 
 ### Day 1: November 05, 2022 
 ### The Odin Project [CONTINUATION]

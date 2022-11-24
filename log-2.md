@@ -61,3 +61,10 @@ I found myself much more consistent when taking part in the challenge, and so he
 **Today's Progress**: Today I was finally able to finish up the CSS Grid project.
 
 **Thoughts:** I frustratingly continued to attempt to tweak the grid using template-areas to no avail, as the cards in the middle-section would still break. Due to this, I decided to start over, this time without using grid-template-areas and individually placing child elements within the crid using grid-row and grid-column. Fortunately, this solved the problem, but I am disappointed that I was not able to make the grid work using my own method of template-areas; I guess that's what I get for trying to run before I can walk! The grid matched the finished-project image perfectly although the grid was not using 100vh, so the footer would sit half-way up the page when stretched. I checked the solution code to find that this is actually intended, which I feel the course should have been more explicit about, as I was under the impression that the footer would sit at the bottom of the page.. Like most footers. In hindsight, using 100vh for my grid container in my original attempt to create the grid may even have been the issue. On to the next project tomorrow!
+
+
+### Day 9: November 22, 2022 
+
+**Today's Progress**: In preparation for the final TOP CSS Grid project, I spent several hours today using YouTube videos and following along with projects by Kevin Powell and Brad Traversy. I completed all of the projects and also paused the videos and spent a significant amount of time using Grid myself to develop my understanding.
+
+**Thoughts:** The video projects were extremely helpful and cleared up a few grey areas, such as the grid syntax which I had written about on day 5 in this log. I also now have a greater understanding of Grids potential when it comes to responsive design, such as by using auto-fit/auto-fill, the fr unit and media-queries. Overall, I feel much more confident in my ability to use Grid manually and not just via Bootstrap/other frameworks.

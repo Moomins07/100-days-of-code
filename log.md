@@ -1,6 +1,6 @@
 # 100 Days Of Code - Log
 
-Having completed a variety of exercises from various different courses over the last few months, I have decided to begin a JavaScript Udemy course from scratch and it is my goal to complete the course in it's entirety by the end of my 100days-of-code challenge. I believe that, by doing so, I will not only streamline my learning experience, but I will also set myself a clear goal/path that is realistic within the time frame that I have set. I am coding along with my lecturer, taking notes and completing ALL of the coding challenges presented to me in the course. You can find my notes and code here: https://github.com/Moomins07/udemy-course-notes. /n
+Having completed a variety of exercises from various different courses over the last few months, I have decided to begin a JavaScript Udemy course from scratch and it is my goal to complete the course in it's entirety by the end of my 100days-of-code challenge. I believe that, by doing so, I will not only streamline my learning experience, but I will also set myself a clear goal/path that is realistic within the time frame that I have set. I am coding along with my lecturer, taking notes and completing ALL of the coding challenges presented to me in the course. You can find my notes and code here: https://github.com/Moomins07/udemy-course-notes.
 **Edit: Over the course of the 100 days, my goals differed due to certain needs and requirements at particular times. Some goals were met, some were not.**
 
 ### Day 1: January 30, 2022 

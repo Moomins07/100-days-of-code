@@ -739,3 +739,6 @@ Edit: Later that night, officially completed The Odin Project foundation course,
 **Today's Progress**: Following yesterday, tying up even more loose ends as I begin to make smaller tweaks to certain website features. Today was mostly media-related such as adding a SVG logo/background image to a section and making those responsive. I also added extra buttons to certain menus to ensure that the user can navigate back and forth without feeling too lost.
 
 **Thoughts**: The website is nearing completion at this point with a few key features still missing, such as Umbraco Forms, Gallery and colour themes. These particular features will be added at a later date. It's been quite a long and very educational journey. I feel very confident with Bootstrap, and I feel much more confident in my ability to use CMS such as Umbraco, although, I do not feel like I've scratched the surface. With experience, in the right hands, I can see how Umbraco is capable of being a very powerful tool in a developers toolkit. Overall, there's many things I'm content with, and many things I feel that I could have done better, but I am happy with how far I have come. I'm grateful for the opportunity to have been able to work on this project.
+
+
+## Moved to Log V2 ##

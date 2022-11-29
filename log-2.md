@@ -76,7 +76,7 @@ I found myself much more consistent when taking part in the challenge, and so he
 
 **Thoughts:** Although more confident with the use of Grid, I still find myself very overwhelmed, as even though I had laid out the overall Grid for the page, I feel that I haven't used units/responsive sizing to its full potential, by using minmax or auto-size functions. When tackling the navigation panel, I found myself confused as to how to do it, as there are obviously several ways this could be done. From my brief research, it seems that most people opt for using ul/li/a tags in sections. However, seeing as the project is focused on the use of Grid, I attempted to use Grid as much as possible in the design. I was unsure if I should apply a div to every elemetn that I was going to place in the grid, as there are 2 columns, one for the icon and one for the menu text; I was able to position these correctly without putting everything into a div. However, my first issue was that I needed to space specific rows apart from eachother, which Grid cannot do, it can only apply spacing to all of the rows. My way around this was by putting 2 row's elements into flex-divs and applying a margin-bottom, but this feels shoddy and incorrect. I plan to re-approach the same design and split the grid up into 3 divs that will also be grids so that I can use gap to split the grouped-rows apart, as opposed to using flex-divs and margin-bottom. However, this approach will require me to apply the same column sizing in the first column to each grid to ensure that everything aligns correctly.
 
-###Few days watching project videos###
+### Few days watching project videos ###
 
 ### Day 11: November 29, 2022 
 

@@ -185,3 +185,10 @@ Furthermore, I used auto-fit and minmax() in several places to make the grid mor
 **Today's Progress**: Moving back to The Odin Project course, I continued with the advanced JavaScript section which now has me covering more advanced concepts of Object Oriented Programming. Today, I mostly researched and learned about prototypical inheritance/object constructors.
 
 **Thoughts:** I had only briefly covered Object literals in a past JavaScript course during my first 100 days of code challenge. The concept of object constructors and prototypical inheritance are new to me. I feel somewhat confident that I understand the concept, but I was overwhelmed by the many number of ways that you can essentially get to the same result of creating an object prototype. I personally liked the syntactic sugar of ES6 'Classes' but the Odin Project, at least for now, does not suggest the use of Classes. I definitely need to play around with prototypes; more specifically, I need to better understand the prototype chain and feel more confident in creating a prototype for an object.
+
+
+### Day 27: December 28, 2022 
+
+**Today's Progress**: I spent several hours today watching videos on OOP in JavaScript. The videos mostly covered the use of Object.create and a general overview of what OOP is and why it is used.
+
+**Thoughts:** I now have a much better understanding of why we use OOP in programming and I learned about the 4 principles of OOP: Abstraction, Ecapsulation, Inheritance and Polymorphism. I'm still not confident in my ability to use OOP, so I will be spending tomorrow following an OOP section of a JavaScript course. I am doing this in preparation for a OOP project within The Odin Project course that I hope to start within the next few days.

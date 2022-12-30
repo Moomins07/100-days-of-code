@@ -192,3 +192,10 @@ Furthermore, I used auto-fit and minmax() in several places to make the grid mor
 **Today's Progress**: I spent several hours today watching videos on OOP in JavaScript. The videos mostly covered the use of Object.create and a general overview of what OOP is and why it is used.
 
 **Thoughts:** I now have a much better understanding of why we use OOP in programming and I learned about the 4 principles of OOP: Abstraction, Ecapsulation, Inheritance and Polymorphism. I'm still not confident in my ability to use OOP, so I will be spending tomorrow following an OOP section of a JavaScript course. I am doing this in preparation for a OOP project within The Odin Project course that I hope to start within the next few days.
+
+
+### Day 28: December 29, 2022 
+
+**Today's Progress**: Continuing to learn OOP, I have returned to a JavaScript Udemy course that I first started earlier in the year. I completed several sections on prototypal inheritance.
+
+**Thoughts:** As usual, I found that the lectures from the JavaScript Udemy course cleared up a lot of misunderstandings I had with OOP, and I'm only 2 lectures in! A great example of this is the fact that constructor functions themselves don't have a prototype, even though the syntax makes it look so (Person.prototype). What we're essentially saying here is 'the prototype of objects created using the Person constructor function'. It was also interesting to learn that JavaScript doesn't really have traditional 'classical OOP' classes and so it's important to learn some of the distinctions in the terminology. There's seemingly A LOT to OOP and I'm finding it somewhat overwhelming so far and I'm especially intimidated by The Odin Project OOP project that I will need to complete soon.

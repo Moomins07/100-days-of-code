@@ -213,3 +213,10 @@ Furthermore, I used auto-fit and minmax() in several places to make the grid mor
 **Today's Progress**: Further lessons on OOP in JavaScript today, I completed a coding challenge and finished a lesson on ES6 classes.
 
 **Thoughts:** I did not find the coding challenge very difficult and completed it quickly as I found it was mostly recalling syntax; I was required to create a function constructor that accepted 2 arguments, followed by creating 2 methods stored in the prototype of that constructor. I did this by using 'Car.prototype.method' Moving on from the coding challenge, I learned about ES6 classes which is essentially just a much nicer way of storing object constructors and their prototype methods in a neat code block (Syntactic sugar). I much prefer ES6 classes as I find it easier to read, follow and use in comparison to just having single lines of code that store methods in the prototype outside of any code block.
+
+
+### Day 31: January 09, 2023
+
+**Today's Progress**: Continuing with lessons on OOP in JavaScript, I followed along with 2 more lectures: Setters & Getters and Static methods.
+
+**Thoughts:** I have a lot of unanswered questions on how Setter and getters work and I am not very confident on the topic so far. Whilst I feel like I have a 'decent' idea as to how they work, I'm not particularly sure on the common uses of them; the lecturer used them for property validation. I plan to watch a few more lectures tomorrow on Setters and getters in hope to see more examples. Static methods on the other hand seem quite straight forward, essentially just a method created within the constructor function and not inherited on to other object instances as the method is not in the prototype; supposedly static methods are useful for creating constructor helper-functions, but again, my inexperience disallows me from knowing a specific case in which a static function could be handy. I don't plan to be on these 2 subjects too long as I'd like to finish the OOP section asap to re-continue with The Odin Project.

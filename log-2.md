@@ -234,3 +234,10 @@ Furthermore, I used auto-fit and minmax() in several places to make the grid mor
 **Today's Progress**: Continuing with lessons on OOP in JavaScript, I followed along with 2 more lectures: Inheritance between classes: constructor functions and Coding challenge #3.
 
 **Thoughts:** Once again, I do not feel like I had any real issues with either the lecture or the coding challenge itself. The lecture on inheritance between classes was mostly emphasising how we are able to use the call() method to link the 'this' keyword back to the original parent constructor whilst using a child constructor, so that we are able to avoid repeating code. It is through this way that we are able to add child classes with both additional parameters and the parent constructor function parameters/code. The coding challenge required me to put the prior mentioned into practice. I created two constructor functions, one parent and one child, in this case it was "Car" and "EV" (Electric Vehicle). The Car constructor function passes two arguments 'make'/'speed' whilst the EV constructor function passes the same arguments with the additional argument of 'charge'. I also used Object.create to link the prototypes between the two constructors.
+
+
+### Day 34: January 13, 2023
+
+**Today's Progress**: Continuing with lessons on OOP in JavaScript, I followed along with a lecture: Inheritance between "classes": ES6 Classes.
+
+**Thoughts:** This particular lecture was essentially the same as the previous lecture on inheritance between classes, however now with the addition of ES6 syntactic sugar 'Classes'. I was already a fan of ES6 classes as I find it much easier to read and use, so I'm very excited to see that Classes go even further and make prototypical inheritance even easier to use and read. I'll definitely be opting to use Classes in the future; although I by no means feel very confident in my ability to program using the OOP paradigm yet. I feel like I've also developed a better understanding of the Call() method/ 'super' keyword with classes. Overall, I've found this lecture very informative and I'm looking forward to future projects using Classes.

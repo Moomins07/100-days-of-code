@@ -252,6 +252,14 @@ Furthermore, I used auto-fit and minmax() in several places to make the grid mor
 
 ### Day 36: January 18, 2023
 
-**Today's Progress**: Having finished the OOP section of my JavaScript Udemy course, I've returned to The Odin Project to attempt a project by myself without any 'hand-holding'. The project is 'Book library'.
+**Today's Progress**: Having finished the OOP section of my JavaScript Udemy course, I've returned to The Odin Project to work on a project without any 'hand-holding'. The project is 'Book library'.
 
 **Thoughts:** Typically, I find myself staring blankly at the screen pondering how I'm going to approach the project from scratch. I decided to first sketch out the project on paper with pencil so that I had an idea as to how it will look. Recently having spent a decent amount of time learning Tailwind CSS, I decided to use Tailwind for the CSS, which took a little re-familiarisation, but has allowed me to follow my design almost perfectly, including mobile responsiveness. The project is missing the main JS OOP functionality that will allow me to add books, but I've added some basic JS that allowed me to implement a light and dark mode to the site. Overall, I'm very happy with how it looks and I'm looking forward to getting into the logic.
+
+#### [3 Week break due to other commitments]
+
+### Day 37: February 11, 2023
+
+**Today's Progress**: Finally able to get back on the horse! Today, I've began easing myself back into The Odin Project course by taking some time to re-familiarise myself and took a small dig at the book library project I had begun on Day 36.
+
+**Thoughts:** Admittedly, I feel very rusty having taken such an extended break and struggled for a few hours to work out where I had left off with the project and where abouts I had gotten up to. Thanks to this coding log, it was much easier than anticipated! I firstly returned to my TailwindCSS and decided that I am happy with the front-end design so far. Following this, I returned to the JavaScript to make sense of what I had so far and began working on the 'Add Book' functionality. The first issue I ran into is that my '+' button was refreshing the page upon click and not allowing me to properly see the text I was logging to the console; I took some time to research the issue and found that it is because the button is within a form and its default behaviour is to 'submit' and refresh the page. The first solution I had found was to simply declare the type of the button in the HTML to 'button', thus no longer making it a type of 'submit'. The second solution I found was to add the method event.preventDefault() to the JavaScript code that was being executed upon the click of that particular button. I opted to use preventDefault() instead of changing the type of the button. I still have a long way to go with the project, especially since the aim of the project is to specifically use OOP, of which I haven't really done yet. Looking forward to finally using some ES6 classes!

@@ -270,3 +270,10 @@ Furthermore, I used auto-fit and minmax() in several places to make the grid mor
 **Today's Progress**: Refreshing myself with certain JavaScript concepts via Brad Traversy's JavaScript course.
 
 **Thoughts:** Trying very hard not to stay out of 'tutorial hell', hoping to re-familiarise myself with concepts that I'll be using in my current project so that I'm not unnecessarily studying concepts that I've already taken several courses on. Currently going over destructuring and eventually Object prototypes once again before I continue with my book library project.
+
+
+### Day 39: February 15, 2023
+
+**Today's Progress**: Continuing with Brad Traversy's JavaScript course to refresh my knowledge.
+
+**Thoughts:** I'm really enjoying Brad Traversy's course, been a big fan of his courses since I completed his TailwindCSS course. Today I mostly spent my time briefly going over more concepts and diving deeper into destructuring as I did not feel very confident with it. I also spent time looking into some 'under the hood' concepts again such as execution context, hoisting (specifically the difference between let and var) and the temporal dead zone. However, I would like to get back to developing projects again ASAP.

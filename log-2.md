@@ -277,3 +277,10 @@ Furthermore, I used auto-fit and minmax() in several places to make the grid mor
 **Today's Progress**: Continuing with Brad Traversy's JavaScript course to refresh my knowledge.
 
 **Thoughts:** I'm really enjoying Brad Traversy's course, been a big fan of his courses since I completed his TailwindCSS course. Today I mostly spent my time briefly going over more concepts and diving deeper into destructuring as I did not feel very confident with it. I also spent time looking into some 'under the hood' concepts again such as execution context, hoisting (specifically the difference between let and var) and the temporal dead zone. However, I would like to get back to developing projects again ASAP.
+
+
+### Day 40: February 16, 2023
+
+**Today's Progress**: Continuing with Brad Traversy's JavaScript course, I covered a few older areas and decided to have a go at some coding challenges, of which included objects and functions.
+
+**Thoughts:** Thankfully, I found myself feeling very confident with these challenges; I say thankfully as they are your typical 'intro' challenges to these particular JavaScript concepts. Although, it definitely didn't hurt to brush up on the concepts as I did in fact find myself a little stuck with arrow functions, forgetting the syntax, and also found myself unable to remember how to use an Immediately Invoked Function Expression (IIFE). The most notable challenge for me however, was definitely on destructuring, as it's something I'd like to understand and use more. Again, fortunately I did not have any struggles with the destructuring challenge and found that my solution was the same as the lecturers! 

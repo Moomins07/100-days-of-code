@@ -291,3 +291,10 @@ Furthermore, I used auto-fit and minmax() in several places to make the grid mor
 **Today's Progress**: More JavaScript course sections and some challenges!
 
 **Thoughts:** As to avoid 'tutorial hell', I find myself still mostly picking and choosing certain topics that I'm not familiar with as opposed to just watching the entire course and wasting time, potentially. Today, I covered quite a wide-range of topics, but most of today's lectures covered high-order functions such as forEach, filter, map etc. I also briefly covered some loops that I'm not very confident with, such as for...of and for...in loops, which I now have a much greater understanding of and will likely use in my up-coming projects. Overall, I'm finding that my current method of learning is working very well.
+
+
+### Day 42: February 19, 2023
+
+**Today's Progress**: Today I completed all of the lectures on high-order JS functions and the coding challenges following them.
+
+**Thoughts:** I recall having issues with high-order functions when they were first introduced to me during a previous JavaScript course. I was using them from time to time in my personal JS projects, but I struggled as I didn't fully understand the syntax/results or the use-cases. Brad Traversy has explained the high-order functions very clearly and provided various examples as to where they may be useful and how they interact with other high-order functions to get very specific values. I'm feeling much more confident using them and I didn't have any issues completing the coding challenges at the end of the section that required me to use all of the high-order functons that I had learned in the previous lectures.

@@ -389,3 +389,10 @@ Furthermore, I used auto-fit and minmax() in several places to make the grid mor
 **Today's Progress**: Continuation of the 'typicode todos' project - part 2.
 
 **Thoughts:** Part 2 of the project focused on using fetch to now also update and delete data using the 'PUT' & 'DELETE' method. I feel like I have a somewhat decent grasp on the use of fetch itself, but I again found myself feeling a little overwhelmed with some of the code Brad has used. This is sometimes just simply trying to understand exactly what is happening in a particular function and then following the callstack/queue of invokes. I'm also confused by the 'init' function that Brad placed at the bottom of the code that contains the event listeners; the init function is invoked directly after at the very bottom of the code. The event listeners persist once the function has been invoked once? I'll need to research this more.
+
+
+### Day 56: April 23, 2023
+
+**Today's Progress**: Returning from an extended break, I mostly spent today refamiliarising myself with the last topic I had covered.
+
+**Thoughts:** Naturally, having taken such a long break, I'm lacking a lot of confidence and I'm very unsure as to how I'm going to re-continue with my studies. I believe that the best plan of action is to cover the last topic I left off at in my course and continue onwards. I went back through a few hours of lectures and I now remember where I left off, but my confidence with regards to applying that topic is low. Even though I haven't coded for a long period, I think it would be more detrimental to go back on myself and prevent progress. The topic I refer to is mentioned in the previous, day 55.

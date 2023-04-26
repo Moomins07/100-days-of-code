@@ -396,3 +396,17 @@ Furthermore, I used auto-fit and minmax() in several places to make the grid mor
 **Today's Progress**: Returning from an extended break, I mostly spent today refamiliarising myself with the last topic I had covered.
 
 **Thoughts:** Naturally, having taken such a long break, I'm lacking a lot of confidence and I'm very unsure as to how I'm going to re-continue with my studies. I believe that the best plan of action is to cover the last topic I left off at in my course and continue onwards. I went back through a few hours of lectures and I now remember where I left off, but my confidence with regards to applying that topic is low. Even though I haven't coded for a long period, I think it would be more detrimental to go back on myself and prevent progress. The topic I refer to is mentioned in the previous, day 55.
+
+
+### Day 57: April 25, 2023
+
+**Today's Progress**: Continuing to refresh myself on where I had left off, I spent today once again re-watching previous lectures.
+
+**Thoughts:** Though it feels like it's definitely helping to re-watch previous lectures, I feel that maybe simply re-watching them isn't enough and that I should in fact go over these lectures once again and follow along with the coding. The more previous lectures I watch, the more that I feel like I should continue to go back on myself as a lot of these previous topics are lost to me.
+
+
+### Day 58: April 26, 2023
+
+**Today's Progress**: I took yesterday me's advice and began coding along with previous lectures.
+
+**Thoughts:** Coding along with lectures I'd already covered in the past is definitely taking steps backwards, but I feel like it's best to invest a little extra time to ensure that I'm fully prepared to tackle the upcoming projects in the course as I'm quite certain that I'm going to find myself stumped at certain parts, failing to understand why the lecturer did things a certain way. This begs the question though, how far back should I go? Currently I'm considering the entire section on Async JS, High Order Array Methods and Fetch API/Async Await.

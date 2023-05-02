@@ -410,3 +410,11 @@ Furthermore, I used auto-fit and minmax() in several places to make the grid mor
 **Today's Progress**: I took yesterday me's advice and began coding along with previous lectures.
 
 **Thoughts:** Coding along with lectures I'd already covered in the past is definitely taking steps backwards, but I feel like it's best to invest a little extra time to ensure that I'm fully prepared to tackle the upcoming projects in the course as I'm quite certain that I'm going to find myself stumped at certain parts, failing to understand why the lecturer did things a certain way. This begs the question though, how far back should I go? Currently I'm considering the entire section on Async JS, High Order Array Methods and Fetch API/Async Await.
+
+
+### Day 59: April 28, 2023
+
+**Today's Progress**: Today I covered 5 more lectures in the Async JavaScript section of the course. This includes: setTimeout & clearTimeout Functions,
+setInterval & clearInterval Functions, Callbacks, ,Crash Course On HTTP Requests and lastly, DevTools Network Tab
+
+**Thoughts:** As mentioned in day 58, I'm feeling much more confident gonig forward re-doing some of these lectures due to the large break I had taken earlier this year. Rewatching these lectures and following along with the code once again feels a lot like re-watching a movie, as I'm discovering things that I did not notice before. As eager as I am to make progress with the course, it's been very refreshing to go over these topics again and I feel like I've developed a new confidence in their use. I'm certain now that I'll be covering other, more important topics that I had covered in the past.

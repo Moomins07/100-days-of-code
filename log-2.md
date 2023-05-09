@@ -418,3 +418,10 @@ Furthermore, I used auto-fit and minmax() in several places to make the grid mor
 setInterval & clearInterval Functions, Callbacks, ,Crash Course On HTTP Requests and lastly, DevTools Network Tab
 
 **Thoughts:** As mentioned in day 58, I'm feeling much more confident gonig forward re-doing some of these lectures due to the large break I had taken earlier this year. Rewatching these lectures and following along with the code once again feels a lot like re-watching a movie, as I'm discovering things that I did not notice before. As eager as I am to make progress with the course, it's been very refreshing to go over these topics again and I feel like I've developed a new confidence in their use. I'm certain now that I'll be covering other, more important topics that I had covered in the past.
+
+
+### Day 60: May 03, 2023
+ 
+**Today's Progress**: Continuing with lectures in the Async JavaScript section of the course, today I completed a lecture on AJAX and XHR Object followed by a mini-project Joke generator challenge.
+
+**Thoughts:** I recall the AJAX and XHR lessons well from the past and didn't have any issues with following the lecture. Whilst it is still useful to know the AJAX and XHR method of Async JS, it is also an outdated method and not something I'll particularly spend much extra time on. I was able to once again complete the Joke generator challenge by myself without following the lecture, which I'm happy with. I did hit a small snag wherein I forgot to place the section of code that 'opens' XHR and placed it outside of my function that was being invoked when 'generating a new joke'. I realised that this piece of code needed to run with every click of the button, not just the one time outside of the function. Other than that, everything works perfectly and I'm feeling confident moving forward. 

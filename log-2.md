@@ -425,3 +425,10 @@ setInterval & clearInterval Functions, Callbacks, ,Crash Course On HTTP Requests
 **Today's Progress**: Continuing with lectures in the Async JavaScript section of the course, today I completed a lecture on AJAX and XHR Object followed by a mini-project Joke generator challenge.
 
 **Thoughts:** I recall the AJAX and XHR lessons well from the past and didn't have any issues with following the lecture. Whilst it is still useful to know the AJAX and XHR method of Async JS, it is also an outdated method and not something I'll particularly spend much extra time on. I was able to once again complete the Joke generator challenge by myself without following the lecture, which I'm happy with. I did hit a small snag wherein I forgot to place the section of code that 'opens' XHR and placed it outside of my function that was being invoked when 'generating a new joke'. I realised that this piece of code needed to run with every click of the button, not just the one time outside of the function. Other than that, everything works perfectly and I'm feeling confident moving forward. 
+
+
+### Day 61: May 09, 2023
+ 
+**Today's Progress**: Continuing with lectures in the Async JavaScript section of the course, today I completed a lecture on Callback hell, Promises and Callback to Promises refactoring.
+
+**Thoughts:** Considering the last time I completed the lecture on callback hell, I feel that I have a greater understanding of why it is people may find themselves in 'callback hell' and how promises are a great solution to this issue. However, promises on the other hand, I still find somewhat difficult to follow at times. I absolutely have a better understanding of the topic now compared to when I had first completed this same lecture on promises several months ago, but I clearly need to use them practically in a project. Callback to promises refactor was a nice lecture to follow, once again shows how I can avoid using callbacks with promises. Overall, I'm not 100% there with these topics but I'm feeling more confident. I'm going to avoid returning to these topics now and power forward so that I can begin working on new things.

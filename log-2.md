@@ -495,3 +495,45 @@ The spinner was quite straight as it has already been developed, I simply had to
 
 Overall, this project so far has been a lot of fun. I'm now beginning to see the power of APIs and just how much is available to me. It's especially fun to be using concepts such as Page Routing and Active Links as this is essentially the back-bone of a functional website. I'm looking forward to the next lecture!
 
+---
+
+### Day 67: May 20, 2023
+ 
+**Today's Progress**: Continuing with the Flixx App project, today I completed the 'Movie Details Page' and 'Details Page Backdrop' lectures.
+
+**Thoughts:** Populating the movie details page was a little more complex as I'm now having to check the id in the html search bar. As per usual, I made a displayMovieDetails() function that will obviously populate the page when invoked, of which I then place in the page routing switch statement to ensure that this function only runs on the movie-details page.
+
+Using window.location.search I'm able to store the movie id in a variable e.g.'?id=502356'.
+As we only need the number, I can use the split() method to do so. 
+split('=') will return an array with 2 items. ([?id, 402356]). I then store that number in a variable. The finished line is as follows: 
+  ```const movieId = window.location.search.split('=')[1];```
+
+I can then use both the movieId and the fetchAPIData() function to dynamically call the different movie detail pages!
+  ```const movie = await fetchAPIData(`movie/${movieId}`);```
+
+Similarly to previous pages, I again create a div using createElement() and use innerHTML to add the html and css, followed by replacing hard-coded values within the movie data. 
+E.g. ```<h2>${movie.title}</h2>```
+
+One particular thing to note in this lecture is the use of .map(), which I have not done in a while. I had to refamiliarise myself with the syntax.
+```<ul class="list-group">
+      ${movie.genres.map((genre) => `<li>${genre.name}</li>`).join(', ')}
+    </ul>```
+
+Here, I called the data inside of movie.genres and map over it. The map function loops over the data via our callback function and returns a new array of the data. Using template literals again, I create a list item for every genre item and include the 'genre.name'.
+As it returns an array, the data within the site looks something like the following:
+```Universal Pictures
+, 
+Illumination
+, 
+Nintendo.```
+
+To fix this, I use the join() method to convert the array into a string.
+
+I noticed that some movies were lacking data on their budget and revenue and the API would return '0'. I did not like the look of this, so I made 2 variables that used ternary operators to check if movie.budget/revenue was 0, and if so, change to 'N/A'. 
+
+```const checkBudget =
+    movie.budget != 0 ? `$${numberWithCommas(movie.budget)}` : 'N/A';
+  const checkRevenue =
+    movie.revenue != 0 ? `$${numberWithCommas(movie.revenue)}` : 'N/A';```
+    
+On to the next lecture!

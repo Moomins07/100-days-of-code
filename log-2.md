@@ -497,7 +497,7 @@ Overall, this project so far has been a lot of fun. I'm now beginning to see the
 
 ---
 
-### Day 67: May 20, 2023
+### Day 67: May 22, 2023
  
 **Today's Progress**: Continuing with the Flixx App project, today I completed the 'Movie Details Page' and 'Details Page Backdrop' lectures.
 
@@ -515,9 +515,11 @@ Similarly to previous pages, I again create a div using createElement() and use 
 E.g. ```<h2>${movie.title}</h2>```
 
 One particular thing to note in this lecture is the use of .map(), which I have not done in a while. I had to refamiliarise myself with the syntax.
-`<ul class="list-group">
-      ${movie.genres.map((genre) => ``<li>${genre.name}</li>``).join(', ')}
+```
+<ul class="list-group">
+      ${movie.genres.map((genre) => `<li>${genre.name}</li>`).join(', ')}
     </ul>`
+```
 
 Here, I called the data inside of movie.genres and map over it. The map function loops over the data via our callback function and returns a new array of the data. Using template literals again, I create a list item for every genre item and include the 'genre.name'.
 As it returns an array, the data within the site looks something like the following:
@@ -537,5 +539,24 @@ const checkBudget =
     movie.budget != 0 ? `$${numberWithCommas(movie.budget)}` : 'N/A';
   const checkRevenue =
     movie.revenue != 0 ? `$${numberWithCommas(movie.revenue)}` : 'N/A';
+```
     
-On to the next lecture!
+The API includes 'movie backdrop', which we can use to make the site look a little more professional.
+I used the the backdrop on both the movie details and tv details page.
+I first created a function called displayBackgroundImage with 2 parameters (type and backgroundPath)
+displayBackgroundImage(type, backgroundPath)
+
+Inside of this function I created a div.
+I then use style.backgroundImage to target the specific url needed to access the image backdrops with the id.
+`overlayDiv.style.backgroundImage = `url(https://image.tmdb.org/t/p/original/${backgroundPath})`;`
+Followed by a lot of CSS styling inside of the function, which I'm not too sure if I'm happy with. I personally feel like it may have been better to store these styles in a class within the stylesheet, especially as there is so many of them.
+
+Lastly, an if statement that checks whether it is tv details or movie details.
+```
+if (type === 'movie') {
+document.querySelector('#movie-details').appendChild(overlayDiv);
+} else document.querySelector('#show-details').appendChild(overlayDiv);
+```
+
+By calling this function inside of our displayMovieDetails() function, our backdrop is added!
+

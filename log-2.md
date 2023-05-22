@@ -535,6 +535,6 @@ I noticed that some movies were lacking data on their budget and revenue and the
 ```const checkBudget =
     movie.budget != 0 ? ``$${numberWithCommas(movie.budget)}`` : 'N/A';
   const checkRevenue =
-    movie.revenue != 0 ? ``$${numberWithCommas(movie.revenue)}`` : 'N/A';```
+    movie.revenue != 0 ? ``$${numberWithCommas(movie.revenue)}`` : 'N/A';
     
 On to the next lecture!

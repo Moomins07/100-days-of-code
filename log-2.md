@@ -532,9 +532,9 @@ To fix this, I use the join() method to convert the array into a string.
 
 I noticed that some movies were lacking data on their budget and revenue and the API would return '0'. I did not like the look of this, so I made 2 variables that used ternary operators to check if movie.budget/revenue was 0, and if so, change to 'N/A'. 
 
-`const checkBudget =
-    movie.budget != 0 ? ``$${numberWithCommas(movie.budget)}`` : 'N/A'; <br>
+```const checkBudget =
+    movie.budget != 0 ? ``$${numberWithCommas(movie.budget)}`` : 'N/A';
   const checkRevenue =
-    movie.revenue != 0 ? ``$${numberWithCommas(movie.revenue)}`` : 'N/A';`
+    movie.revenue != 0 ? ``$${numberWithCommas(movie.revenue)}`` : 'N/A';```
     
 On to the next lecture!

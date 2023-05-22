@@ -463,6 +463,7 @@ I'm also still not very confident with my understanding on handling the fetch re
 
 **Thoughts:** Not much to report today as I wanted to refresh my memory on the various data-types and build on my theory knowledge. I often find myself regularly returning to fundamental/basic theory lectures just as a quick reminder. Following this I noticed that in a lot of the lectures the lecturer only tends to use the keyboard to navigate his code and rarely uses his mouse. I could see the benefits of this, quite literally, and decided to find out how exactly he was doing it. Thankfully, Brad did have a lecture on shortcuts and commands etc, but my keybinds were completely different to his as he uses a Mac, whereas I am on Windows. In the end, I found myself asking Chat-GPT what the MacOS keybind equivalent was for Windows and worked my way from there, slowly rebinding my keys to more accessible ones. Now it's just a matter of getting used to only using the keyboard, at least now my tools are configured!
 
+---
 
 ### Day 66: May 20, 2023
  

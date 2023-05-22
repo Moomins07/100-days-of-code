@@ -515,25 +515,25 @@ Similarly to previous pages, I again create a div using createElement() and use 
 E.g. ```<h2>${movie.title}</h2>```
 
 One particular thing to note in this lecture is the use of .map(), which I have not done in a while. I had to refamiliarise myself with the syntax.
-```<ul class="list-group">
+`<ul class="list-group">
       ${movie.genres.map((genre) => `<li>${genre.name}</li>`).join(', ')}
-    </ul>```
+    </ul>`
 
 Here, I called the data inside of movie.genres and map over it. The map function loops over the data via our callback function and returns a new array of the data. Using template literals again, I create a list item for every genre item and include the 'genre.name'.
 As it returns an array, the data within the site looks something like the following:
-```Universal Pictures
+`Universal Pictures
 , 
 Illumination
 , 
-Nintendo.```
+Nintendo.`
 
 To fix this, I use the join() method to convert the array into a string.
 
 I noticed that some movies were lacking data on their budget and revenue and the API would return '0'. I did not like the look of this, so I made 2 variables that used ternary operators to check if movie.budget/revenue was 0, and if so, change to 'N/A'. 
 
-```const checkBudget =
+`const checkBudget =
     movie.budget != 0 ? `$${numberWithCommas(movie.budget)}` : 'N/A';
   const checkRevenue =
-    movie.revenue != 0 ? `$${numberWithCommas(movie.revenue)}` : 'N/A';```
+    movie.revenue != 0 ? `$${numberWithCommas(movie.revenue)}` : 'N/A';`
     
 On to the next lecture!

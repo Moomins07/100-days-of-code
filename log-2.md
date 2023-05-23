@@ -560,3 +560,125 @@ document.querySelector('#movie-details').appendChild(overlayDiv);
 
 By calling this function inside of our displayMovieDetails() function, our backdrop is added!
 
+---
+
+### Day 68: May 23, 2023
+ 
+**Today's Progress**: Continuing with the Flixx App project, today I completed the 'TV Show Details Page', 'Swiper Slider' and 'Search Functionality' lectures.
+
+**Thoughts:** <br>
+#### TV Show Details Page
+This was obviously once again very similar to our movie details page. I removed the hard-coded values from the HTML and copied our displayMovieDetails function and changed the template literals as needed to produce the data on the site.
+
+No real issues to report, except for the lack of mobile responsiveness in the site as flexbox/grid was not properly being utilised on the details pages. I somewhat fixed this but I can appreciate that this project is obviously for JavaScript purposes, not necessarily making the website look 'perfect'.
+
+Some of the data property names change when using TV shows data, rather than the movie data, so I naturally found that a lot of the code wasn't necessarily returning the data when I simply changed our data variable from movie > show. Thankfully my lecturer is already aware of this and knows the correct API data property names, but obviously if this were not the case, I would have to console.log and check the returned data myself or refer to the API reference guide.
+
+#### Swiper Slider
+This lesson was really cool and something I've wanted to do for a long time, which is to use a library to create some animated site effects.
+After following this lecture, there's a 'Now Playing' section at the top of the site that scrolls through movies that are currently playing in Cinemas. It is also mobile responsive and customiseable!
+
+The code itself was not particularly difficult to follow as it's followed somewhat of the same general process as previous functions.
+
+First I created the function displaySlider(), which is placed with our index.html section in the page-routing. I async await using the fetchAPIData() function from 'movie/now_playing'. 
+
+I destructure and 'pull' the 'results' from that data followed by looping through that data and once again creating a div for each movie. I then add a class of 'slider-swipe' to each div created and then set the innerHTML of the created divs as follows:
+
+```
+            `<a href="movie-details.html?id=${movie.id}">
+              <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />
+            </a>
+            <h4 class="swiper-rating">
+              <i class="fas fa-star text-secondary"></i> ${movie.vote_average} / 10
+            </h4>`;
+```
+I make sure they are clickable links by using anchor tags and movie.id. I use poster_path again for the images, followed by the rating of the movie and appending the div to the parent container of .swiper-wrapper.
+
+It's important to note that the swiper animation requires a little more setting up, so I also invoke the function of 'initSwiper()' within the forEach loop so that it is called everytime a div is created.
+
+The initSwiper function is mostly just configuration as you can see below: 
+```
+function initSwiper() {
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    freeMode: true,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      500: {
+        slidesPerView: 2,
+      },
+      700: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
+    },
+  });
+}
+```
+Definitely using this again!
+
+
+#### Search Functionality
+This lecture was a little more difficult to follow as search functionality is an entirely new concept to me. I felt like I was however able to keep up with the lecture and understand the code.
+
+The first important changes to note here was Brad's decision to move the API key and URL from the fetchAPIData() function into the global object as well as adding a new search object with keys that we'll be using later to determine whether we're searching for a movie or a tv show.
+```
+const global = {
+   currentPage: window.location.pathname,
+   search: {
+    term: '',
+    type: '',
+    page: 1,
+    totalPages: 1,
+ },
+   api: {
+    apiKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxx',
+    apiUrl: 'xxxxxxxxxxxxxxxxxxxxxxxxxx',
+ },
+};
+```
+Interestingly, the search submit button actually directs to a different HTML page entirely, appropriately named 'search.html'. Due to this, I have created a search() function that is placed in the page-routing under our search.html page.
+
+Firstly, the search function needs to store two important pieces of data.
+window.location.search again, followed by the search parameters.
+```
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+```
+queryString has stored '?type=movie&search-term=[whatever we search here]'
+
+urlParams has stored an instantiation of the object URLSearchParams that I have passed queryString into.
+
+This is important as the URLSearchParams object gives me access to a variety of methods made available within the prototype object such as 'get()'.
+
+By using get(), I am able to specifically return the 'type' or 'search-term' that we can then use for condition checks to see exactly what we are searching for, and whether or not the 'type' is a movie or tv-show!
+```
+global.search.type = urlParams.get('type');
+global.search.term = urlParams.get('search-term');
+```
+I'll now store the 'type' and 'search-term' inside of the global object and run a condition check to see whether or not there is text within the search bar, and if there isn't, alert the user on screen.
+```
+if (global.search.term !== '' && global.search.term !== null) {
+ const results = await searchAPIData();
+ console.log(results);
+ } else {
+ showAlert('Please enter a search term');
+ }
+```
+If the condition passes, we want to await data from the new searchAPIData function which is very similar to the fetchAPIData function. The main differences here being that I'm now adding a 'search type' and a 'search term' from the global object into the API URL.
+```
+const response = await fetch(
+`${API_URL}search/${global.search.type}?api_key=${API_KEY}&language=en-US&query=${global.search.term}`
+);
+```
+The global object will update according to whether or not we have Movies or TV Shows selected when we search and now provide is with the correct search results!
+
+I'm very happy with the progress so far, I'll be using many of the concepts that I've learned in this project so far, it's great to really start working on the 'backbone' of webdev. However, search functionality is proving to be quite a lot to take in, even if I am able to understand the code. 
+

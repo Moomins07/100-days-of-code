@@ -682,3 +682,51 @@ The global object will update according to whether or not we have Movies or TV S
 
 I'm very happy with the progress so far, I'll be using many of the concepts that I've learned in this project so far, it's great to really start working on the 'backbone' of webdev. However, search functionality is proving to be quite a lot to take in, even if I am able to understand the code. 
 
+---
+
+### Day 69: May 24, 2023
+ 
+**Today's Progress**: Continuing with the Flixx App project, today I completed the 'Display Search Results'.
+
+**Thoughts:** <br>
+Displaying the search results on screen wasn't as complicated as I thought it would be and in fact was very similar to displaying the movie and tv shows on the DOM as I had done in the previous lectures.
+
+In the search() function, I have now added an additional if statement to check if there are any search results, and if there aren't any, show an alert 'No results.'
+```
+if (results.length === 0) {
+showAlert('No results');
+return;
+}
+```
+If this passes, and there are results, then I want to run a function that displays the search results in the DOM and clear the input field.
+```
+displaySearchResults(results);
+document.querySelector('#search-term').value = '';
+```
+For the most part, the displaySearchResults function was very similar to my displayPopularMovies / Tv-shows function as I'm once again looping through the results, creating a div with a class of 'card' and then setting the innerHTML of those divs. As the cards have remained the same throughout the website, I've copied the card innerHTML from my other functions and changed the template literals appropriately.
+
+One key thing to note however is that 'movies' have a value pair of 'title' and tv-shows have a value pair of 'name'. Due to this, I had to include a conditional check to determine whether or not the title will be a movie, or a tv-show. As seen below:
+```
+<h5 class="card-title">${
+global.search.type === 'movie' ? result.title : result.name
+}</h5>
+```
+The global.search.type is obviously updated depending on which radio button is checked when using the search input. This was also the same case with release date, as tv-shows do not have a 'release date', but instead a 'first_air_date'.
+```
+<small class="text-muted">${
+global.search.type === 'movie'
+? result.release_date
+: result.first_air_date
+}</small>
+```
+Whilst I'm confident with the repetition of code that I'm seeing when it comes to creating new elements, adding the innerHTML and displaying those elements in the DOM etc, it's the 'smaller' details that are making a big difference that I'm not confident that I will remember.
+
+An example of this is when Brad, during the lecture, decided to update the showAlert() function in a way that I have not seen before.
+```
+function showAlert(message, className = 'error') {}
+```
+Brad assigned the second parameter a default value of 'error', meaning that the function can be invoked without having to specify a second argument if we'd just like to use the red-background in the .error CSS.
+
+This doesn't mean that I cannot assign a different second argument. I can also pass a second argument of 'success' if I'd like to use my .success class in my CSS thus changing the background colour of the alert to green.
+
+A very small, but very useful amendment to the function that I hope I will remember to use in the future.

@@ -741,3 +741,99 @@ if (results.length === 1) {
 }
 ```
 Max-width alone was not enough to solve the issue, is the card would also sit off-center and look out of place, so I also had to add flexbox to center the card. Another issue I faced after this however was the page buttons sitting directly under the card rather than at the bottom of the page with the footer. This is because Brad did not couple the footer and page buttons together in the HTML and I previously fixed the footer by using margin-top auto, which now pushes the page buttons up. I've decided to leave this issue as obviously the main focus of these lectures is the JavaScript.
+
+---
+
+### Day 70: May 25, 2023
+ 
+**Today's Progress**: Continuing with the Flixx App project, today I completed the 'Add Pagination for Search'.
+
+**Thoughts:** <br>
+In this lecture, I'm learning how to add dynamic page buttons that will allow the user to cycle through the search results, as only 20 are displayed on screen at a time. To do this, next/prev page will be fetching data from the API and re-populating the screen with data from the correct page. <br>
+
+To start, I add three new key/value pairs to my global object:
+```
+    page: 1,
+    totalPages: 1,
+    totalResults: 0,
+```
+
+As I will require all three to track the current page out of the total pages.
+
+Following this, inside of my search() function, I need to return more data from the API such as total_pages, page and total_results so that I can then update my global object equivalents with that data. As seen below:
+
+```
+if (global.search.term !== '' && global.search.term !== null) {
+const { results, total_pages, page, total_results } = await searchAPIData();
+
+    global.search.page = page;
+    global.search.totalPages = total_pages;
+    global.search.totalResults = total_results;
+```
+
+Firstly, I add a heading within my displaySearchResults() function so that we can display how many results are being displayed out of how many total results were found.
+```
+document.querySelector('#search-results-heading').innerHTML = ` <h2>${results.length} of ${global.search.totalResults} results for ${global.search.term}</h2>
+`;
+```
+This will display "20 of 150 results for [search input]" <br>
+
+As for the pagination, I first created a function called displayPagination() :
+```
+function displayPagination() {
+const div = document.createElement('div');
+div.classList.add('pagination');
+div.innerHTML = `        <button class="btn btn-primary" id="prev">Prev</button>
+          <button class="btn btn-primary" id="next">Next</button>
+          <div class="page-counter">Page ${global.search.page} of ${global.search.totalPages} </div>
+        </div>`;
+}
+```
+The function follows the same process as most other functions populating the DOM. Here I create 2 buttons (prev/next) followed by a page counter to allow us to which page we are on out of how many pages total.
+
+Now that the buttons are seen on the DOM and soon to be functioning, I need to add some basic conditionals that disables the prev button on the first page, and the next button on the last page:
+```
+// Disable prev button if on first page
+if (global.search.page === 1) {
+document.querySelector('#prev').disabled = true;
+}
+
+// Disable next button if on last page
+if (global.search.page === global.search.totalPages) {
+document.querySelector('#next').disabled = true;
+}
+```
+Furthermore, I need to add an event listener to the buttons.
+Everytime a button is clicked, it was be fetching data from the API, meaning that the function will be async.
+```
+// Next page
+document.querySelector('#next').addEventListener('click', async () => {
+global.search.page++;
+const { results, total_pages } = await searchAPIData();
+displaySearchResults(results);
+});
+// Prev page
+document.querySelector('#prev').addEventListener('click', async () => {
+global.search.page--;
+const { results, total_pages } = await searchAPIData();
+displaySearchResults(results);
+});
+```
+When the button is clicked, the global.search.page value is incremented by 1 (page 2).
+I assign destructure results again from our returned data and invoke the displaySearchResults() function with the newly returned data.
+
+Important note! The searchAPIData function that we call to return data from the API must be updated so that the correct page of data is returned. To do this, I added another query-string to the end of the URL.
+
+`${API_URL}search/${global.search.type}?api_key=${API_KEY}&language=en-US&query=${global.search.term}`===&page=${global.search.page}===
+
+The buttons are now working, but the pervious page of data remains on the screen, causing the results/pagination buttons to double whenever we click next or previous page. To fix this, I can clear the previous search results by adding the following code at the very top of the displaySearchResults() function:
+```
+document.querySelector('#search-results').innerHTML = '';
+document.querySelector('#search-results-heading').innerHTML = '';
+document.querySelector('#pagination').innerHTML = '';
+```
+Now, whenever the displaySearchResults() function is called, the above elements are set to '' I.e. Nothing.
+
+This was a much longer lecture and there was a lot to take in. I definitely won't remember everything here, especially as this was one of the more complex lessons. I'm very happy to have this project complete, I'm hopeful that I can take a lot away from this and implement what I've learned in future projects.
+
+

@@ -824,7 +824,7 @@ I assign destructure results again from our returned data and invoke the display
 
 Important note! The searchAPIData function that we call to return data from the API must be updated so that the correct page of data is returned. To do this, I added another query-string to the end of the URL.
 
-`${API_URL}search/${global.search.type}?api_key=${API_KEY}&language=en-US&query=${global.search.term}`== &page=${global.search.page} ==
+`${API_URL}search/${global.search.type}?api_key=${API_KEY}&language=en-US&query=${global.search.term}` ==&page=${global.search.page}==
 
 The buttons are now working, but the pervious page of data remains on the screen, causing the results/pagination buttons to double whenever we click next or previous page. To fix this, I can clear the previous search results by adding the following code at the very top of the displaySearchResults() function:
 ```

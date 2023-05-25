@@ -742,6 +742,8 @@ if (results.length === 1) {
 ```
 Max-width alone was not enough to solve the issue, is the card would also sit off-center and look out of place, so I also had to add flexbox to center the card. Another issue I faced after this however was the page buttons sitting directly under the card rather than at the bottom of the page with the footer. This is because Brad did not couple the footer and page buttons together in the HTML and I previously fixed the footer by using margin-top auto, which now pushes the page buttons up. I've decided to leave this issue as obviously the main focus of these lectures is the JavaScript.
 
+Note: Also spent the evening completing beginner CodeWar challenges to re-familiarise myself with some basic Array functions etc.
+
 ---
 
 ### Day 70: May 25, 2023

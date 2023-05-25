@@ -733,11 +733,11 @@ A very small, but very useful amendment to the function that I hope I will remem
 
 I also noticed that when a single result was returned in the search, the styling would cause the singular card to occupy the entirety of the page, causing the hover over effect to cover the page buttons and also distort the card image due to its size. Obviously, this isn't intended and so I also added an extra conditional and styling to fix the problem.
 
-
+```
 if (results.length === 1) {
   document.querySelector('.card').style.maxWidth = '50%';
   document.querySelector('#search-results').style.display = 'flex';
   document.querySelector('#search-results').style.justifyContent = 'center';
 }
-
+```
 Max-width alone was not enough to solve the issue, is the card would also sit off-center and look out of place, so I also had to add flexbox to center the card. Another issue I faced after this however was the page buttons sitting directly under the card rather than at the bottom of the page with the footer. This is because Brad did not couple the footer and page buttons together in the HTML and I previously fixed the footer by using margin-top auto, which now pushes the page buttons up. I've decided to leave this issue as obviously the main focus of these lectures is the JavaScript.

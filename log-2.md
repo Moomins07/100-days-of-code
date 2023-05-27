@@ -877,4 +877,79 @@ I'm getting close, but I'm not quite there yet. More tweaking is required.
 **Today's Progress**:
 
 **Thoughts:** <br>
-Thinking that this was an issue with my 'Tailwind-starter' folder that I created 5-6 months ago, I set up a new, updated folder for TailwindCSS that now uses 'Vite'. The updated Tailwind folder is much 'cleaner' now and easier to manage then my previous folder, but this unsurprisingly did not solve the issue of my animations not working.
+Continuing from yesterday, I thought that the continuous animation malfunctions was an issue with my 'Tailwind-starter' folder that I created 5-6 months ago, I set up a new, updated folder for TailwindCSS that now uses 'Vite'. The updated Tailwind folder is much 'cleaner' now and easier to manage then my previous folder, but this unsurprisingly did not solve the issue of my animations not working. On the bright side, my new project now also uses Just-In-Time, meaning that only the classes I call are being used in my project!
+
+I realised that I only need the one element manipulated to achieve the desired effect, and so I once again tweaked my function, this time using a setTimeout function that would perform the code once the initial animation finished (fade in and fade out). Within that setTimeout function, I removed the fadeInOut animation, added the 'fadeIn' animation and also set the textContent to the new message that I'd like the user to see. This worked! Seen below.
+
+```
+function titlesFadeInOut() {
+  return new Promise((resolve) => {
+    // Fade in first message
+    const firstMessage = document.getElementById('firstMessage');
+    firstMessage.classList.remove('opacity-0');
+
+    // After 8 seconds, fade out the first message and fade in the second
+    setTimeout(() => {
+      firstMessage.classList.remove('animate-fadeInOut');
+      firstMessage.classList.add('animate-fadeIn');
+      firstMessage.textContent = 'Click to get started!';
+      resolve();
+
+      // Allow for the first message to fade out before the second message starts to fade in
+    }, 9000); // 8 seconds
+  });
+}
+```
+
+Following this, I wanted my 2 image buttons to be a little more dynamic and responsive. My first idea was to add a 'bounce' animation to the images if they are not interacted with for a period of time, prompting the user to make a selection. This needed to occur once the h1 animations had finished, which I was able to achieve by using async/await and a promise in the titlesFadeInOut() function, seen above and below. 
+
+```
+async function imgPromptAnimation() {
+  await titlesFadeInOut();
+  const promptBtns = document.querySelectorAll('.promptBtn');
+  let timerId = null;
+  //   Adds initial bounce animation to prompt user after 12 secs
+  setTimeout(() => {
+    document.getElementById('srv').classList.add('animate-lessBounce');
+    // 1.5 sec delay on other img so they bounce out of sync
+    setTimeout(() => {
+      document.getElementById('klr').classList.add('animate-lessBounce');
+    }, 1500);
+  }, 12000);
+  //   Remove bounce effect on hover
+  promptBtns.forEach((button) => {
+    button.addEventListener('mouseenter', () => {
+      // If there is a previous timer, clear it
+      if (button.dataset.timerId) {
+        clearTimeout(button.dataset.timerId);
+      }
+      button.classList.remove('animate-lessBounce');
+      //   Time out function to add bounce effect after 12 seconds of inactivity
+      // Set up a new timer
+      button.dataset.timerId = setTimeout(() => {
+        button.classList.add('animate-lessBounce');
+      }, 12000);
+    });
+  });
+}
+
+```
+I wanted the buttons to bounce when they were not interacted with after 12 seconds, which I was able to do with a rather basic setTimeout function, as seen above. Both buttons would bounce at the same time, so I used another setTimeout function to animate the right button 1.5 seconds after the left button. I then looped over each button and listened for a 'hover' (mouseenter) event. When this occurred, the bounce animation is removed. To add to this, I wanted the buttons to once again bounce if another 12 seconds pass without any interaction, which is why I have a conditional check to check if the button has dataset.timerId, and if there is already a timer, clear that timer. I had to do this, as originally if I continued to hover over the button, several Timeout functions would begin to run simultaneously.
+After 12 seconds, the lessBounce animation is added again.
+
+Note that I first discovered the default Tailwind bouce animation to be too 'bouncy', so I created a custom bounce animation called lessBounce and used that instead.
+
+```
+keyframes: {
+        lessBounce: {
+          '0%, 100%': {
+            transform: 'translateY(-5%)',
+            animationTimingFunction: 'cubic-bezier(0.8,0,1,1)',
+          },
+          '50%': {
+            transform: 'none',
+            animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
+          },
+ ```
+
+All of the functions are added to my init() function, which is invoked on DOMContentLoaded. Today has been very educational, but also very frustrating. Slow and steady progress! Tomorrow, I will be looking to change the HTML to load via our JS as well as populating the site with some API data.

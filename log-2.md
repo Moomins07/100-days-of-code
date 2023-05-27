@@ -874,7 +874,7 @@ I'm getting close, but I'm not quite there yet. More tweaking is required.
 
 ### Day 72: May 27, 2023
  
-**Today's Progress**:
+**Today's Progress**: Continuing with my personal project, I've managed to tweak and fix the h1 animations to get the result I was after. I have also added some extra responsive/user experience features to the 2 buttons on the landing page that will be used to populate the site.
 
 **Thoughts:** <br>
 Continuing from yesterday, I thought that the continuous animation malfunctions was an issue with my 'Tailwind-starter' folder that I created 5-6 months ago, I set up a new, updated folder for TailwindCSS that now uses 'Vite'. The updated Tailwind folder is much 'cleaner' now and easier to manage then my previous folder, but this unsurprisingly did not solve the issue of my animations not working. On the bright side, my new project now also uses Just-In-Time, meaning that only the classes I call are being used in my project!

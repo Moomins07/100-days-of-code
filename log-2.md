@@ -838,4 +838,42 @@ Now, whenever the displaySearchResults() function is called, the above elements 
 
 This was a much longer lecture and there was a lot to take in. I definitely won't remember everything here, especially as this was one of the more complex lessons. I'm very happy to have this project complete, I'm hopeful that I can take a lot away from this and implement what I've learned in future projects.
 
+---
 
+### Day 71: May 26, 2023
+ 
+**Today's Progress**: Now that I have completed the Flix App project, I have decided to begin a mini-project that will use an API in hope to solidify what I've learned.
+
+**Thoughts:** <br>
+The original plan was to build a simple landing page using TailwindCSS as it's my general 'go to' framework for CSS now. However, it's been many months since I used it last and I found myself unsure as to how to continue. My first hurdle was not necessarily trying to remind myself of Tailwind's syntax, but more so brushing up on my general CSS fundamentals and then even trying to decide on a design for the website.
+
+I poorly attempted to convince myself that the landing page was not particularly important, as the project was obviously for JavaScript purposes, but I set out to refamiliarise myself with Tailwind once again and learn new things along the way.
+
+Even though it took many, many hours of research and referring to documentation, I eventually created somewhat of an acceptable, yet basic, looking landing page for the humble beginnings of my project.
+
+I did not stop there though. I decided that I wanted to animate a message on the landing page wherein a message would 'fade-in', pause for a few seconds, 'fade-out' and then fade-in once again with a different message. Although this sounded simple by design, I found myself constantly 'close' to a result, but only found that the animations would break.
+
+The first attempt at trying to add such an animation to my page was as follows: <br>
+I created custom animations through the 'tailwind config' file. The first animation fades the element in, pauses for 5 seconds or so and then fades out; the text would suddenly re-appear however, and I learned that I needed to add 'forwards' to my animation, which makes the element use the last animation frame when it ends (faded out). I then created a second animation that would only fade-in, once again using the newly learned 'forwards' syntax. Example below:
+
+```fadeInOut: {
+          '0%': { opacity: '0' },
+          '20%': { opacity: '1' },
+          '80%': { opacity: '1' },
+          '100%': { opacity: '0' },
+        },
+ ```
+
+My first attempt was by adding two different 'h1' elements and applying the'fadeInOut' animation to the first h1, followed by the second 'fadeIn' animation to the second h1. Using JavaScript to apply these classes unfortunately did not work everytime, they were very volatile and seemed to break at random. I created a function within my JavaScript that would add the animate class to my first h1 and then use setTimeOut() to wait for that animation to finish, followed by adding the fadeIn animation to my second h1. This did not work and also had the undesired effect of naturally having 2 different elements in 2 different positions on sreen (two block elements). I considered using 'absolute' positioning to solve this, but I feared that the elements would not sit correctly on all screen sizes. 
+
+I'm getting close, but I'm not quite there yet. More tweaking is required.
+
+
+---
+
+### Day 72: May 27, 2023
+ 
+**Today's Progress**:
+
+**Thoughts:** <br>
+Thinking that this was an issue with my 'Tailwind-starter' folder that I created 5-6 months ago, I set up a new, updated folder for TailwindCSS that now uses 'Vite'. The updated Tailwind folder is much 'cleaner' now and easier to manage then my previous folder, but this unsurprisingly did not solve the issue of my animations not working.

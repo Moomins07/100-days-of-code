@@ -856,7 +856,8 @@ I did not stop there though. I decided that I wanted to animate a message on the
 The first attempt at trying to add such an animation to my page was as follows: <br>
 I created custom animations through the 'tailwind config' file. The first animation fades the element in, pauses for 5 seconds or so and then fades out; the text would suddenly re-appear however, and I learned that I needed to add 'forwards' to my animation, which makes the element use the last animation frame when it ends (faded out). I then created a second animation that would only fade-in, once again using the newly learned 'forwards' syntax. Example below:
 
-```fadeInOut: {
+```
+fadeInOut: {
           '0%': { opacity: '0' },
           '20%': { opacity: '1' },
           '80%': { opacity: '1' },
@@ -864,7 +865,7 @@ I created custom animations through the 'tailwind config' file. The first animat
         },
  ```
 
-My first attempt was by adding two different 'h1' elements and applying the'fadeInOut' animation to the first h1, followed by the second 'fadeIn' animation to the second h1. Using JavaScript to apply these classes unfortunately did not work everytime, they were very volatile and seemed to break at random. I created a function within my JavaScript that would add the animate class to my first h1 and then use setTimeOut() to wait for that animation to finish, followed by adding the fadeIn animation to my second h1. This did not work and also had the undesired effect of naturally having 2 different elements in 2 different positions on sreen (two block elements). I considered using 'absolute' positioning to solve this, but I feared that the elements would not sit correctly on all screen sizes. 
+My first attempt was by adding two different 'h1' elements and applying the 'fadeInOut' animation to the first h1, followed by the second 'fadeIn' animation to the second h1. Using JavaScript to apply these classes unfortunately did not work everytime, they were very volatile and seemed to break at random. I created a function within my JavaScript that would add the animate class to my first h1 and then use setTimeOut() to wait for that animation to finish, followed by adding the fadeIn animation to my second h1. This did not work and also had the undesired effect of naturally having 2 different elements in 2 different positions on sreen (two block elements). I considered using 'absolute' positioning to solve this, but I feared that the elements would not sit correctly on all screen sizes. 
 
 I'm getting close, but I'm not quite there yet. More tweaking is required.
 

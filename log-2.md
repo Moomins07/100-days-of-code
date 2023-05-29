@@ -953,3 +953,12 @@ keyframes: {
  ```
 
 All of the functions are added to my init() function, which is invoked on DOMContentLoaded. Today has been very educational, but also very frustrating. Slow and steady progress! Tomorrow, I will be looking to change the HTML to load via our JS as well as populating the site with some API data.
+
+
+---
+
+### Day 73: May 28, 2023
+ 
+**Today's Progress**: Today I completed several hours of beginner challenges on Codewars.com.
+
+**Thoughts:** This is quite interesting, because I recall over a year ago, struggling to make sense of some of the basic JavaScript beginner challenges. I recall being extremely demoralised, because so many online resources swear by Codewars as a big and potentially important part of a programmer's learning resources. I decided that in time, I would return to Codewars to see my progress, and I am happy to report that I was able to complete all but one beginner challenge across several days. Better yet, I not only passed these challenges, but I also refactored my code often down to single lines, which obviously isn't totally necessary, and not all that practical in terms of readability, but fun nonetheless. I'll definitely be incorporating more challenges into my day when I find myself looking for something to pass some time. Hopefully, in time, I will also find myself returning once again completing more advanced challenges. 

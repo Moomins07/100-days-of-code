@@ -962,3 +962,45 @@ All of the functions are added to my init() function, which is invoked on DOMCon
 **Today's Progress**: Today I completed several hours of beginner challenges on Codewars.com.
 
 **Thoughts:** This is quite interesting, because I recall over a year ago, struggling to make sense of some of the basic JavaScript beginner challenges. I recall being extremely demoralised, because so many online resources swear by Codewars as a big and potentially important part of a programmer's learning resources. I decided that in time, I would return to Codewars to see my progress, and I am happy to report that I was able to complete all but one beginner challenge across several days. Better yet, I not only passed these challenges, but I also refactored my code often down to single lines, which obviously isn't totally necessary, and not all that practical in terms of readability, but fun nonetheless. I'll definitely be incorporating more challenges into my day when I find myself looking for something to pass some time. Hopefully, in time, I will also find myself returning once again completing more advanced challenges. 
+
+---
+
+### Day 74: May 29, 2023
+ 
+**Today's Progress**: Continued working on my personal project site that uses a Dead By Daylight API. I added in some placeholder images to replace when I access the API and also tweaked the layout a bit. I also did manage to access the API today, but not without its frustrations.
+
+**Thoughts:** I originally planned this project to be 'quick' and 'simple' just to solidify what I had learned from my previous API lessons in the JavaScript course I am following. However, it is taking much longer than anticipated. 
+
+As previously mentioned, I've found myself having to essentially re-learn TailwindCSS whilst also coming to grips with HTML and CSS again as I go. I've managed to achieve the simple look and style, which isn't working 100% of the time in terms of mobile responsiveness etc, but the focus here is obviously the JavaScript.
+
+I've noticed that my site tends to be very volatile, with the animations sometimes just breaking without any real reason, and then simply resolving itself whenever it feels like it. I've still no idea why the website does this, maybe it's something to do with my browser cache? I hope to find some answers on this soon.
+
+The first major issue I ran into whilst attempting to pull data from the API I had chosen (https://dbd.tricky.lol/apidocs/) was a 'CORS' error. This error is completely new to me and I've yet to understand what it actually means, but it was a hurdle I needed to jump. I began researching on the topic to find that this isn't uncommon when working with APIs, and that there is in fact an NPM package called 'cors-anywhere' that allows the user to essentially 'by-pass' the error.
+
+From what I can see, and I could be wrong, the API requires us to be using a secure server if we wish to pull the data, of which I obviously do not have as I'm attempting to pull the data directly from the API first, NOT from my own back-end server. 
+
+Cors-anywhere essentially allows us to set up a server that meets the correct criteria to be able to pull the data we'd like from the API. I did this by creating a server.js file and using the following code:
+
+```
+const cors = require('cors-anywhere');
+
+cors
+  .createServer({
+    originWhitelist: [], // Allow all origins
+    requireHeader: ['origin', 'x-requested-with'],
+    removeHeaders: ['cookie', 'cookie2'],
+  })
+  .listen(8080, '0.0.0.0', function () {
+    console.log('Running CORS Anywhere on ' + '0.0.0.0' + ':' + '8080');
+  });
+```
+
+After this, I simply needed to update my fetchAPIData function to include the server URL before the API url:
+
+```
+const API_URL = 'http://localhost:8080/' + global.api.apiUrl;
+```
+
+This did the trick! I'm now able to pull data from the API. However, it's important to note here that this is clearly going to be insecure and will only be used for development and educational purposes. Unfortunately, I have to run this server manually via Node.js in the console with `node server.cjs` before I can obviously use it. This means that I will not be able to fetch data from the API if I were to actually make this website live on a domain. 
+
+Nonetheless, tomorrow I'll be attempting to use the API to populate my website locally and see what I can do with it. Not the exact result that I would have hoped for, but this has been incredibly educational as I'm sure this won't be the last time that I'll encounter the 'CORS' error.

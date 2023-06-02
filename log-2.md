@@ -1004,3 +1004,104 @@ const API_URL = 'http://localhost:8080/' + global.api.apiUrl;
 This did the trick! I'm now able to pull data from the API. However, it's important to note here that this is clearly going to be insecure and will only be used for development and educational purposes. Unfortunately, I have to run this server manually via Node.js in the console with `node server.cjs` before I can obviously use it. This means that I will not be able to fetch data from the API if I were to actually make this website live on a domain. 
 
 Nonetheless, tomorrow I'll be attempting to use the API to populate my website locally and see what I can do with it. Not the exact result that I would have hoped for, but this has been incredibly educational as I'm sure this won't be the last time that I'll encounter the 'CORS' error.
+
+---
+
+### Day 75: June 01 , 2023
+ 
+**Today's Progress**: With several job opportunities arriving, I'm taking a small break from my personal project to focus on learning tech stacks that could potentially benefit me in upcoming projects. Today, I focused on following an 'Astro' lecture as I plan to eventually use both Astro and TailwindCSS to get Landing Pages up quickly and efficiently.
+
+**Thoughts:** Now that I've finally began touching on a framework that uses components, with regards to JavaScript, I'm beginning to see the fruits of my labour. It's very strange yet also very exciting to start using a framework that actually requires the use of JavaScript to streamline the process of creating a website. It's quite a strange concept for me, as I haven't used such a framework before, but it's a lot of fun to build individual components using a combination of HTML, CSS and JavaScript, followed by using JavaScript to import and export components across different pages of the site. I can see how this can greatly increase the speed of setting up a site once you gain some experience. Note that JavaScript can be used inside of curly brackets.
+
+An example of this that I found really fun, was creating a 'card' component that I could then easily re-use across my site if required. See below:
+
+```
+---
+export interface Props {
+  title: string;
+  body: string;
+  dark?: boolean;
+}
+
+const { title, body, dark = false } = Astro.props as Props;
+---
+
+<div class={`card ${dark && 'dark'}`}>
+  <h3>{title}</h3>
+  <p>{body}</p>
+</div>
+
+<style>
+  .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+  .dark {
+    background: var(--color-primary);
+    color: #fff;
+  }
+</style>
+```
+
+As you can see, it's explicitly declared via Props that those key/value pairs will include a certain data type. I then destructure and assign those variables to Astro.props as Props.
+Following this, I assign those now dynamic values into the card. I've also noticed the important of using the AND operator to short-circuit when handling conditionals for the components.
+`<div class={`card ${dark && 'dark'}`}>` Assigns the class of card and then uses a template literal for the expression to determine whether or not dark is true, and if so, assign the 'dark' as a class.
+This makes sense to me, but again, is not something that I have done or used before.
+
+I can now use this component, for example, in my 'features' section of the web-page. Seen below:
+
+```
+---
+import Card from './Card.astro';
+
+const featuresData = [
+  {
+    title: 'Zero JavaScript Runtime',
+    body: ' Astro renders HTML on the server and strips away any remaining, unused JavaScript.',
+  },
+  {
+    title: 'The Power of Islands',
+    body: ' Need interactive UI? Load individual, non-blocking component islands in parallel.',
+  },
+  {
+    title: 'Lazy-Loading Islands',
+    body: "Components only hydrate when they scroll into view. If you don't see it, Astro won't load it.",
+  },
+];
+---
+
+<section class="features">
+  <div class="container">
+    {
+      featuresData.map((feature) => (
+        <Card title={feature.title} body={feature.body} />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  /* Cards */
+  .features .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 0 20px;
+    margin: 30px auto;
+  }
+  @media (max-width: 500px) {
+    .features .container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+```
+
+Firstly, I have to import the Card component, followed by explicitly declaring the text that will sit inside of those cards, which works as I made the card component dynamic and did not hard-code any text. Inside of the container, I now use curly brackets to start a JavaScript expression, wherein I use .map() to loop through the featuresData array of objects, and for each 'feature', assign Card title and body featuresData.title & body respectively. Note that if I add an expression to explicitly add the class of dark = true, then the dark-mode styling in the Card component will execute. 
+
+Overall, this is quite a sudden change for me as I have yet to use React, which is a framework that I had planned to eventually learn before other similar frameworks, but Astro had caught my eye a few times and curiosity got the better of me. Whether or not I continue to use Astro going forward, I don't know, but I'd like to have at least a project or two that uses Astro for portfolio purposes. 
+

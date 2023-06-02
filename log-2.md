@@ -1049,7 +1049,7 @@ const { title, body, dark = false } = Astro.props as Props;
 
 As you can see, it's explicitly declared via Props that those key/value pairs will include a certain data type. I then destructure and assign those variables to Astro.props as Props.
 Following this, I assign those now dynamic values into the card. I've also noticed the important of using the AND operator to short-circuit when handling conditionals for the components.
-`<div class={`card ${dark && 'dark'}`}>` Assigns the class of card and then uses a template literal for the expression to determine whether or not dark is true, and if so, assign the 'dark' as a class.
+`<div class={``card ${dark && 'dark'}``}>` Assigns the class of card and then uses a template literal for the expression to determine whether or not dark is true, and if so, assign the 'dark' as a class.
 This makes sense to me, but again, is not something that I have done or used before.
 
 I can now use this component, for example, in my 'features' section of the web-page. Seen below:

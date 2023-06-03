@@ -1105,3 +1105,68 @@ Firstly, I have to import the Card component, followed by explicitly declaring t
 
 Overall, this is quite a sudden change for me as I have yet to use React, which is a framework that I had planned to eventually learn before other similar frameworks, but Astro had caught my eye a few times and curiosity got the better of me. Whether or not I continue to use Astro going forward, I don't know, but I'd like to have at least a project or two that uses Astro for portfolio purposes. 
 
+---
+
+### Day 76: June 02 , 2023
+ 
+**Today's Progress**: Today I finished the Astro project and deployed it to Netlify.
+
+**Thoughts:** I covered a lot during this lecture but I will note particular topics of interest below.
+
+Firstly, the power of Props, that I have still yet to fully understand. 
+When creating the Tabs component, I needed the Headings and Content of those tabs to be customiseable and not hard-coded, as this obviously made the component dynamic and re-useable. To do this, I first needed to 'export interface Props' and declare key/value pair headings/contents with their data type. In this case, it was an array of strings. I then followed typical procedure by destructuring those keys and assigning them as Props. See below:
+```
+---
+export interface Props {
+  activeTextColor?: string;
+  headings: string[];
+  contents: string[];
+}
+
+const {
+  headings,
+  contents,
+  activeTextColor = '#A741FF',
+} = Astro.props as Props;
+---
+
+<div class="tabs">
+  <ul class="tabs-header">
+    {headings.map((heading) => <li>{heading}</li>)}
+  </ul>
+  <ul class="tabs-content">
+    {contents.map((content) => <li class="tab">{content}</li>)}
+  </ul>
+</div>
+```
+As you can see above, typical procedure is followed by then using the .map() function to create our new array of <li> tags with a dynamic 'heading'.
+The exact same process is followed for the tabs-content too, except we now obviously use {contents}, not {heading}.
+ 
+To make full use of this component, I now need to place it in my index page after importing the component. The difference now being that I can actually place an array of strings inside of that component that are fully customiseable within the index page itself. See below:
+```
+ <Tabs
+        headings={['NPM', 'PNPM', 'YARN']}
+        contents={[
+          '$ npm create astro@latest',
+          '$ pnpm create astro@latest',
+          '$ yarn create astro',
+        ]}
+      />
+```
+ 
+The second notable topic is the use of Markdown in my project to create blog posts that can also expand into a more detailed post on that particular blog post.
+This is a new concept to me. I firstly had to create markdown posts that followed a specific structure:
+ 
+```
+ ---
+title: Astro 1.0 Release Update
+slug: astro-1-0-release-update
+excerpt: orem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis ante at sem ultrices iaculis. Praesent at ultricies risus. Aliquam consequat porttitor sollicitudin. Cras ultricies, ligula quis vehicula dignissim, urna quam placerat ex, et malesuada diam metus ut justo. Suspendisse ornare lacus quis elit lacinia pellentesque.
+date: 02-06-2021
+author: Jane Doe
+---
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis ante at sem ultrices iaculis. Praesent at ultricies risus. Aliquam consequat porttitor sollicitudin. Cras ultricies, ligula quis vehicula dignissim, urna quam placerat ex, et malesuada diam metus ut justo. Suspendisse ornare lacus quis elit lacinia pellentesque. Maecenas at orci at eros mollis porta. Suspendisse potenti. Aliquam scelerisque diam risus, ullamcorper vulputate tellus finibus eu. Nulla facilisi. Vivamus ut lacinia ligula.
+```
+ 
+ 

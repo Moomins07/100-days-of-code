@@ -1161,12 +1161,86 @@ This is a new concept to me. I firstly had to create markdown posts that followe
  ---
 title: Astro 1.0 Release Update
 slug: astro-1-0-release-update
-excerpt: orem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis ante at sem ultrices iaculis. Praesent at ultricies risus. Aliquam consequat porttitor sollicitudin. Cras ultricies, ligula quis vehicula dignissim, urna quam placerat ex, et malesuada diam metus ut justo. Suspendisse ornare lacus quis elit lacinia pellentesque.
+excerpt: orem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis ante at sem ultrices iaculis.
 date: 02-06-2021
 author: Jane Doe
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis ante at sem ultrices iaculis. Praesent at ultricies risus. Aliquam consequat porttitor sollicitudin. Cras ultricies, ligula quis vehicula dignissim, urna quam placerat ex, et malesuada diam metus ut justo. Suspendisse ornare lacus quis elit lacinia pellentesque. Maecenas at orci at eros mollis porta. Suspendisse potenti. Aliquam scelerisque diam risus, ullamcorper vulputate tellus finibus eu. Nulla facilisi. Vivamus ut lacinia ligula.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis ante at sem ultrices iaculis. Praesent at ultricies risus. Aliquam consequat porttitor sollicitudin.
 ```
+
+Naturally, I then created a blog page for the website that used 'Layout' to apply the Header and footer. As there is more than one post, typical process it followed once again by using the .map() function to create new arrays, that will place our blogs dynamically on the page. I did however needed to use await on the posts folder, followed by specifying that I am waiting for all .md files.
+
+`const posts = await Astro.glob('../posts/*.md');`
+```
+ <section class="page-content">
+    <div class="container">
+      {
+        posts.map((post) => (
+          <Card>
+            <h3>{post.frontmatter.title}</h3>
+            <div>
+              Written by <strong>{post.frontmatter.author}</strong> on{' '}
+              {new Date(post.frontmatter.date).toLocaleDateString()}
+            </div>
+            <p>{post.frontmatter.excerpt}</p>
+            <a class="btn" href={`/${post.frontmatter.slug}`}>
+              Read More
+            </a>
+          </Card>
+        ))
+      }
+    </div>
+  </section>
+```
+ 
+Key to note here that I specifically had to use 'frontmatter' to access the keys in my markdown files. 
+I now have the blogs placed as cards on my blog page, thanks to the help of the Card component, that include a button that will take us to `{`/${post.frontmatter.slug}`}`.
+
+This is where I began to feel out of my depth with the course as I haven't worked with much backend before and the following process is supposedly very similar to Next.js.
+To now make the blog cards button take us to an expanded version of the blog, I have to create a new page `[slug].astro`. 
+I created a function 'getStaticPaths' that again awaits the markdown files, followed by mapping over the post md files and assigning 2 objects. 'params' with a key of slug with a value pair and 'props' with only a key 'post'.
+```
+ export async function getStaticPaths() {
+  const posts = await Astro.glob('../posts/*.md');
+
+  return posts.map((post) => ({
+    params: {
+      slug: post.frontmatter.slug,
+    },
+    props: {
+      post,
+    },
+  }));
+}
+
+const { Content, frontmatter } = Astro.props.post;
+---
+```
+ 
+I somewhat struggled to follow along at this point, but continually attempted to breakdown what exactly the code is doing. I don't recall how I have access to 'Content', I can only presume that this is an object that is already existing inside of Astro.props.post. Frontmatter, on the other hand, I know points to the top-section of the blog posts and gives me access to the key/value pairs. For the content of the 'expanded blog' page, I used the following:
+```
+<Layout title={frontmatter.title}>
+  <section class="page-content">
+    <div class="container">
+      <Card>
+        <a class="btn" href="/blog">Go Back</a>
+        <h2>{frontmatter.title}</h2>
+        <div>
+          Written by <strong>{frontmatter.author}</strong> on {
+            new Date(frontmatter.date).toLocaleDateString()
+          }
+        </div>
+        <Content />
+      </Card>
+    </div>
+  </section>
+</Layout>
+```
+frontmatter.xxx points to the key/value pairs in the markdown posts and `<Content />` is referring to the Lorem Ipsum that is placed outside of those key/value pairs.
+I'm definitely not 100% on exactly how everything is working together, but I am quite confident that I could re-create this and create my own blog/posts in the future if required. 
+
+Overall, Astro has been very different for me, a lot of fun to use and very educational, but component-based building is clearly something that I need to do more of. I'm looking forward to using it more in the future.
+ 
  
  

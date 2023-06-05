@@ -1242,5 +1242,82 @@ I'm definitely not 100% on exactly how everything is working together, but I am 
 
 Overall, Astro has been very different for me, a lot of fun to use and very educational, but component-based building is clearly something that I need to do more of. I'm looking forward to using it more in the future.
  
+ ---
  
+ ### Day 77: June 04 , 2023
  
+**Today's Progress**: Having finished the a lecture on Astro, and with my Astro template finished and working, I've begun to move an older project over to Astro in order to practice but also to "Leverage Astro's unique zero-JS frontend architecture to unlock higher conversion rates with better SEO." 
+
+**Thoughts:** Not much to report today, I haven't had anay issues moving over the project yet. I was a little afraid of the site breaking when I added TailwindCSS to the project, but via Astro's online documents, I've managed to do that without any real issues. I've began to slowly remove redundant in-line CSS from my Astro components and tweak some styling. For example, I wasn't happy with the image cards on the homepage as a single column on phone screens, it took up an unnecessary amount of space and required more scrolling. To fix this, I opted for display: grid instead of flexbox, giving me more control over how many columns there should be at which break-points With that now working, I made a start on hooking up the Astro components appropriately and changing the homepage text etc.
+
+ 
+---
+ 
+ ### Day 78: June 05 , 2023
+ 
+**Today's Progress**: With the site mostly as I'd like it in terms on the landing page, I spent today experimenting with animations as I wasn't particularly happy with how my animations turned out in a previous project. 
+
+**Thoughts:** This time, I decided to try and find a library for my animations, instead of using/creating TailwindCSS animations. I was not able to get a library called 'aos' (animate on scroll' to work and I think this is due to how Astro manages the web files. However, I was able to get results by using a library called 'animate.css' that easily allowed me to place animations on my elements by using classes. The first issue I noticed was that the default animations were not very customiseable and didn't give me all of the freedom that I would have liked. To solve this, I used JavaScript and setTimeout methods to create a 'flow' of animations on-screen. See below: 
+
+```
+ document.addEventListener('DOMContentLoaded', function () {
+    const boxOne = document.querySelector('.boxOne') as HTMLElement;
+    const boxTwo = document.querySelector('.boxTwo') as HTMLElement;
+    const boxThree = document.querySelector('.boxThree') as HTMLElement;
+    const boxFour = document.querySelector('.boxFour') as HTMLElement;
+    setTimeout(() => {
+      setTimeout(() => {
+        boxOne.style.visibility = 'visible';
+        boxOne.classList.add('animate__animated', 'animate__fadeIn');
+      }, 300); // Start after 300ms
+
+      setTimeout(() => {
+        boxTwo.style.visibility = 'visible';
+
+        boxTwo.classList.add('animate__animated', 'animate__fadeIn');
+      }, 600); // Start after 600ms
+
+      setTimeout(() => {
+        boxThree.style.visibility = 'visible';
+
+        boxThree.classList.add('animate__animated', 'animate__fadeIn');
+      }, 900); // Start after 900ms
+      setTimeout(() => {
+        boxFour.style.visibility = 'visible';
+
+        boxFour.classList.add('animate__animated', 'animate__fadeIn');
+      }, 1200); // Start after 1200ms
+    }, 3500);
+  });
+```
+ 
+I wanted each box to appear one after the other, not simultaneously, and the animate.css library default classes did not allow me to do this. To solve this issue, I set theboxes to hidden in their default styling, followed by changing 'hidden' to 'visible' and then applying the animation classes. Every .3 seconds, this occurs and creates the effect of a staggered animation. Furthermore, I wanted to animate the homepage title and hero section which took approximately 3 seconds to complete. This is why I also set another setTimeout function around the box setTimeouts, so that the title animations could finish before the boxes appear.
+ 
+I'm very happy to finally get some consistent working animations on screen, it's something that I've wanted to do for a long time and only recently began to get results that I'm happy with. I'll be sure to use these animations, albeit sparingly, in future projects.
+ 
+Note: As a bonus project, I also attempted to create my own 'animate on scroll', which I was able to do but not necessarily with my own JavaScript knowledge. Using resources, I was able to find the code below:
+
+```
+ document.addEventListener('DOMContentLoaded', function () {
+    // Get our element
+    const element = document.querySelector('.features');
+
+    // Define our scroll check function
+    function checkScroll() {
+      const rect = element.getBoundingClientRect();
+
+      if (rect.top < window.innerHeight) {
+        element.classList.add('animate__animated', 'animate__fadeInLeft');
+      }
+    }
+
+    // Listen for scroll events
+    window.addEventListener('scroll', checkScroll);
+
+    // Run our scroll check function once to check initial position
+    checkScroll();
+  });
+```
+This also worked successfully every time without issues and it's something I could consider using in the future.
+I'm looking forward to playing around with more animations!                                      
+                                      

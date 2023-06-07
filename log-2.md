@@ -1319,5 +1319,79 @@ Note: As a bonus project, I also attempted to create my own 'animate on scroll',
   });
 ```
 This also worked successfully every time without issues and it's something I could consider using in the future.
-I'm looking forward to playing around with more animations!                                      
-                                      
+I'm looking forward to playing around with more animations!
+
+---
+                                        
+### Day 79: June 06 , 2023
+ 
+**Today's Progress**: Continuing to make tweaks to the website, I decided to add a max-width to the header to ensure that the logo and privacy policy nav item don't sit at the very edge of the screen. I also continued to tweak the site in terms of mobile responsiveness.
+
+**Thoughts:** Setting up the nav bar header to use a max-width ended up being a little more problematic than I had planned as setting as max width was naturally causing white bars to appear around my header, as my background was set directly to that header. The easiest solution in the end was to add another div within the header and apply my max-width to that instead, meaning that the background colour was unaffected. Following this, I added in my 'previous project' cards but found they were not working correctly; I realised that this is because the styling I had used for these cards in a previous project were using TailwindCSS components and I also needed to move this into the global.css file. 
+                                        
+The cards originally weren't working, I tried and failed to set up postcss and autoprexifer which resulted in removing them entirely. I eventually realised that the cards were working all along, and that it was a z-index issue causing an overlap in elements. Hence my cursor was not in fact hovering over the cards and the animations were not working.. 
+                                       
+---
+       
+### Day 80: June 07 , 2023
+ 
+**Today's Progress**: More tweaks! Today I fixed up spacing, typography, responsiveness, added a Privacy Policy page and also added a few scripts with refactoring!
+
+**Thoughts:** I covered a lot today with a bit of everything to clean up the site and get it ready for deployment. Firstly, I decided to clean up the code to the animated logo boxes on the homepage as I wasn't happy with how I had declared individual variables for each box, which is unnecessary when I can simply loop over the. You can see that code below:
+
+```
+document.addEventListener('DOMContentLoaded', function () {
+    const boxes = document.querySelectorAll(
+      '.logoBox'
+    ) as NodeListOf<HTMLElement>;
+
+    boxes.forEach((box) => {
+      setTimeout(() => {
+        setTimeout(() => {
+          boxes[0].style.visibility = 'visible';
+          boxes[0].classList.add('animate__animated', 'animate__fadeIn');
+        }, 300); // Start after 300ms
+
+        setTimeout(() => {
+          boxes[1].style.visibility = 'visible';
+          boxes[1].classList.add('animate__animated', 'animate__fadeIn');
+        }, 600); // Start after 600ms
+
+        setTimeout(() => {
+          boxes[2].style.visibility = 'visible';
+          boxes[2].classList.add('animate__animated', 'animate__fadeIn');
+        }, 900); // Start after 900ms
+        setTimeout(() => {
+          boxes[3].style.visibility = 'visible';
+          boxes[3].classList.add('animate__animated', 'animate__fadeIn');
+        }, 1200); // Start after 1200ms
+      }, 3500);
+      box.classList.remove('animate__animated', 'animate__fadeIn');
+    });
+  });
+      
+```
+As you can see, I've now given everybox a class of 'logoBox' and used querySelectAll with the addition of 'as NodeListOf<HTMLElement>' due to TypeScript strictness. Following this, I've used a forEach loop to essentially do the exact same thing as before, except now I'm targetting those boxes as I would an array 'boxes[0]', as opposed to targetting each box individually with its own variable.
+                                        
+The rest of today's work is a lot of little tweaks to spacing at different breakpoints to ensure that the website is looking correct on smaller devices. Unfortunately, I've yet to work out how to get a website to work correctly on 'Nest Hubs'/'Nest Hub Max'; it seems that Tailwind considers them a completely different breakpoint to what comes default within TailwindCSS and I would likely need to set up a custom breakpoint for Nesthubs in the tailwind.config file. I may get around to adding this functionality but for now I'm happy with the website working on what seems to be 95% of devices.
+
+On the topic of responsiveness and site functionality, I recently learned of a DevTool called 'Lighthouse' which scans my website and gives me scores based on several factors, but most importantly, accessibility. My score for accessibility was originally quite low, so I set out to add accessibility features such as aria-labels, sequenced headings and focus outlines so that the website can be navigated using the 'tab' key.
+       
+After I had added the privacy policy page, I decided to add some JavaScript to detect the page that the user is currently on and then change the innerHTML based on that condition. See below: 
+```
+const privacy = document.querySelector('.privacy');
+  if (window.location.pathname === '/privacy') {
+    privacy.innerHTML = `<a
+        href="/"
+        class="privacy flex tracking-widest hover:text-white transition duration-500"
+        >HOME</a>`;
+  } else {
+    privacy.innerHTML = `<a
+        href="/privacy"
+        class="privacy flex tracking-widest hover:text-white transition duration-500"
+        >privacy policy</a
+      >`;
+  }
+```
+This worked locally and allowed that anchor tag to work both as a link to the privacy page and the home page, but seems to break after deployment to netlify, which I think is due to how Astro handles its JavaScript. Upon checking the source files, I noticed that this script wasn't being hoisted; I will be spending more time tomorrow looking into this and hopefully finding some answers. I also noticed that the homepage background image is not being uploaded to GitHub and therefore also isn't displayed on the homepage. This is also something I'll be looking into tomorrow.
+Overall, a very productive day today, the finish line is in site, just a few more things to fix!

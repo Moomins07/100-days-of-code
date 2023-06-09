@@ -1395,3 +1395,19 @@ const privacy = document.querySelector('.privacy');
 ```
 This worked locally and allowed that anchor tag to work both as a link to the privacy page and the home page, but seems to break after deployment to netlify, which I think is due to how Astro handles its JavaScript. Upon checking the source files, I noticed that this script wasn't being hoisted; I will be spending more time tomorrow looking into this and hopefully finding some answers. I also noticed that the homepage background image is not being uploaded to GitHub and therefore also isn't displayed on the homepage. This is also something I'll be looking into tomorrow.
 Overall, a very productive day today, the finish line is in site, just a few more things to fix!
+                                        
+                                        
+                                        
+---
+       
+### Day 81: June 08 , 2023
+ 
+**Today's Progress**: More fixes and tweaks to the CASoftware landing page!
+
+**Thoughts:** I discovered a few more minor bugs, but I knew I wouldn't be satisfied until I had resolved them.
+I noticed the other day that content would overflow into other sections when I shrunk the screen vertically. Googling and AI was not of much help and so I decided to sleep on the matter and give it some thought. Incredibly, I actually found myself waking up the next morning with the fix, as I realised that my sections were set to height: 100vh (screen size), NOT min-height. This meant that the sections had a max-height and would grow to the size of the screen but were also able to shrink vertically. Declaring a min-height solved this issue.
+                                        
+I'm also beginning to question 'best practices' as I'm not sure how happy I am with how I've laid out and spaced my website. I've been using a lot of individuals containers with padding and margin to space them out across the screen. However, I feel like some of these elements could use flexbox and be aligned vertically that way instead, as I currently have my 'box container' separated from the paragraph it by padding and margins. Could flexbox be better practice/more useful if I'm specifically setting that section to fill the entire screen? For now, it's not making much of a difference, but I'll need to inspect others code or watch a few tutorials online to get an idea as to how I can do better on that topic.
+       
+I'm yet to work out how to resolve the issue of the privacy policy text changing depending on the current active page. I may just have to leave it as it is and hope that the company logo will suffice as an 'obvious' way to go back to the main page. 
+Quite happy with what I have so far, hoping to have everything fixed and deployed soon.

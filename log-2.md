@@ -1007,7 +1007,7 @@ Nonetheless, tomorrow I'll be attempting to use the API to populate my website l
 
 ---
 
-### Day 75: June 01 , 2023
+### Day 75: June 01, 2023
  
 **Today's Progress**: With several job opportunities arriving, I'm taking a small break from my personal project to focus on learning tech stacks that could potentially benefit me in upcoming projects. Today, I focused on following an 'Astro' lecture as I plan to eventually use both Astro and TailwindCSS to get Landing Pages up quickly and efficiently.
 
@@ -1107,7 +1107,7 @@ Overall, this is quite a sudden change for me as I have yet to use React, which 
 
 ---
 
-### Day 76: June 02 , 2023
+### Day 76: June 02, 2023
  
 **Today's Progress**: Today I finished the Astro project and deployed it to Netlify.
 
@@ -1244,7 +1244,7 @@ Overall, Astro has been very different for me, a lot of fun to use and very educ
  
  ---
  
- ### Day 77: June 04 , 2023
+ ### Day 77: June 04, 2023
  
 **Today's Progress**: Having finished the a lecture on Astro, and with my Astro template finished and working, I've begun to move an older project over to Astro in order to practice but also to "Leverage Astro's unique zero-JS frontend architecture to unlock higher conversion rates with better SEO." 
 
@@ -1253,7 +1253,7 @@ Overall, Astro has been very different for me, a lot of fun to use and very educ
  
 ---
  
- ### Day 78: June 05 , 2023
+ ### Day 78: June 05, 2023
  
 **Today's Progress**: With the site mostly as I'd like it in terms on the landing page, I spent today experimenting with animations as I wasn't particularly happy with how my animations turned out in a previous project. 
 
@@ -1323,7 +1323,7 @@ I'm looking forward to playing around with more animations!
 
 ---
                                         
-### Day 79: June 06 , 2023
+### Day 79: June 06, 2023
  
 **Today's Progress**: Continuing to make tweaks to the website, I decided to add a max-width to the header to ensure that the logo and privacy policy nav item don't sit at the very edge of the screen. I also continued to tweak the site in terms of mobile responsiveness.
 
@@ -1400,7 +1400,7 @@ Overall, a very productive day today, the finish line is in site, just a few mor
                                         
 ---
        
-### Day 81: June 08 , 2023
+### Day 81: June 08, 2023
  
 **Today's Progress**: More fixes and tweaks to the CASoftware landing page!
 
@@ -1411,3 +1411,20 @@ I'm also beginning to question 'best practices' as I'm not sure how happy I am w
        
 I'm yet to work out how to resolve the issue of the privacy policy text changing depending on the current active page. I may just have to leave it as it is and hope that the company logo will suffice as an 'obvious' way to go back to the main page. 
 Quite happy with what I have so far, hoping to have everything fixed and deployed soon.
+
+---
+### Day 82: June 10, 2023
+ 
+**Today's Progress**: Made a start on the OOP section of Brad Traversy's JavaScript course. I completed 6 lectures: 
+'What Is OOP?',
+'4 Basic Principles of OOP',
+'More on Object Literals & this Keyword',
+'Constructor Functions',
+'Literals vs Built-in Constructors',
+'Working With Object Properties',
+                                        
+**Thoughts:** Returning to the Odin Project course once again, I've decided to use Brad Traversy's course as a supplement to my learning via the Odin project. Unsurprisingly, I've found that I'm not retaining as much as I thought I would when completing some of the projects in the course. The Odin Project requires you to complete projects through your own means of knowledge and research. Originally I had planned to complete Traversy's course to re-continue with The Odin Project, but this doesn't make sense, as I should be applying what I've learned almost immediately. As I haven't been doing this, I'm not retaining as much as I would like.
+       
+I briefly learned about OOP around 5-6 months ago as part of a project in The Odin Project course. The project was to create an interactive library, similar to a to-do app, which allows the user to add, remove and update their progress on a book. 
+       
+Once I have finished all lectures on OOP in Brad's course, I will return to the Library Project. 

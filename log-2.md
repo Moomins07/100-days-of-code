@@ -1413,6 +1413,7 @@ I'm yet to work out how to resolve the issue of the privacy policy text changing
 Quite happy with what I have so far, hoping to have everything fixed and deployed soon.
 
 ---
+                                        
 ### Day 82: June 10, 2023
  
 **Today's Progress**: Made a start on the OOP section of Brad Traversy's JavaScript course. I completed 6 lectures: 
@@ -1428,3 +1429,62 @@ Quite happy with what I have so far, hoping to have everything fixed and deploye
 I briefly learned about OOP around 5-6 months ago as part of a project in The Odin Project course. The project was to create an interactive library, similar to a to-do app, which allows the user to add, remove and update their progress on a book. 
        
 Once I have finished all lectures on OOP in Brad's course, I will return to the Library Project. 
+                                        
+                                        
+---
+                                        
+### Day 83: June 11, 2023
+ 
+**Today's Progress**: Continuing with the OOP section of Brad Traversy's JavaScript course. I completed 4 more lectures: 
+
+'Prototypes & The Prototype Chain',
+'Adding Methods to the Prototype',
+'Using Object.create()',
+'Prototypical Inheritance & call()'.
+                                        
+**Thoughts:** I recall covering prototypes in previous lectures and the various syntax that can be used to form a prototype chain. The method of prototypical inheritance covered in the above lectures uses, in my opinion, a somewhat chaotic and confusing structure. See below:
+
+```                              
+function Shape(name) {
+  this.name = name;
+}
+
+Shape.prototype.logName = function () {
+  console.log(`Shape Name: ${this.name}`);
+};
+
+function Rectangle(name, height, width) {
+  Shape.call(this, name);
+
+  this.height = height;
+  this.width = width;
+}
+                                        
+Rectangle.prototype = Object.create(Shape.prototype);
+                                        
+Rectangle.prototype.constructor = Rectangle;
+                                        
+const rect = new Rectangle('Rectangle 1', 20, 20);
+```
+                                        
+As you can see above in this block of code, a few steps must be completed before I am able to create new Shapes using constructors.
+Firstly, I've created a a generic 'Shape' function with a parameter of 'name' as all of our shapes will have a name, followed by adding a function called 'logName' to the prototype of that Shape constructor function that will allow me to log the name of the shape. 
+       
+Secondly, I create a Rectangle constructor function with the parameters of name, height and width. However, 'name' is being 'called' from our Shape constructor function. To do this, I must use the .call() method and pass in 'this' to set the 'this' keyword to the current function followed by which parameter I am calling from that constructor function, in this case it's 'name'.
+                                        
+Thirdly, I've decided that I want to link the Shape constructor function's prototype to my Rectangle constructor function so that I can use logName and log the name of the Rectable. To do this, I must assign Rectangle.prototype to Shape.prototype. However, it's important to note that I MUST use Object.create to instantiate a new object of that prototype and not link them directly. `Rectangle.prototype = Object.create(Shape.prototype);`
+       
+Now that I have linked the two prototypes, I can even store logName inside of my Rectangle constructor's prototype but change the output to suit my needs. This is a great exmaple of polymorphism. 
+```
+Rectangle.prototype.logName = function () {
+  console.log(`Rectangle Name: ${this.name}`);
+};
+```
+Also note that the prototype constructors were set to 'Shape' which is not what I want when I'm creating a Rectangle, for example. To set instantiated Rectangle's constructor to Rectangle, I must also use the following code:
+`Rectangle.prototype.constructor = Rectangle;`
+                                        
+Lastly, to instantiate a new Rectangle object:
+`const rect = new Rectangle('Rectangle 1', 20, 20);`
+                                        
+I don't find this syntax or structure easy to read and I won't be using this particular syntax once I have covered Classes.
+                                       

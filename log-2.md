@@ -1487,4 +1487,19 @@ Lastly, to instantiate a new Rectangle object:
 `const rect = new Rectangle('Rectangle 1', 20, 20);`
                                         
 I don't find this syntax or structure easy to read and I won't be using this particular syntax once I have covered Classes.
+                                        
+---
+                                        
+### Day 84: June 12, 2023
+ 
+**Today's Progress**: Continuing with the OOP section of Brad Traversy's JavaScript course. I completed 3 more lectures: 
+
+'OOP Game Challenge',
+Followed by making a start on the second OOP section: 14 - OOP - Classes, Getters, Setters & Private Properties:
+'Classes',
+'Class Inheritance',
+                                        
+**Thoughts:** I felt confident moving on to the OOP game challenge, but actually found myself stuck with the logic. I over-complicated the logic as the focus on the challenge was simply to use what I had learned on prototypes and inheritance. I also did not fully understand Brad's wording for the challenge as he specified that a function will accept a number between 1-10 but Brad did not add conditional checks for this and his solution could accept both number above and below 1/10. However, I was relatively close to achieving a very similar result and I understood how prototypical inheritance was working in my code, which again, was the main focus of the lesson. 
+       
+On the topic of classes, I'm just very glad to get started with them as I do not like the messy code of explicitly declaring .prototype etc. Classes are much cleaner and easier to read/use in my opinion. Really looking forward to having this section complete so that I can get back to The Odin Project!
                                        

@@ -1493,7 +1493,6 @@ I don't find this syntax or structure easy to read and I won't be using this par
 ### Day 84: June 12, 2023
  
 **Today's Progress**: Continuing with the OOP section of Brad Traversy's JavaScript course. I completed 3 more lectures: 
-
 'OOP Game Challenge',
 Followed by making a start on the second OOP section: 14 - OOP - Classes, Getters, Setters & Private Properties:
 'Classes',
@@ -1503,3 +1502,104 @@ Followed by making a start on the second OOP section: 14 - OOP - Classes, Getter
        
 On the topic of classes, I'm just very glad to get started with them as I do not like the messy code of explicitly declaring .prototype etc. Classes are much cleaner and easier to read/use in my opinion. Really looking forward to having this section complete so that I can get back to The Odin Project!
                                        
+---
+                                        
+### Day 85: June 13, 2023
+ 
+**Today's Progress**: Continuing with the OOP section of Brad Traversy's JavaScript course. I completed 3 more lectures: 
+'Static Methods',
+'bind() & Defining this',
+'Getters & Setters with Classes'.
+                                        
+**Thoughts:** I'm definitely not feeling as confident as I begin to slowly approach topics that are new to me. Whilst I have somewhat of a decent understanding of all of the topics that I covered today, I definitely don't have the full picture just yet. My understanding so far of the 3 topics is as follows:
+Static methods are simply functions that are declared inside of a Class to work with data that is 'static', it doesn't use any data from the constructor function. An example of this is just returning the class name:
+```
+   static getClass() {
+    return 'Rectangle';
+  }
+}
+```
+I'm not quite sure of a typical use-case just yet.
+                                        
+The bind() function was a little lost to me at first, but I think I'd grasped the concept toward the end of the lesson. Here's the code I used during my lecture:
+```
+class App {
+  constructor() {
+    this.serverName = 'localHost';
+
+    document
+      .querySelector('button')
+      .addEventListener('click', this.getServerName.bind(this));
+  }
+
+  getServerName() {
+    console.log(this.serverName);
+  }
+}
+
+const app = new App();
+```
+
+Here we have a typical constructor called App that simply assigns this.serverName to a string of localHost. I then also created a function called getServerName() that logs this.serverName to the console.
+The problem occurs when I want to add an event listener to my class that will invoke the getServerName(). This is because getServerName() will be placed in our event listener as a callback function, which automatically means the 'this' keyword will refer to the object that triggered the event, which in this case would be a button; 'undefined' would be returned on click. To solve this, we use 'bind()', which creates a new function that refers to the class App ensuring that the getServerName() is invoked. To summarise, we can use bind() to ensure our 'this' keyword refers to the class.
+
+Getters and Setters, in concept, make sense to me but I don't feel confident about their use or use-cases. Again I will post code that I worked with and break down my understanding:
+       
+```
+class Person {
+  constructor(firstName, lastName) {
+    this._firstName = firstName;
+    this._lastName = lastName;
+  }
+
+  get firstName() {
+    return this.capitaliseFirst(this._firstName);
+  }
+
+  set firstName(value) {
+    this._firstName = this.capitaliseFirst(value);
+  }
+
+  get lastName() {
+    return this.capitaliseFirst(this._lastName);
+  }
+
+  set lastName(value) {
+    this._lastName = this.capitaliseFirst(value);
+  }
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+
+  capitaliseFirst(value) {
+    return value.charAt(0).toUpperCase() + value.slice(1);
+  }
+}
+
+const person1 = new Person('john', 'doe');
+```
+
+The first important note is that JavaScript developers follow a naming convention when handling private properties; it will be indicated with an underscore before the variable. E.g. this._firstName. This means that the property should not be accessed directly.
+To handle the private properties without directly accessing them, Getters and Setters can be used, for example, in the case above I am using a capitaliseFirst() method to capitalise the first letter of firstName and lastName without actually directly accessing 'this._firstName'.
+
+get firstName will return 'John' and lastName will return 'Joe'. Therefore we have actually mutated the data provided to use without touching our private properties.
+
+Setters also allow us to mutate the data without accessing the private property. You can use dot notation on the instantiated object 'person1' to simply mutate the properties. E.g.
+```
+person1.firstName = 'joe';
+person1.lastName = 'smith';
+```
+
+'John Doe' would now be 'Joe Smith'.
+
+We can even go another step and use 'get' to return a full name by concatenating our firstName and lastName getters:
+```
+get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+```
+`console.log(person1.fullName);` would now return "Joe Smith".
+
+These new topics have been quite overwhelming as there's a lot to cover. Even though I lack confidence on the use of the syntax, I feel confident in my understanding of the concepts, especially after the above breakdowns of the code that I have used.
+

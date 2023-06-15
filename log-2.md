@@ -1603,3 +1603,102 @@ get fullName() {
 
 These new topics have been quite overwhelming as there's a lot to cover. Even though I lack confidence on the use of the syntax, I feel confident in my understanding of the concepts, especially after the above breakdowns of the code that I have used.
 
+---
+
+### Day 86: June 14, 2023
+ 
+**Today's Progress**: Continuing with the OOP section of Brad Traversy's JavaScript course. I completed 2 more lectures: 
+'Getters & Setters with defineProperty()',
+'Private Property Underscore Convention'.
+                                        
+**Thoughts:** This is where I've began to feel overwhelmed as, typically with programming, I've been shown another way of using getters and setters, this time without using classes. See below:
+```
+function Person(firstName, lastName) {
+  this._firstName = firstName;
+  this._lastName = lastName;
+
+  Object.defineProperty(this, 'firstName', {
+    get: function () {
+      return this.capitaliseFirst(this._firstName);
+    },
+    set: function (value) {
+      this._firstName = value;
+    },
+  });
+```
+
+The key differences here is that we're calling the 'defineProperty' function to bind 'this' and our getters and setters. There is no advantage or disadvantage to this particular syntax, it's just preference. 
+
+Brad also explained how to use getters and setters inside of an object literal:
+```
+const PersonObj = {
+  _firstName: 'jane',
+  _lastName: 'doe',
+
+  get firstName() {
+    return Person.prototype.capitaliseFirst(this._firstName);
+  },
+  set firstName(value) {
+    this._firstName = value;
+  },
+
+  get lastName() {
+    return Person.prototype.capitaliseFirst(this._lastName);
+  },
+  set lastName(value) {
+    this._lastName = value;
+  },
+
+  get fullName() {
+    return this.firstName + ' ' + this.lastName;
+  },
+};
+
+const person2 = Object.create(PersonObj);
+```
+
+The key difference when using getters and setters inside of an object literal is that we instantiate that object by using Object.create(), not the 'new' syntax. 
+
+In the private properties convention lecture, Brad goes into more detail about the naming convention of placing an underscore ('_') at the beginning of our properties. I originally struggled somewhat with this concept as in JavaScript, it is just a naming convention and not an actual secure property; I also struggle to imagine where I would need to use a secure property. Brad fortunately goes into detail and explains that it's to ensure that our constructor properties are not interacted with directly by the user. See below:
+
+```
+class Wallet {
+  constructor() {
+    this._balance = 0;
+    this._transactions = [];
+  }
+
+get balance() {
+    return this._balance;
+  }
+get transactions() {
+    return this._transactions;
+  }
+ }
+```
+
+As explained from previous lectures, through the use of getters, like in the code above, I can now access balance and transactions without making changes to the 'secure' properties in the constructor function. Note that a similar result can also be achieved through the use of functions, getters are not always required:
+```
+_processWithdrawal(amount) {
+    console.log(`Withdrawing ${amount}`);
+
+    this._transactions.push({
+      type: 'withdraw',
+      amount,
+    });
+  }
+```
+
+Through this function, I am able to send data to the '_transaction' array and use a 'withdraw' function to access it:
+```
+withdraw(amount) {
+    if (amount > this._balance) {
+      console.log(`Not enough funds`);
+      return;
+    }
+    this._processWithdrawal(amount);
+    this._balance -= amount;
+  }
+```
+
+With current lectures, I'm finding better results in reducing the amount of lectures per day simply due to the amount of new information. 

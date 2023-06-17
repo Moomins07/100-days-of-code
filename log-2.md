@@ -1702,3 +1702,45 @@ withdraw(amount) {
 ```
 
 With current lectures, I'm finding better results in reducing the amount of lectures per day simply due to the amount of new information. 
+
+---
+                                        
+### Day 87: June 15, 2023
+ 
+**Today's Progress**: Continuing with the OOP section of Brad Traversy's JavaScript course. I completed 3 more lectures, completing this section of the course: 
+'ES2022 Private Class Fields',
+'Property Flags & Descriptors',
+'Sealing & Freezing Objects'.
+                                        
+**Thoughts:** Private class fields was very interesting, to see that JavaScript does in fact have a way of making properties a true private property as opposed to the naming convention that is currently used to indicate if a propert yis private. It's a shame that, as a new feature, it is currently not supported by all browsers, making the new feature seemingly more-so eye-candy that a feature that can be used practically. However, it's great to see that it could potentially become a commonly used feature within the next few years and obviously useful to know that it exists.
+
+Unsurprisingly, the OOP rabbit hole goes deeper and I've learned that each object property individually has access to a 'descriptors' object, which allows the developer to alter 4 different, individual properties of the descriptor object. The properties are as follows: 
+[[Configurable]] - if `true`, the property can be deleted and these attributes can be modified, otherwise not
+[[Enumerable]] - if `true`, the property will be returned in a `for...in` loop, otherwise not
+[[Writable]] - if `true`, the value of the property can be changed, otherwise not
+[[Value]] - the value of the property.
+
+Through descriptors, we can ensure that an object can only be interacted with in a very certain way. I.e. We don't want that object to be displayed in a loop, so we can set enumerable to true etc.
+```
+Object.defineProperty(rectObj, 'name', {
+  writable: false,
+  configurable: false,
+  enumerable: true,
+});
+```
+
+Following this, I learned about 2 more properties that work essentially the same as the descriptors except with pre-coded values, to save time.
+[[Sealing]] - Prevents properties from being added or removed. Can still be changed.
+[[Freezing]] - Prevents properties from being added, removed or changed.
+
+The syntax is as follows:
+`Object.freeze(circleObj);`
+`Object.seal(rectObj)`
+
+You can then also check if an onject is frozen or sealed with `Object.isSealed(rectObj)` / `Object.isFrozen(circleObj)`.
+
+
+
+
+                                                                         
+

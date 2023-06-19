@@ -1739,8 +1739,17 @@ The syntax is as follows:
 
 You can then also check if an onject is frozen or sealed with `Object.isSealed(rectObj)` / `Object.isFrozen(circleObj)`.
 
+---
 
+### Day 88: June 16, 2023
+ 
+**Today's Progress**: Today I moved on to the OOP project 'Tracalorie'. The app will allow a user to input their daily calorie goals and workouts, whilst counting the amount of calories consumed and burned based on worksouts/food eaten. There will also be a progress bar and filter options.
+                                        
+**Thoughts:** Having finished the first 3 lectures of the project section, Brad gives a clear overview of what the project is, how it will work and what we will be doing in terms of OOP to get the results we'd like. This project is definitely intimidating compared to the previous projects that I have completed, because there is just so many different concepts to cover in OOP.
 
+I did not feel like I fully understood the flow chart that Brad had presented in one of the lectures that explained the various functions that will be implemented into different classes. On the other hand, Brad also went over the theme for the project, which is just a relatively basic Bootstrap theme, which I do understand as I have used Bootstrap in the past.
+
+Overall, I'm excited to get going, but also very intimidated by the size of the project.
 
                                                                          
 

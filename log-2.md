@@ -1762,9 +1762,26 @@ Overall, I'm excited to get going, but also very intimidated by the size of the 
                                         
 **Thoughts:** I'm finding this OOP project a little difficult to follow at times. I'm definitely lacking confidence and full understanding of how OOP is used to build full size projects such as this. Whilst the code itself makes sense to me, I struggle sometimes to see how exactly the various methods within classes interact with one another.
 I'm especially confused at times as to why some methods are public, and why others are not. Brad did cover this in a previous lecture, explaining what methods will go in which classes etc, but at the end of the day, I'm simply following along with the project in attempt to soak up what I can before returning to The Odin Project.
-I definitely need to come to better terms with the concept of OOP and understand why some of the methods are private rather than public. I'm not sure what the *actual* reason is behind opting to keep some methods private and public, what has a programmer make that decision?
+I definitely need to come to better terms with the concept of OOP and understand why some of the methods are private rather than public. I'm not sure what the *actual* reason is behind opting to keep some methods private and public, what has a programmer make that decision? Obviously, I understand however, that a private method is a way of accessing constructor properties without directly interacting with them, which is why private methods are especially useful. I haven't user any getters or setters so far though.
 
 I'm following along and managing to understand the code and somewhat get by, but I feel like I'm lacking a lot of key information with some knowledge gaps and that's causing me to lack confidence on the topic.
 
+Another concept that makes sense but seems sloppy to me, is the use of a render method. This is to ensure that everytime I 'Add a workout' or 'Add a meal', other methods, such as display total calories is invoked and updated in the DOM.
+See below:
+```
+addMeal(meal) {
+    this._meals.push(meal);
+    this._totalCalories += meal.calories;
+    this._render();
+  }
+
+_render() {
+    this._displayCaloriesTotal();
+    this._displayCaloriesConsumed();
+    this._displayCaloriesBurned();
+    this._displayCaloriesRemaining();
+  }
+```   
+As you can see, addMeal pushes our meal to an array and we then use render to run all of our methods to update our DOM. Though this makes sense, it feels messy and something that I would easily overlook.
                                                                          
 

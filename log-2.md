@@ -1751,5 +1751,20 @@ I did not feel like I fully understood the flow chart that Brad had presented in
 
 Overall, I'm excited to get going, but also very intimidated by the size of the project.
 
+
+---
+
+### Day 89: June 19, 2023
+ 
+**Today's Progress**: Continuing with the Tracalorie app, I completed 2 lectures:
+'Base Tracker, Meal & Workout Class',
+'Display Tracker Stats'.
+                                        
+**Thoughts:** I'm finding this OOP project a little difficult to follow at times. I'm definitely lacking confidence and full understanding of how OOP is used to build full size projects such as this. Whilst the code itself makes sense to me, I struggle sometimes to see how exactly the various methods within classes interact with one another.
+I'm especially confused at times as to why some methods are public, and why others are not. Brad did cover this in a previous lecture, explaining what methods will go in which classes etc, but at the end of the day, I'm simply following along with the project in attempt to soak up what I can before returning to The Odin Project.
+I definitely need to come to better terms with the concept of OOP and understand why some of the methods are private rather than public. I'm not sure what the *actual* reason is behind opting to keep some methods private and public, what has a programmer make that decision?
+
+I'm following along and managing to understand the code and somewhat get by, but I feel like I'm lacking a lot of key information with some knowledge gaps and that's causing me to lack confidence on the topic.
+
                                                                          
 

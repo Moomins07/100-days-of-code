@@ -1784,4 +1784,74 @@ _render() {
 ```   
 As you can see, addMeal pushes our meal to an array and we then use render to run all of our methods to update our DOM. Though this makes sense, it feels messy and something that I would easily overlook.
                                                                          
+---
+
+### Day 90: June 21, 2023
+ 
+**Today's Progress**: Continuing with the Tracalorie app, I completed 3 lectures:
+'Progress Bar & Calorie Alert',
+'App Class, New Meal & Workout',
+'Refactor to Single _newItem Method'.
+                                        
+**Thoughts:** 
+The progress bar was a lot of fun to code as it's something that I've specifically wondered how to do for a while and would like to use it in my personal projects. The progress bar was relatively straight forward, as well as coding the style changes if the user consumes too many calories; this was a typical use case for an if statement and background style change depending on the condition. 
+
+Starting on the App class and new Meal/Workout however is where I've once again become a little stumped, as I still question at times why Brad has chosen to put methods in certain places and how those interact with the other classes. Something that is new to me and was not really explained, is the ability to instantiate a new object inside of a classes constructor.
+
+```
+class App {
+  constructor() {
+    this._tracker = new CalorieTracker();
+
+    document
+      .getElementById('meal-form')
+      .addEventListener('submit', this._newItem.bind(this, 'meal'));
+    document
+      .getElementById('workout-form')
+      .addEventListener('submit', this._newItem.bind(this, 'workout'));
+  }
+}
+```
+
+As you can see above, I've instantiated CalorieTracker and assigned it to a private property '_tracker'. I was not aware that this was possible and I'm not 100% on how exactly that works. This now gives me access to public CalorieTracker methods to use in my App class. Ie. newMeal and newWorkout.
+
+I'm also going to add a few notes during the refactor of my newWorkout/newMeal methods in the App class as I was unsure as to how this worked for a moment.
+
+```
+_newItem(type, e) {
+    e.preventDefault();
+
+    const name = document.getElementById(`${type}-name`);
+    const calories = document.getElementById(`${type}-calories`);
+
+    // Validation inputs
+    if (name.value === '' || calories.value === '') {
+      alert('Please fill in all fields');
+      return;
+    }
+
+    if (type === `meal`) {
+      const meal = new Meal(name.value, +calories.value);
+      this._tracker.addMeal(meal);
+    } else {
+      const workout = new Workout(name.value, +calories.value);
+      this._tracker.addWorkout(workout);
+    }
+
+    name.value = '';
+    calories.value = '';
+
+    const collapseItem = document.getElementById(`collapse-${type}`);
+    const bsCollapse = new bootstrap.Collapse(collapseItem, {
+      toggle: true,
+    });
+  }
+}
+```
+
+By using template literals and the event listeners in the class App constructor, either meal or workout is passed into the function, and depending on which is passed through, 2 different elements are selected, followed by an if statement that instantiates a new object of either Workout or Meal. This is a refactor from originally have 2 separates methods for addMeal and addWorkout.
+The code makes sense to me, but I don't think this is something I would have done myself had I not been following a tutorial.
+
+
+
 

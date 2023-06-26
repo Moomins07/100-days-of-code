@@ -1855,3 +1855,42 @@ The code makes sense to me, but I don't think this is something I would have don
 
 
 
+---
+
+### Day 91: June 22, 2023
+ 
+**Today's Progress**: Continuing with the Tracalorie app, I completed 1 lecture:
+'Display New Meal & Workout'.
+                                        
+**Thoughts:** Not a lot to report on this topic. Typical process of making the 'Add Meal/Workout' element actually add a newly created element to the DOM. See below:
+```
+_displayNewWorkout(workout) {
+    const workoutsEl = document.getElementById('workout-items');
+
+    const workoutEl = document.createElement('div');
+    workoutEl.classList.add('card', 'my-2');
+    workoutEl.setAttribute('data-id', workout.id);
+    workoutEl.innerHTML = `
+    <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h4 class="mx-1">${workout.name}</h4>
+                  <div
+                    class="fs-1 bg-secondary text-white text-center rounded-2 px-2 px-sm-5"
+                  >
+                    ${workout.calories}
+                  </div>
+                  <button class="delete btn btn-danger btn-sm mx-2">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+              </div>
+    `;
+```
+
+I create and assign a div 'workoutEl' with the parent container that I want to add the child elements today assigned as 'workoutsEl'.
+Once the div is created, I assign it a class of 'card' and 'my-2' for Bootstrap functionality. I then assign workoutEl data attributes as I need to be able to select specific elements later to delete them.
+I've then taken the original hard-coded HTML and used that and innerHTML to add the full card content along with template-literals to add the dynamic values such as 'workout.name' etc.
+
+This is a process that I'm becoming very familiar with. However, I often hear that using innerHTML is not the best practice and should be avoided in some projects due to security issues; it's been referred to as the 'quick and dirty' way of adding elements to the DOM by my lecturer, but he continues to use this method a lot? I will need to research more and find out why Brad is opting for this method of adding an element.
+
+I'm also becoming a little overwhelmed with how many functions the data is being passed through and find myself overthinking and analysing the functions and going back on myself regularly. I think this is definitely more prevalent after a shirt-break from the project and trying to re-familiarise myself with the structure of the code. 

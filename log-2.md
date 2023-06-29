@@ -1932,4 +1932,19 @@ _removeItem(type, e) {
 Firstly, inside of the parent element 'workout-items', I check if the element being clicked contains the classes either 'delete' or 'fa-xmark' as this is both the red box and the x. I follow this with another if check to confirm if the user is sure they want to delete, and if so, store the closest '.card's' id in a variable. I then use a ternary operator to check if the type is equal to meal, and if so, use removeMeal(id) or removeWorkout(id) from the '_tracker' object. The element is then removed.
 
 The removeMeal/Workout function is as follows:
+```
+removeMeal(id) {
+    const index = this._meals.findIndex((meal) => meal.id === id);
+    if (index !== -1) {
+      const meal = this._meals[index];
+      this._totalCalories -= meal.calories;
+      this._meals.splice(index, 1);
+      this._render();
+    }
+  }
+```
 
+Firstly, find and store the index by using findIndex() and looping through the _meals array until a meal.id is found that matches the passed in id. 
+If that item exists, store that meal as that index in a variable 'meal', takeaway the meal.calories from the totalCalories, splice() to remove that item from the array and lastly, use render() to update the DOM.
+
+As previously mentioned, I feel that I'm able to understand the process, but I'm feeling overwhelmed and lack confidence in my ability to do something like this myself outside of a tutorial.

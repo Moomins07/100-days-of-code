@@ -1894,3 +1894,42 @@ I've then taken the original hard-coded HTML and used that and innerHTML to add 
 This is a process that I'm becoming very familiar with. However, I often hear that using innerHTML is not the best practice and should be avoided in some projects due to security issues; it's been referred to as the 'quick and dirty' way of adding elements to the DOM by my lecturer, but he continues to use this method a lot? I will need to research more and find out why Brad is opting for this method of adding an element.
 
 I'm also becoming a little overwhelmed with how many functions the data is being passed through and find myself overthinking and analysing the functions and going back on myself regularly. I think this is definitely more prevalent after a shirt-break from the project and trying to re-familiarise myself with the structure of the code. 
+
+---
+
+### Day 92: June 26, 2023
+ 
+**Today's Progress**: Continuing with the Tracalorie app, I completed 1 lecture:
+'Remove Meal & Workout'.
+                                        
+**Thoughts:** Again, not feeling very confident with what I'm learning, although I can understand what is happening to an extent. This lecture was about using event delegation by adding an event listener to the parent element of the cards that contain the delete buttons.
+```
+document
+      .getElementById('workout-items')
+      .addEventListener('click', this._removeItem.bind(this, 'workout'));
+```
+Again, bind is used to ensure that 'this' points to the object and not the element that is being clicked. I also pass in 'workout' so that I can make conditional checks later. '_removeItem' is invoked on click.
+
+```
+_removeItem(type, e) {
+    if (
+      e.target.classList.contains('delete') ||
+      e.target.classList.contains('fa-xmark')
+    ) {
+      if (confirm('Are you sure?')) {
+        const id = e.target.closest('.card').getAttribute('data-id');
+
+        type === 'meal'
+          ? this._tracker.removeMeal(id)
+          : this._tracker.removeWorkout(id);
+
+        e.target.closest('.card').remove();
+      }
+    }
+  }
+```
+
+Firstly, inside of the parent element 'workout-items', I check if the element being clicked contains the classes either 'delete' or 'fa-xmark' as this is both the red box and the x. I follow this with another if check to confirm if the user is sure they want to delete, and if so, store the closest '.card's' id in a variable. I then use a ternary operator to check if the type is equal to meal, and if so, use removeMeal(id) or removeWorkout(id) from the '_tracker' object. The element is then removed.
+
+The removeMeal/Workout function is as follows:
+

@@ -1951,12 +1951,13 @@ As previously mentioned, I feel that I'm able to understand the process, but I'm
 
 ---
 
-Day 93: June 26, 2023
-Today's Progress: Continuing with the Tracalorie app, I completed 2 lectures:
+### Day 93: June 26, 2023
+
+**Today's Progress:** Continuing with the Tracalorie app, I completed 2 lectures:
 'Filter & Reset',
 'Set Calorie Limit'.
 
-Thoughts: Unfortunately, life has gotten in that way of my studying the past few weeks and I was forced to take a break, meaning that my learning has been inconsistent. Returning to a half-finished project has made this all the more difficult, especially since I already found myself very overwhelmed with this particular project, with OOP already being a new concept to me.
+**Thoughts:** Unfortunately, life has gotten in that way of my studying the past few weeks and I was forced to take a break, meaning that my learning has been inconsistent. Returning to a half-finished project has made this all the more difficult, especially since I already found myself very overwhelmed with this particular project, with OOP already being a new concept to me.
 
 I was able to follow the lectures with ease, but I feel that at this point I am just essentially following along and typing away whilst not retaining as much as I'd like. I do try to take pauses here and there to understand the code, and for the most part I do understand it, but I could never imagine myself developing such code by myself without a tutorial to follow.
 

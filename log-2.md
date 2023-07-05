@@ -1948,3 +1948,123 @@ Firstly, find and store the index by using findIndex() and looping through the _
 If that item exists, store that meal as that index in a variable 'meal', takeaway the meal.calories from the totalCalories, splice() to remove that item from the array and lastly, use render() to update the DOM.
 
 As previously mentioned, I feel that I'm able to understand the process, but I'm feeling overwhelmed and lack confidence in my ability to do something like this myself outside of a tutorial.
+
+---
+
+Day 93: June 26, 2023
+Today's Progress: Continuing with the Tracalorie app, I completed 2 lectures:
+'Filter & Reset',
+'Set Calorie Limit'.
+
+Thoughts: Unfortunately, life has gotten in that way of my studying the past few weeks and I was forced to take a break, meaning that my learning has been inconsistent. Returning to a half-finished project has made this all the more difficult, especially since I already found myself very overwhelmed with this particular project, with OOP already being a new concept to me.
+
+I was able to follow the lectures with ease, but I feel that at this point I am just essentially following along and typing away whilst not retaining as much as I'd like. I do try to take pauses here and there to understand the code, and for the most part I do understand it, but I could never imagine myself developing such code by myself without a tutorial to follow.
+
+I will add the code used to create a filter below:
+```
+ document
+      .getElementById('filter-meals')
+      .addEventListener('keyup', this._filterItems.bind(this, 'meal'));
+document
+      .getElementById('filter-workouts')
+      .addEventListener('keyup', this._filterItems.bind(this, 'workout'));
+
+_filterItems(type, e) {
+    const text = e.target.value.toLowerCase();
+    document.querySelectorAll(`#${type}-items .card`).forEach((item) => {
+      const name = item.firstElementChild.firstElementChild.textContent;
+
+      if (name.toLowerCase().indexOf(text) !== -1) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+```
+
+Naturally, I first add an event listener to both filter elements (workout and meal) and have it check for a keyup event, as we'll be typing to filter.  I bind 'this' to the object and not the element and also pass in 'meal' / 'workout' so that we can use a conditional to check which filter is being used.
+
+Inside of the _filterItems function, a 'type' and 'event' is passed in. I store the text being typed into the filter using `const text = e.target.value.toLowerCase();` also making sure that the text is lower-case in our checks, so it is not case-sensitive in our application.
+I select all of the '.card' s under the parent element of `#${type}-items`, depending on whether 'workout' or 'meals' is passed into our function. I then loop through those cards using forEach, first storing the name of the workout or meal with `const name = item.firstElementChild.firstElementChild.textContent;`.
+Next, I use an if statement to check if 'name' (E.g. Lunch) contains 'text' (checked on every keyup event). If so: display block, else: display none.
+
+
+Resetting the page, on the other hand, was relatively straight forward. 
+```
+document
+      .getElementById('reset')
+      .addEventListener('click', this._reset.bind(this));
+
+ _reset() {
+    this._tracker.reset();
+    document.getElementById('meal-items').innerHTML = '';
+    document.getElementById('workout-items').innerHTML = '';
+    document.getElementById('filter-meals').value = '';
+    document.getElementById('filter-workouts').value = '';
+  }
+
+reset() {
+    this._totalCalories = 0;
+    this._meals = [];
+    this._workouts = [];
+    this._render();
+  }
+
+```
+
+Add an event listener to reset button, on click, invoke private _reset function.
+_reset invokes public reset function in our _tracker class.
+Set all relevant fields to none ( = '').
+In the public reset function, reset all private properties to default/none and use render to display these changes on screen.
+
+
+Lastly, setting a new calorie limit.
+```
+document
+      .getElementById('limit-form')
+      .addEventListener('submit', this._setLimit.bind(this));
+
+ _setLimit(e) {
+    e.preventDefault();
+
+    const limit = document.getElementById('limit');
+
+    if (limit.value === '') {
+      alert('Please add a limit.');
+      return;
+    }
+
+    this._tracker.setLimit(+limit.value);
+    limit.value = '';
+
+    const modalEl = document.getElementById('limit-modal');
+    const modal = bootstrap.Modal.getInstance(modalEl);
+    modal.hide();
+  }
+
+
+setLimit(calorieLimit) {
+    this._calorieLimit = calorieLimit;
+    this._displayCaloriesLimit();
+    this._render();
+  }
+```
+
+Added an event listener, on submit, invoke private function _setLimit().
+_setLimit first prevents default, stopping the refresh from occurring on submit.
+If statement to check if anything is inside of the field before submitting.
+
+Next I use _tracker class' public function of setLimit to pass in limit.value. (added a + at the beginning to make the output a number).
+I then set limit.value to nothing ( = '').
+
+```
+ const modalEl = document.getElementById('limit-modal');
+    const modal = bootstrap.Modal.getInstance(modalEl);
+    modal.hide();
+```
+The above code is just bootstrap code to close the modal once a new calorie limit has been set.
+
+Overall, I'm finding it a little tough getting back into the 'flow' of this project and understanding all of the code, but I am managing to slowly work through the project, spending time on brekaing down the code and understanding it as I have done here in this log. 
+
+

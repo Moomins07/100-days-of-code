@@ -1951,7 +1951,7 @@ As previously mentioned, I feel that I'm able to understand the process, but I'm
 
 ---
 
-### Day 93: June 26, 2023
+### Day 93: July 04, 2023
 
 **Today's Progress:** Continuing with the Tracalorie app, I completed 2 lectures:
 'Filter & Reset',

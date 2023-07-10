@@ -2068,4 +2068,93 @@ The above code is just bootstrap code to close the modal once a new calorie limi
 
 Overall, I'm finding it a little tough getting back into the 'flow' of this project and understanding all of the code, but I am managing to slowly work through the project, spending time on brekaing down the code and understanding it as I have done here in this log. 
 
+---
 
+### Day 94: July 09, 2023
+
+**Today's Progress:** Continuing with the Tracalorie app, I completed 2 lectures:
+'Storage Class & Calorie Limit Persist',
+'Persist Total Calories To Local Storage'.
+
+**Thoughts:** As I approach the end of this project, I've finally began to store the data in local storage so that the user's data can persist through website reloads/closure. I've found this part of the course a little difficult to follow, but I will do my best to breakdown the code I have added to the project below.
+
+First, I created a storage class that will contain static methods. Static methods are methods that can be called without the requirement of instantiating the object. E.g. With the class 'Storage' and the method called 'updateTotalCalories', I can simply type: Storage.updateTotalCalories(). There is no need to instantiate. The reason I use static methods inside of the Storage class is because I do not need multiple instances of storage, it's local-storage, which is one entity.
+
+```
+class Storage {
+  static getCalorieLimit(defaultLimit = 2000) {
+    let calorieLimit;
+    if (localStorage.getItem('calorieLimit') === null) {
+      calorieLimit = defaultLimit;
+    } else {
+      calorieLimit = +localStorage.getItem('calorieLimit');
+    }
+
+    return calorieLimit;
+  }
+
+  static setCalorieLimit(calorieLimit) {
+    localStorage.setItem('calorieLimit', calorieLimit);
+  }
+
+  static getTotalCalories(defaultCalories = 0) {
+    let totalCalories;
+    if (localStorage.getItem('totalCalories') === null) {
+      totalCalories = defaultCalories;
+    } else {
+      totalCalories = +localStorage.getItem('totalCalories');
+    }
+
+    return totalCalories;
+  }
+
+  static updateTotalCalories(calories) {
+    localStorage.setItem('totalCalories', calories);
+  }
+}
+```
+
+getCalorieLimit() initialises a variable calorieLimit and then checks if localStorage contains the key 'calorieLimit', if it doesn't, set calorieLimit to the defaultLimit of 2000, else set calorieLimit to the calorieLimit in localStorage.
+setCalorieLimit() simple sets the key of calorieLimit in localStorage using whatever is passed into the function.
+I then repeat essentially the same code for TotalCalories as I also want this stored in localStorage also.
+
+For the data inside of localStorage to work, I have to make sure that the constructors are using the data inside of localStorage and not hard-coded data. _calorieLimit and _totalCalories is set to use values from Storage, as you can see below:
+
+```
+class CalorieTracker {
+  constructor() {
+    this._calorieLimit = Storage.getCalorieLimit();
+    this._totalCalories = Storage.getTotalCalories(0);
+    this._meals = [];
+    this._workouts = [];
+```
+
+I now also need to ensure that the calorie limit is set inside of localStorage when the calorie limit is set in the app. To do this, I need to add the setCalorieLimit function inside of the setLimit public function.
+```
+setLimit(calorieLimit) {
+    this._calorieLimit = calorieLimit;
+    Storage.setCalorieLimit(calorieLimit);
+    this._displayCaloriesLimit();
+    this._render();
+  }
+```
+
+Now, whenever the calorieLimit is set, it will be stored in localStorage also.
+
+However, if the user modifies those values in the app, we also need to update the total cloaries inside of localStorage. This is achieved with the updateTotalCalories() function. You can see this 3 code snippets up.
+updateTotalCalories should be invoked whenever the user adds/removes a meal/workout, as this will affect the total calories in our app.
+
+```
+ addMeal(meal) {
+    this._meals.push(meal);
+    this._totalCalories += meal.calories;
+    Storage.updateTotalCalories(this._totalCalories);
+    this._displayNewMeal(meal);
+    this._render();
+  }
+```
+
+I add the line `Storage.updateTotalCalories(this._totalCalories);` after the line of code that adds calories to _totalCalories.
+This same line of code will also be included inside of addWorkout, removeWorkout and removeMeal.
+
+Overall, I feel that I've understood the code and broken it down well, but again, I simply can't imagine myself being able to write this code by myself/independently. This project has been very humbling for me, and a quick reminder that I still have a very long way to go.

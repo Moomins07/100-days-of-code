@@ -2158,3 +2158,117 @@ I add the line `Storage.updateTotalCalories(this._totalCalories);` after the lin
 This same line of code will also be included inside of addWorkout, removeWorkout and removeMeal.
 
 Overall, I feel that I've understood the code and broken it down well, but again, I simply can't imagine myself being able to write this code by myself/independently. This project has been very humbling for me, and a quick reminder that I still have a very long way to go.
+
+---
+
+### Day 95: July 14, 2023
+
+**Today's Progress:** Continuing with the Tracalorie app, I completed 4 lectures:
+'Save Meals To Local Storage',
+'Save Workouts To Local Storage',
+'Remove Meals & Workouts From LocalStorage',
+'Clear Storage Items'.
+
+**Thoughts:** Continuing with saving data to local storage, thankfully a lot of the code is somewhat straight forward and re-useable, making these lectures quite short and to the point. 
+
+**Saving meals/workouts to localStorage**:
+Typically, I first created a function to get the meals from localStorage if it exists there, followed by then pushing the new meal into the 'meals' array and re=saving the updated meals array in localStorage.
+
+```
+static getMeals() {
+    let meals;
+    if (localStorage.getItem('meals') === null) {
+      meals = [];
+    } else {
+      meals = JSON.parse(localStorage.getItem('meals'));
+    }
+    return meals;
+  }
+
+  static saveMeal(meal) {
+    const meals = Storage.getMeals();
+    meals.push(meal);
+    localStorage.setItem('meals', JSON.stringify(meals));
+  }
+```
+
+getMeals() checks if 'meals' exists in localStorage, if it doesn't, create an empty array called 'meals', else 'meals' is assigned 'meals' from localStorage followed by returning 'meals'.
+
+saveMeal() stores whatever is returned from our getMeals() function inside of 'meals', pushes the passed in meal into the meals array followed by then re-saving the newly updated array in localStorage (using setItem).
+
+saveMeal() will need to be added to the public addMeal() function so that the meals is also saved to localStorage when a new meal is added. Shown below:
+```
+addMeal(meal) {
+    this._meals.push(meal);
+    this._totalCalories += meal.calories;
+    Storage.updateTotalCalories(this._totalCalories);
+    Storage.saveMeal(meal);
+    this._displayNewMeal(meal);
+    this._render();
+  }
+```
+
+The CalorieTracker constructor will also need to be updated so that this._meals is not set to an empty array anymore, but instead whatever is stored in localStorage: `this._meals = Storage.getMeals();`
+
+Lastly, the newly added meals/workouts will need to be added to the DOM. To do this, I created a function called 'loadItems()' that does the following:
+` this._meals.forEach((meal) => this._displayNewMeal(meal));`
+
+A loop through the _meals array that runs _displayNewMeal() for each meal in the array. 
+
+A side note: I had so many event-listeners inside of the App class constructor that I placed them all in their own function '_loadEventListeners' and simply invoked that function inside of the App constructor instead.
+
+get/saveMeals() is essentially the exact same code to also do the same for 'workouts', just simply changing 'meals' to 'workouts' was enough.
+
+**Removing Meals/Workouts from storage**:
+When a meal is removed from the DOM, it also needs to be removed in localStorage. To do that, I used the following function:
+```
+static removeMeal(id) {
+    const meals = Storage.getMeals();
+    meals.forEach((meal, index) => {
+      if (meal.id === id) {
+        meals.splice(index, 1);
+      }
+    });
+
+    localStorage.setItem('meals', JSON.stringify(meals));
+  }
+```
+
+'meals' is once again assigned the output of getMeals(), followed by looping over that array and passing in a meal/index.
+If the meal.id that is passed in by the looped item matches the id passed into the removeMealfunction, I use splice() to remove that meal at the passed in index. Once the item is removed from the meals array, it needs to be re-saved to localStorage again, which is done by using the last line of code (setItem).
+
+The exact same code is also used for workouts to achieve the same result.
+
+Similarly to when I added saveMeal() to the public addMeal() function, I must also do the same here but instead with the public removeMeal() function.
+This is also so that when a meal is removed, localStorage is updated accordingly. I add `Storage.removeWorkout(id);` to removeMeal() to do so as seen below:
+```
+ removeMeal(id) {
+    const index = this._meals.findIndex((meal) => meal.id === id);
+    if (index !== -1) {
+      const meal = this._meals[index];
+      this._totalCalories -= meal.calories;
+      Storage.updateTotalCalories(this._totalCalories);
+      this._meals.splice(index, 1);
+      Storage.removeMeal(id);
+      this._render();
+    }
+  }
+```
+
+Again, the same is done for workouts also.
+
+**Clear Storage Items**:
+Firstly, I set the current value inside of _calorieLimit to the input field of the 'set calorie limit' modal by adding the following line of code to the CalorieTracker class: `document.getElementById('limit').value = this._calorieLimit;`. This is just a simple nicety that means that user will not need to re-type the calorie limit if they want to use the same limit after resetting the App.
+
+The idea here is to reset both the DOM and localStorage as we are now obviously pulling data from localStorage. To begin with, I added a function 'clearAll()' to the public reset() function (which is obviously hooked up to our reset button on the app).
+
+There were two ways to do this, as the calorieLimit is also saved in localStorage. If I want the calorieLimit to persist through a reset, I would need to individually clear all of localStorage items except for calorieLimit so that it stays. However, if I don't mind everything resetting (which I don't), then I can simply use the clear() function. 
+
+```
+static clearAll() {
+    localStorage.clear();
+  }
+```
+
+**Project finished/final thought's**:
+With that this project is finally finished! Unfortunately I found this project to be quite overwhelming, though I'm sure I've learned a lot I feel that I haven't gained a strong grasp on using OOP. I will be building a small project in The Odin Project course that requires me to use OOP, so I'm hopeful that I can use what I've learned here in that project. As seen by the dates, this project took a couple weeks of inconsistent work to complete, which has definitely affected how much information I have retained over the course of this project. I regret that I wasn't more consistent, as I may have felt more confident going into the TOP project. However, I have taken time after every lecture to break down the code I have written, how it works and how I feel about that particular subject, which has certainly helped a lot.

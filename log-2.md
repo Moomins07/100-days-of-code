@@ -2272,3 +2272,35 @@ static clearAll() {
 
 **Project finished/final thought's**:
 With that this project is finally finished! Unfortunately I found this project to be quite overwhelming, though I'm sure I've learned a lot I feel that I haven't gained a strong grasp on using OOP. I will be building a small project in The Odin Project course that requires me to use OOP, so I'm hopeful that I can use what I've learned here in that project. As seen by the dates, this project took a couple weeks of inconsistent work to complete, which has definitely affected how much information I have retained over the course of this project. I regret that I wasn't more consistent, as I may have felt more confident going into the TOP project. However, I have taken time after every lecture to break down the code I have written, how it works and how I feel about that particular subject, which has certainly helped a lot.
+
+
+---
+
+### Day 96: July 18, 2023
+
+**Today's Progress:** Moving on from Brad's JavaSript course and the Tracalorie app project, I've returned to The Odin Project as I now plan to complete TOP whilst supplementing my learning with Brad's course. I returned to an old, previous 'book library' project in the TOP course, which requires me to use OOP. The app will accept 2 user inputs, a book title and author name, followed by a button or keypress that will store the book(s) in a table, in the DOM.
+
+**Thoughts:** I decided to first hardcode and style the table/elements that will be added when the user adds a book to the page. This surprisingly gave me quite a bit of trouble, as I was deciding what the book element would look like on the page once it's added. In the end, I decided to use a HTML table with borders/dividers as this stood out to me the most. The issue with this is that there is no real way to make tables responsive, causing the table to break on mobile; to solve this, I hide the table on small screens and replace the table with simple cards that neatly store the book information instead.
+I've definitely become rusty with TailwindCSS< finding myself referring to the documentation often as I can't remember syntax. Overall, I've spent too much time away from some of the fundamentals such as CSS and HTML requiring me to spend more time on the 'simpler' things than I had anticipated. However, the design is essentially done, I now need to move on to the logic. Below I will add the code that allowed me to hide the table on large screens and display the cards on mobile:
+```
+<table class="w-full mt-6 divide-y hidden md:table dark:border-gray-800 light:border-black">
+
+ <div class="md:hidden block">
+            <div
+              class="border rounded p-4 mb-2 space-y-2 flex flex-col sm:items-center text-left mt-6"
+            >
+              <!-- this div represents a row -->
+              <div><span class="font-bold">Name: </span>Lord of the Rings</div>
+              <div><span class="font-bold">Author: </span>Tolkien</div>
+              <div><span class="font-bold">Read: </span>Yes</div>
+              <button
+                class="uppercase tracking-wider text-sm border px-4 py-2 rounded hover:bg-white hover:text-black hover:border-black transform transition duration-250 ease-in-out w-fit sm:px-12"
+              >
+                Remove
+              </button>
+            </div>
+  </div>
+```
+
+The table is hidden on mobile view (TailwindCSS uses a mobile-first design) but displayed on medium and above (md:table)
+The card is hiddein on medium screens (md:hidden) but displayed on mobile screens (block).

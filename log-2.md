@@ -2304,3 +2304,233 @@ I've definitely become rusty with TailwindCSS< finding myself referring to the d
 
 The table is hidden on mobile view (TailwindCSS uses a mobile-first design) but displayed on medium and above (md:table)
 The card is hiddein on medium screens (md:hidden) but displayed on mobile screens (block).
+
+---
+
+### Day 97: July 19, 2023
+
+**Today's Progress:** Continuing with the TOP Library project, I began working on the functionality of the app whilst ensuring I use OOP to do so. Today, I managed to correctly place the light/dark mode code within classes and also added a Book class as well as private and public methods.
+
+**Thoughts:** As usual, I was very unsure as to how to start with this project, but I was fortunately able to use the previous project (Tracalorie App) that I had completed during Brad's JS course as reference. 
+As usual, I doubt my ability and also my methods of completing this particular project. Should I be completing it from start to finish without referring to previously written code? I can't help but feel like using a previous course as reference is damaging my learning. I'm contemplating starting the project from scratch to see how far I can get. I will however, break down what I have written below regardless.
+
+Similarly to the Tracalorie App, I created 2 main classes: Library which will store the books and contain public and private methods to interact with that data, and 'App', which will be the instantiated class to essentially run the Application.
+
+```
+class Library {
+  constructor() {
+    this._myLibrary = [];
+  }
+
+  // Public methods
+  addBook(book) {
+    this._myLibrary.push(book);
+    this._displayNewBook(book);
+    console.log(`Adding ${book} to "myLibrary" array`);
+  }
+
+  removeBook(id) {
+    const index = this._myLibrary.findIndex((book) => book.id === id);
+    if (index !== -1) {
+      this._myLibrary.splice(index, 1);
+    }
+  }
+
+  // Added this function to App class so items in array are displayed on load
+  loadItems() {
+    this._myLibrary.forEach((book) => this._displayNewBook(book));
+  }
+
+  // Private methods
+
+  // Function to display the newly added book in the DOM
+  _displayNewBook(book) {
+    const booksEl = document.getElementById('book-table');
+
+    const bookEl = document.createElement('tr');
+    bookEl.classList.add('border-b');
+    bookEl.setAttribute('data-id', book.id);
+    bookEl.innerHTML = `
+    <tr class="border-b">
+    <td class="py-6">${book.name}</td>
+    <td>${book.author}</td>
+    <td>
+      <button
+        class="uppercase tracking-wider text-sm border border-white px-4 py-2 rounded hover:bg-white hover:text-black hover:border-black transform transition duration-250 ease-in-out hover:scale-105"
+      >
+        Yes
+      </button>
+    </td>
+    <td class="flex justify-end py-6">
+      <button
+        id="remove-book"
+        class="uppercase tracking-wider text-sm border border-white px-4 py-2 rounded hover:bg-white hover:text-black hover:border-black transform transition duration-250 ease-in-out delete"
+      >
+        Remove
+      </button>
+    </td>
+  </tr>
+  `;
+
+    booksEl.appendChild(bookEl);
+  }
+}
+```
+Inside of the Library constructor, I've only contained an empty array assigned to _myLibrary as it's all I currently need in terms of data from the user.
+Public methods: addBook(), removeBook() and loadItems(). addBook will push the passed in book into the _myLibrary array and then also run _displayNewBook to ensure that the book is added to the DOM. removeBook() finds the index of a particular item in the _myLibrary array by checking the passed in id with the books in the array. If it finds a match, it returns that book and then 'splices' it (removes it). loadItems() is a simple function that loops through the _myLibrary array and runs _displayNewBook for each item inside of the array. This is just to ensure that any books stored inside of the array are placed in the DOM on application start.
+
+Private methods: _displayNewBook takes in a book as an argument and creates a new table-row (tr) element that also includes setting an extra attribute (data-id) assigned the value of the book's id (book.id). Lastly, the newly created book/element is appended to the table so that it is shown on the page.
+
+
+class Book {
+  constructor(name, author) {
+    this.id = Math.random().toString(16).slice(2);
+    this.name = name;
+    this.author = author;
+  }
+}
+
+Funnily enough, as simple as this is, I got stuck here because I simply forgot that I should make Book its own class. Simple Book class that tikes in two arguments and a typical constructor. The id is quite importantly here, as it generates a random code that we use in _displayNewBook to set data-id attribute and also in the removeBook function to compare the id with whatever is passed in. I realise the important of this simple line of code, as it makes any element unique and easier to handle.
+
+```
+class App {
+  constructor() {
+    this._bookLibrary = new Library();
+    this._bookLibrary.loadItems();
+    this._loadEventListeners();
+    this._setDarkMode();
+  }
+
+  _loadEventListeners() {
+    document
+      .getElementById('theme-toggle')
+      .addEventListener('click', this._toggleMode.bind(this));
+    document
+      .getElementById('link-form')
+      .addEventListener('submit', this._newBook.bind(this));
+
+    document
+      .getElementById('add-book')
+      .addEventListener('submit', this._newBook.bind(this));
+    document
+      .getElementById('book-table')
+      .addEventListener('click', this._removeBook.bind(this));
+  }
+
+  _removeBook(e) {
+    if (e.target.classList.contains('delete')) {
+      {
+        if (confirm('Are you sure?')) {
+          const id = e.target.closest('.border-b').getAttribute('data-id');
+          this._myLibrary.removeBook(id);
+          e.target.closest('.border-b').remove();
+        }
+      }
+    }
+  }
+
+  _newBook(e) {
+    e.preventDefault();
+    const bookTitle = document.getElementById('title');
+    const authorName = document.getElementById('author');
+
+    if (bookTitle.value === '' || authorName.value === '') {
+      alert('Please fill in all fields');
+      return;
+    }
+
+    const book = new Book(bookTitle.value, authorName.value);
+    this._bookLibrary.addBook(book);
+
+    bookTitle.value = '';
+    authorName.value = '';
+    console.log(this._bookLibrary._myLibrary);
+  }
+
+  _toggleMode() {
+    const themeToggleDarkIcon = document.getElementById(
+      'theme-toggle-dark-icon'
+    );
+    const themeToggleLightIcon = document.getElementById(
+      'theme-toggle-light-icon'
+    );
+    // Toggle icon
+    themeToggleDarkIcon.classList.toggle('hidden');
+    themeToggleLightIcon.classList.toggle('hidden');
+
+    // If is set in localstorage
+    if (localStorage.getItem('color-theme')) {
+      // If light, make dark and save in localstorage
+      if (localStorage.getItem('color-theme') === 'light') {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      }
+    } else {
+      // If not in localstorage
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      }
+    }
+    // DARK / LIGHT MODE BUTTON
+  }
+
+  _setDarkMode() {
+    const themeToggleLightIcon = document.getElementById(
+      'theme-toggle-light-icon'
+    );
+    const themeToggleDarkIcon = document.getElementById(
+      'theme-toggle-dark-icon'
+    );
+    if (
+      localStorage.getItem('color-theme') === 'dark' ||
+      (!('color-theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      // Show light icon
+      themeToggleLightIcon.classList.remove('hidden');
+    } else {
+      themeToggleDarkIcon.classList.remove('hidden');
+    }
+  }
+}
+
+const app = new App();
+```
+
+The App class what I've used to essentially represent the actual 'running' app, which is why the constructor also includes instantiating the Library class `this._bookLibrary = new Library()`. I am then able to use this._bookLibrary to call methods inside of the Library class, which I do below to invoke the loadItems function, meaning that this function will be run on app start. This is because code inside of constructors is run straight away. As this is the case, I also invoke _loadEventListeners and _setDarkMode. The function _loadEventListeners is simply to ensure that all of the elements have their event listeners applied to them straight away. 
+
+Following this there's _removeBook() which is first checks if the element being interact with contains the class 'delete', and if so, check if the user has selected 'Yes' when prompted with 'Are you sure?'. If these pass, I then find the closest element with 'border-b', which should be the closest <tr> element, store that id and then remove the book using removeBook with that id passed in. However, this function at the time of writing this is not working 100% and requires tweaking. I believe it is because I have hard-coded books in the project that do not contain an id, as the idea is only set when a book is created through the newBook function. 
+
+I also had some issues with the event listener and trying to get _removeBook to work when clicking the remove button on the web page. I realised this was because I did not properly use event delegation and did not apply the event listener to the entirety of my table, which I have corrected now. Lastly, and importantly, I created _newBook(e), which will be run when the user submits the book with both input fields populated. Firstly, preventDefault must be used so that the webpage is not refreshed, especially without localStorage set up for now. I stored both input fields in variables, followed by a simple check to make sure that both fields are filled in.
+
+```
+if (bookTitle.value === '' || authorName.value === '') {
+      alert('Please fill in all fields');
+      return;
+    }
+```
+
+If this passed, the function then runs:
+```
+const book = new Book(bookTitle.value, authorName.value);
+    this._bookLibrary.addBook(book);
+```
+
+I instantiate a new Book here with the values of the input fields as the arguments to our Book object. I then invoke addBook() to add the book to the DOM. I am able to use addBook() because I instantiated a new Library in the App's constructor function. 
+Lastly, a few simple lines of code just to reset the input fields after the previous code has run:
+```
+bookTitle.value = '';
+authorName.value = '';
+```
+
+The rest of the code is just for light/dark mode functionality that I don't feel the need to breakdown, as the project did not require light/dark mode, it was just a nicety that I wanted to add for fun.
+
+**Summary**
+Overall, I continue to find OOP quite difficult to grasp, especially since the last 18 months have mostly been procedural programming. As explained at the beginning of this log entry, I find myself feeling somewhat guilty that I've used a previous project for reference, because I simply cannot see myself writing this level of code from scratch off the top of my head. Should I be able to? What determines a great programmer? His/her ability to write great code from the top of his head? Or his/her ability to find re-useable code from a previous project, followed by the ability to adapt that code within a reasonable amount of time for a new project? Sometimes these long-winded projects and courses make me feel somewhat like the Karate Kid, spending his days mopping up water and sweeping dust, longing to do more, until suddenly I realise that code isn't necessarily about writing it, but understanding it. Maybe I'm wrong. Regardless, I'll make sure to thoroughly understand what I've written for this project so far, or potentially write it from scratch.

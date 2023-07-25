@@ -2534,3 +2534,59 @@ The rest of the code is just for light/dark mode functionality that I don't feel
 
 **Summary**
 Overall, I continue to find OOP quite difficult to grasp, especially since the last 18 months have mostly been procedural programming. As explained at the beginning of this log entry, I find myself feeling somewhat guilty that I've used a previous project for reference, because I simply cannot see myself writing this level of code from scratch off the top of my head. Should I be able to? What determines a great programmer? His/her ability to write great code from the top of his head? Or his/her ability to find re-useable code from a previous project, followed by the ability to adapt that code within a reasonable amount of time for a new project? Sometimes these long-winded projects and courses make me feel somewhat like the Karate Kid, spending his days mopping up water and sweeping dust, longing to do more, until suddenly I realise that code isn't necessarily about writing it, but understanding it. Maybe I'm wrong. Regardless, I'll make sure to thoroughly understand what I've written for this project so far, or potentially write it from scratch.
+
+
+---
+
+
+### Day 98: July 24, 2023
+
+**Today's Progress:** Continuing with the TOP Library project, today I implemented the remove and read/not read button. I also made sure that functionality was working with both the mobile and desktop elements.
+
+**Thoughts:** Today was particularly educational, because the guilt of 'referencing previous' code is lessening as I continue to add more and more of my own code to ensure that the code is going to work for this library project. 
+
+I realised that although I could now add books, the books were only being added to the desktop table and the other buttons were not working (Yes/no/remove). I first decided to make sure that the book being added was also added to the mobile view, which turned out to be quite simple, as it only required me to update the _displayNewBook() function to also include a mobile element being added. What was most important here is that both the mobile and desktop elements had the same id, to ensure that both elements are removed if the user decides to remove it.
+
+I became a little stuck when I got to the remove button functionality as I wasn't entirely sure at first how to remove all elements that shared the same id, but in the end I was able to do it with the following code added to _removeBook():
+```
+_removeBook(e) {
+    if (e.target.classList.contains('delete')) {
+      {
+        if (confirm('Are you sure?')) {
+          const id = e.target
+            .closest('.border-b, .mobile-div')
+            .getAttribute('data-id');
+          this._bookLibrary.removeBook(id);
+          const elementsToRemove = document.querySelectorAll(
+            `[data-id="${id}"]`
+          );
+          elementsToRemove.forEach((el) => el.remove());
+        }
+      }
+    }
+  }
+```
+
+The key line here is `const elementsToRemove = document.querySelectorAll(`[data-id="${id}"]`)`.
+This line specifically selects all elements that match the id that is passed in, followed by:
+`elementsToRemove.forEach((el) => el.remove());` to loop through the nodelist and remove all of those elements with the particular id. 
+
+Lastly, I had to add functionality to the 'read' button, which was also quite simple as it only required an 2 event listeners for both the mobile and desktop elements followed by a simple function that just checks the textContent of the button. 
+```
+_checkIfRead(e) {
+    if (e.target.classList.contains('read-btn')) {
+      console.log('clicked');
+      if (e.target.textContent.trim() == 'yes') {
+        e.target.textContent = 'no';
+      } else {
+        e.target.textContent = 'yes';
+      }
+    }
+  }
+```
+
+Note that I added the class 'read-btn' to both the mobile and desktop button to ensure that this function worked for both.
+
+**Summary**: Overall, I'm feeling a lot better about this project as I continue to make more tweaks and add more of my own custom code. I'm slowly feeling more confident that I can move along from this project having a much better understanding of how to use OOP. I'm still not 100% sure on what functions I'd place in which classes and why some functions are public and others not, but I suppose that's rather trivial as opposed to actually learning the concepts.
+
+Next up, I'd like to add localStorage to this project but I may return to this project to do that at a later date, as I've mostly wanted to use this project specifically to concrete my understanding of OOP. On to more things!

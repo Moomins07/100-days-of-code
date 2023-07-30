@@ -2590,3 +2590,114 @@ Note that I added the class 'read-btn' to both the mobile and desktop button to 
 **Summary**: Overall, I'm feeling a lot better about this project as I continue to make more tweaks and add more of my own custom code. I'm slowly feeling more confident that I can move along from this project having a much better understanding of how to use OOP. I'm still not 100% sure on what functions I'd place in which classes and why some functions are public and others not, but I suppose that's rather trivial as opposed to actually learning the concepts.
 
 Next up, I'd like to add localStorage to this project but I may return to this project to do that at a later date, as I've mostly wanted to use this project specifically to concrete my understanding of OOP. On to more things!
+
+---
+
+### Day 99: July 29, 2023
+
+**Today's Progress:** Continuing with the TOP course, I learned about factory functions, what they are, why they're useful and how constructor functions aren't necessarily the only way to get a result.
+
+**Thoughts:** Seeing as I've spent the last few months learning OOP and exclusively using constructor functions/classes, it was a little intimidating and even demoralising to an extent when I learned that there is an entirely different way of returning an object from a function, similar to a constructor. Obviously, I realise the importance of learning the different ways that I can achieve that particular result, as I may run into factory functions in the future. 
+
+**Factory functions**
+A factory function performs very similarly to a constructor, but it does not use the 'new' keyword, instead it simply sets up and returns the new object when the function is invoked. Example below:
+
+```
+const personFactory = (name, age) => {
+  const sayHello = () => console.log('hello!');
+  return { name, age, sayHello };
+};
+
+const jeff = personFactory('jeff', 27);
+
+console.log(jeff.name); // 'jeff'
+
+jeff.sayHello(); // calls the function and logs 'hello!'
+```
+
+personFactory is created that accepts 2 parameters. Inside of the function, sayHello is another function that simply logs 'hello!' to the console. The function then returns the parameters and the function as an object. `const jeff = personFactory('jeff', 27)` instantiates the 'jeff' object. This then allows me to call the sayHello function on the jeff object, as the sayHello function was returned from the personFactory function. Important to note that I would not be able to use the sayHello function if it were not returned from the function due to scope and closure.
+
+For reference, here is the same thing created using the constructor pattern:
+```
+const Person = function(name, age) {
+  this.sayHello = () => console.log('hello!');
+  this.name = name;
+  this.age = age;
+};
+
+const jeff = new Person('jeff', 27);
+```
+
+Important to note that factory functions do not utilize the prototype, which is a performance penalty when creating thousands of objects.
+
+**Scope & Closure**
+I also touched on scope and closure again, which is a concept I am familiar with, but I had not come across the term 'closure' before. 'Closure' is described as the following:
+`The concept of closure is the idea that functions retain their scope even if they are passed around and called outside of that scope.`
+
+```
+const FactoryFunction = string => {
+  const capitalizeString = () => string.toUpperCase();
+  const printString = () => console.log(`----${capitalizeString()}----`);
+  return { printString };
+};
+
+const taco = FactoryFunction('taco');
+
+printString(); // ERROR!!
+capitalizeString(); // ERROR!!
+taco.capitalizeString(); // ERROR!!
+taco.printString(); // this prints "----TACO----"
+```
+
+Because of the concept of scope, neither of the functions created inside of FactoryFunction can be accessed outside of the function itself, which is why lines 9, 10, and 11 fail. The only way to use either of those functions is to return them in the object (see line 4), which is why we can call taco.printString() but not taco.capitalizeString(). The big deal here is that even though we can’t access the capitalizeString() function, printString() can. That is closure.
+
+**Factory function inheritance**
+Inheritance within factory functions is also important to note as they do not use the prototype. So in the case of factory functions, you can destructure and pull a specific function out of an object created by a factory function. Example below:
+```
+const Person = (name) => {
+  const sayName = () => console.log(`my name is ${name}`);
+  return {sayName};
+}
+
+const Nerd = (name) => {
+  // simply create a person and pull out the sayName function with destructuring assignment syntax!
+  const {sayName} = Person(name);
+  const doSomethingNerdy = () => console.log('nerd stuff');
+  return {sayName, doSomethingNerdy};
+}
+
+const jeff = Nerd('jeff');
+
+jeff.sayName(); // my name is jeff
+jeff.doSomethingNerdy(); // nerd stuff
+```
+
+The Person() factory function returns the {sayName} function as an object. In the Nerd() factory function, `const {sayName} = Person(name)`, allows me to destructure/'pull' the sayName object from the Person factory function, allowing me to now use the sayName() method in an instantiated object of Nerd(). 
+E.g. `jeff.sayName(); // my name is jeff`.
+
+**Module pattern**
+Modules is something new to me, but I can already see the power and benefit of using modules. Modules are very similar to factory functions, but they are created differently. An example that was used in my course is the following:
+```
+const calculator = (() => {
+  const add = (a, b) => a + b;
+  const sub = (a, b) => a - b;
+  const mul = (a, b) => a * b;
+  const div = (a, b) => a / b;
+  return {
+    add,
+    sub,
+    mul,
+    div,
+  };
+})();
+
+calculator.add(3,5); // 8
+calculator.sub(6,2); // 4
+calculator.mul(14,5534); // 77476
+```
+
+The concepts are exactly the same as a factory function, but instead of using a factory function to create multiple objects, the module pattern wraps the factory in an IIFE (Immediately Invoked Function Expression).
+`A useful side-effect of encapsulating the inner workings of our programs into objects is namespacing. Namespacing is a technique that is used to avoid naming collisions in our programs. `
+
+**Summary**
+This section of the course has been a lot to cover and a little overwhelming, especially as there are multiple concepts within the one lesson. I'm not sure how important factory functions are or if they're used regularly, but I've endeavoured as best I can to learn the basics of them. I'll attempt to use them in an upcoming project in hope to retain what I've learnd here.

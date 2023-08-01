@@ -2701,3 +2701,107 @@ The concepts are exactly the same as a factory function, but instead of using a 
 
 **Summary**
 This section of the course has been a lot to cover and a little overwhelming, especially as there are multiple concepts within the one lesson. I'm not sure how important factory functions are or if they're used regularly, but I've endeavoured as best I can to learn the basics of them. I'll attempt to use them in an upcoming project in hope to retain what I've learnd here.
+
+---
+
+### Day 100: August 1, 2023
+
+**Today's Progress:** As part of the TOP course, I have now been tasked with creating a tic-tac-toe app without using too much global code. I am advised to use modules and factory functions.
+
+**Thoughts:** As I was fairly stuck with how to approach this project, I decided to first watch a tutorial on YouTube to see how others develop this project. Following this, my plan is to then attempt to re-create the project using factory functions and modules, referring back to the video or this log when I get stuck.
+
+I found the CSS that was used to style the tic-tac-toe project in the YouTube tutorial very advanced and well outside of my comfort zone, especially since it's been a long time since I last used vanilla CSS. When creating the X's and O's that would appear transparently over the gameboard on hover, the developer used CSS to do this, not JavaScript. The main logic to the game is based on where their is a class of 'circle' or 'x' on the main 'board' div. 
+
+```
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after,
+.board.circle .cell:not(.x):not(.circle):hover::before {
+  background-color: lightgrey;
+}
+```
+
+The above CSS alters the X or O content that is displayed within the gameboard cells by checking if the cell does NOT contain a placed O or X (class of .circle or .x). If the cell does not contain a placed X or O, the background color will give provide the effect of transparency when the user hovers over an unpopulated gameboard cell.
+
+I have not really created objects with CSS before as I usually use SVGs, but I do recall having to build an X for a hamburger menu in the past, which was essentially the same code in this project also.
+
+**The JavaScript**:
+I found the JavaScript mostly easy to follow except for a few concepts that are new to me. 
+Firstly, I needed a handeClick() function that will also invoke several other functions:
+```
+function handleClick(e) {
+  const cell = e.target;
+  const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS;
+  // placeMark
+  placeMark(cell, currentClass);
+  // Check for Win
+  if (checkWin(currentClass)) {
+    endGame(false);
+    // Check for Draw
+  } else if (isDraw()) {
+    endGame(true);
+  } else {
+    swapTurns();
+    setBoardHoverClass();
+  }
+}
+```
+
+Checks current turn with 'currentClass'.
+Places an X or an O on the gameboard depending on currentClass.
+If statement to check if someone wins or draws followed by calling the endGame() function. Else, swapTurns.
+
+To check for a win, I had to first store all possible win conditions in an array:
+```
+const WINNING_COMBINATIONS = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6],
+];
+```
+
+Followed by the code that will loop through these win conditions and check them against the cells placed on the game board.
+
+```
+function checkWin(currentClass) {
+  return WINNING_COMBINATIONS.some((combinations) => {
+    return combinations.every((index) => {
+      return cellElements[index].classList.contains(currentClass);
+    });
+  });
+}
+```
+
+I found this function quite confusing as I have not used 'some()' or 'every()' before. My understandin of the function is as follows:
+
+> .some() tests whether at least one element in the array passes the test implemented by the function.
+> Within the .some() method, an arrow functions takes 'combinations' as an argument to represent each winning combination.
+> Inside of the some() function, .every() is used on 'combinations' to to test whether all elements in the array pass the test implemented by the provided function. It is here that it checks whether every cell in the current combination has been marked by the 'currentClass' player.
+> In the .every() function, the arrow function takes 'index' as an argument. 'index' represents each individual cell in the current winning combination.
+> Lastly, `cellElements[index].classList.contains(currentClass)` checks if the CSS class list of the current cell (cellElements[index]) contains currentClass. If it does, this means that the current cell has been marked by the 'currentClass' player.
+> cellElements[index].classList.contains(currentClass) check is returned to the .every() method. If all cells in the current combination contain currentClass, the .every() method returns true.
+> This true or false value is then returned to the .some() method. If at least one combination returns true, the .some() method also returns true.
+
+To summarise, this function is checking whether the player represent by 'currentClass' has any winning combinations on the gameboard.
+
+I also found the 'isDraw()' function to be a little confusing, as once again .every() is used, which is a new concept to me.
+```
+function isDraw() {
+  return [...cellElements].every((cell) => {
+    return (
+      cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS)
+    );
+  });
+}
+```
+
+Firstly, to use .every(), it must be invoked on an array, which was achieved by converting cellElements to an array with the spread operator `[...cellElements]`.
+.every() will now apply the following test to every cell:
+`cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS)`
+If every cell contains the class of 'X_CLASS' OR 'CIRCLE_CLASS', then return TRUE.
+
+Overall, I feel that this project is outside of my current ability? I understand the code for the most part, but as usual, I don't feel like this is code I would have written by myself without having watched a tutorial. I'll be trying to re-create this project using factory functions and modules, and likely returning to this code as I've already taken time to understand how the 'checkWin()' function works, for example. 
